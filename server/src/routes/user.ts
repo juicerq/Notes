@@ -40,7 +40,7 @@ export async function userRoutes(app: FastifyInstance) {
       createdAt: user.createdAt
     }, {
       sub: user.id,
-      expiresIn: '7days'
+      expiresIn: '30 days'
     })
 
     return {

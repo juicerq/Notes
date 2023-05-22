@@ -9,7 +9,7 @@ export async function notesRoutes(app: FastifyInstance) {
   // })
 
   // Create a note
-  app.post('/notes/new', async (req, resp) => {
+  app.post('/notes', async (req, resp) => {
     const noteSchema = z.object({
       title: z.string(),
       content: z.string(),
