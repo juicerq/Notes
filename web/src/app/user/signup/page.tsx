@@ -13,7 +13,7 @@ export default function Signup() {
 
     const formData = new FormData(e.currentTarget)
 
-    await api.post('/user', {
+    await api.post('/register', {
       name: formData.get('name'),
       email: formData.get('email'),
       password: formData.get('password'),
@@ -49,7 +49,7 @@ export default function Signup() {
         <label htmlFor="password" />
         <input
           className="p-2 w-[240px] rounded bg-zinc-700"
-          type="text"
+          type="password"
           name="password"
           id="password"
           placeholder="Password"
