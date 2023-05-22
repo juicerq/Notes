@@ -13,7 +13,7 @@ export default function Signup() {
 
     const formData = new FormData(e.currentTarget)
 
-    await api.post('/user', {
+    await api.post('/register', {
       name: formData.get('name'),
       email: formData.get('email'),
       password: formData.get('password'),
