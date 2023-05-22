@@ -1,7 +1,7 @@
 import './globals.css'
 import { ReactNode } from 'react'
 import { Inter } from 'next/font/google'
-import Link from 'next/link'
+import { Navbar } from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,17 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav className="flex w-full justify-center items-center bg-gray-500">
-          <ul className="flex gap-4">
-            <Link href="/">
-              <li>Home</li>
-            </Link>
-            <Link href="/notes">
-              <li>Notes</li>
-            </Link>
-          </ul>
-        </nav>
+      <body className={inter.className + ' bg-zinc-900'}>
+        <Navbar />
         {children}
       </body>
     </html>

@@ -11,7 +11,7 @@ export function NewNoteForm() {
 
     const formData = new FormData(e.currentTarget)
 
-    await api.post('/notes/new', {
+    await api.post('/notes', {
       title: formData.get('notetitle'),
       content: formData.get('notecontent'),
     })
@@ -20,37 +20,39 @@ export function NewNoteForm() {
   return (
     <form
       onSubmit={handleCreateNote}
-      className="h-[60%] border px-8 py-4 flex flex-col"
+      className="flex relative flex-col gap-4 items-center justify-center m-12"
     >
+      <h1 className="text-3xl text-zinc-300 font-bold">New Note</h1>
       <label
         htmlFor="notetitle"
-        className="text-lg self-center text-white uppercase"
+        className="mb-[-10px] text-2xl text-zinc-300 text-center"
       >
-        Note Title
+        Title
       </label>
       <input
-        className="rounded p-1 bg-gray-500 text-white focus:ring-0"
+        className="rounded p-2 bg-zinc-700 text-white focus:ring-0 leading-relaxed"
         type="text"
         name="notetitle"
         id="notetitle"
+        placeholder="Note title"
       />
 
       <label
         htmlFor="notecontent"
-        className="text-white self-center uppercase text-lg mt-4"
+        className="mb-[-10px] text-2xl text-zinc-300 text-center"
       >
-        Note Content
+        Content
       </label>
       <textarea
         id="notecontent"
         name="notecontent"
-        placeholder="Title content"
-        className="bg-gray-500 rounded flex-1 resize-none text-white p-2 mt-4 border-0 focus:ring-0"
+        placeholder="Note content"
+        className="bg-zinc-700 rounded flex-1 resize-none text-white p-2 w-[240px] border-0 focus:ring-0"
       />
 
       <button
         type="submit"
-        className="text-white py-2 px-6 border rounded mt-6 uppercase"
+        className="rounded hover:bg-zinc-500 transition-colors text-white text-sm bg-zinc-800 py-1 px-6 border uppercase leading-relaxed"
       >
         Create Note
       </button>
