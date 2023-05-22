@@ -3,6 +3,11 @@ import { z } from 'zod'
 import { prisma } from "../lib/prisma";
 
 export async function notesRoutes(app: FastifyInstance) {
+  // Verify if user is logged
+  // app.addHook('preHandler', async (request) => {
+  //   await request.jwtVerify()
+  // })
+
   // Create a note
   app.post('/notes/new', async (req, resp) => {
     const noteSchema = z.object({
@@ -14,6 +19,7 @@ export async function notesRoutes(app: FastifyInstance) {
 
     const note = await prisma.notes.create({
       data: {
+        userId: req.user.sub,
         title,
         content
       }
@@ -23,9 +29,12 @@ export async function notesRoutes(app: FastifyInstance) {
   })
 
   // Get all notes
-  app.get('/notes', async () => {
+  app.get('/notes', async (req) => {
 
     const notes = await prisma.notes.findMany({
+      where: {
+        userId: req.user.sub
+      },
       orderBy: {
         createdAt: 'asc'
       }
