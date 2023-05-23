@@ -2,10 +2,8 @@
 
 import { FormEvent } from 'react'
 import Link from 'next/link'
-import Cookies from 'js-cookie'
 import { useRouter } from 'next/navigation'
-
-import { api } from '@/lib/api'
+import { registerUser } from '@/hooks/registerUser'
 
 export default function Signup() {
   const router = useRouter()
@@ -14,15 +12,11 @@ export default function Signup() {
 
     const formData = new FormData(e.currentTarget)
 
-    const { token } = await api
-      .post('/register', {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        password: formData.get('password'),
-      })
-      .then((res) => res.data)
-
-    Cookies.set('token', token)
+    registerUser(
+      formData.get('name'),
+      formData.get('email'),
+      formData.get('password'),
+    )
     router.push('/')
   }
 
