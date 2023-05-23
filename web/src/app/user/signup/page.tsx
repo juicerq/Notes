@@ -1,23 +1,32 @@
 'use client'
 
-import { FormEvent } from 'react'
+import { FormEvent, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { registerUser } from '@/hooks/registerUser'
+import { registerUser } from '@/hooks/useRegisterUser'
 
 export default function Signup() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+  })
+
   const router = useRouter()
+
   async function handleSignUp(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    const formData = new FormData(e.currentTarget)
-
-    registerUser(
-      formData.get('name'),
-      formData.get('email'),
-      formData.get('password'),
-    )
+    registerUser(formData.name, formData.email, formData.password)
+    window.location.reload()
+    router.refresh()
     router.push('/')
+  }
+
+  function handleChangeInput(e: FormEvent<HTMLInputElement>) {
+    const { name, value } = e.currentTarget
+
+    setFormData({ ...formData, [name]: value })
   }
 
   return (
@@ -34,6 +43,8 @@ export default function Signup() {
           className="p-2 w-[240px] rounded bg-zinc-700"
           type="text"
           name="name"
+          value={formData.name}
+          onChange={handleChangeInput}
           id="name"
           placeholder="Name"
         />
@@ -42,6 +53,8 @@ export default function Signup() {
           className="p-2 w-[240px] rounded bg-zinc-700"
           type="text"
           name="email"
+          value={formData.email}
+          onChange={handleChangeInput}
           id="email"
           placeholder="Email"
         />
@@ -50,6 +63,8 @@ export default function Signup() {
           className="p-2 w-[240px] rounded bg-zinc-700"
           type="password"
           name="password"
+          value={formData.password}
+          onChange={handleChangeInput}
           id="password"
           placeholder="Password"
         />
