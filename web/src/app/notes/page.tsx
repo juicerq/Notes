@@ -1,7 +1,7 @@
 'use client'
 import { api } from '@/lib/api'
+import Cookies from 'js-cookie'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 
 interface NoteType {
   id: string
@@ -11,8 +11,11 @@ interface NoteType {
 }
 
 export default async function Notes() {
-  const route = useRouter()
-  const response = await api.get('/notes')
+  const response = await api.get('/notes', {
+    headers: {
+      Authorization: `Bearer ${Cookies.get('token')}`,
+    },
+  })
   const notes = response.data
 
   return (
@@ -20,7 +23,6 @@ export default async function Notes() {
       {notes.map((note: NoteType) => {
         async function handleDeleteNote() {
           await api.delete(`notes/${note.id}/${note.title}/${note.content}`)
-          route.refresh()
         }
         return (
           <Link key={note.id} href={`/notes/${note.id}`}>
