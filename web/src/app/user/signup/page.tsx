@@ -2,29 +2,34 @@
 
 import { FormEvent } from 'react'
 import Link from 'next/link'
+import Cookies from 'js-cookie'
+import { useRouter } from 'next/navigation'
 
 import { api } from '@/lib/api'
-import { useRouter } from 'next/navigation'
 
 export default function Signup() {
   const router = useRouter()
-  async function HandleSignUp(e: FormEvent<HTMLFormElement>) {
+  async function handleSignUp(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
     const formData = new FormData(e.currentTarget)
 
-    await api.post('/register', {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      password: formData.get('password'),
-    })
-    router.refresh()
+    const { token } = await api
+      .post('/register', {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        password: formData.get('password'),
+      })
+      .then((res) => res.data)
+
+    Cookies.set('token', token)
+    router.push('/')
   }
 
   return (
     <>
       <form
-        onSubmit={HandleSignUp}
+        onSubmit={handleSignUp}
         className="flex relative flex-col gap-4 items-center justify-center m-12"
       >
         <h2 className="text-3xl font-bold text-zinc-300 text-center">
