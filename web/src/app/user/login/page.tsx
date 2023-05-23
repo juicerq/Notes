@@ -13,7 +13,7 @@ export default function Login() {
 
     const formData = new FormData(e.currentTarget)
 
-    await api.get('/login', {
+    await api.post('/login', {
       email: formData.get('email'),
       password: formData.get('password'),
     })

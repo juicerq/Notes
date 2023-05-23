@@ -47,4 +47,35 @@ export async function userRoutes(app: FastifyInstance) {
       token
     }
   })
+
+  app.get('/login', async (req) => {
+    const loginSchema = z.object({
+      email: z.string(),
+      password: z.string()
+    })
+
+    const userInfo = loginSchema.parse(req.body)
+
+    const user = await prisma.user.findFirst({
+      where: {
+        email: userInfo.email,
+        password: userInfo.password
+      }
+    })
+
+    if (user) {
+      const token = app.jwt.sign({
+        name: user.name,
+        email: user.email,
+        createdAt: user.createdAt
+      }, {
+        sub: user.id,
+        expiresIn: '30 days'
+      })
+  
+      return {
+        token
+      }
+    }
+  })
 }
