@@ -1,10 +1,29 @@
+'use client'
+
+import { FormEvent } from 'react'
 import Link from 'next/link'
 
+import { api } from '@/lib/api'
+import { useRouter } from 'next/navigation'
+
 export default function Login() {
+  const router = useRouter()
+  async function handleSignIn(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    const formData = new FormData(e.currentTarget)
+
+    await api.get('/login', {
+      email: formData.get('email'),
+      password: formData.get('password'),
+    })
+    router.refresh()
+  }
+
   return (
     <>
       <form
-        action=""
+        onSubmit={handleSignIn}
         className="flex relative flex-col gap-4 items-center justify-center m-12"
       >
         <h2 className="text-3xl font-bold text-zinc-300 text-center">
@@ -15,13 +34,15 @@ export default function Login() {
           className="p-2 w-[240px] rounded bg-zinc-700"
           type="text"
           name="email"
+          id="email"
           placeholder="Email"
         />
         <label htmlFor="password" />
         <input
           className="p-2 w-[240px] rounded bg-zinc-700"
-          type="text"
+          type="password"
           name="password"
+          id="password"
           placeholder="Password"
         />
         <div className="flex w-[240px] justify-between items-center mt-3">
