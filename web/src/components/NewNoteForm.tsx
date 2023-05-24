@@ -3,6 +3,7 @@
 import { api } from '@/lib/api'
 import { FormEvent } from 'react'
 import { useRouter } from 'next/navigation'
+import Cookies from 'js-cookie'
 
 export function NewNoteForm() {
   const router = useRouter()
@@ -11,10 +12,18 @@ export function NewNoteForm() {
 
     const formData = new FormData(e.currentTarget)
 
-    await api.post('/notes', {
-      title: formData.get('notetitle'),
-      content: formData.get('notecontent'),
-    })
+    await api.post(
+      '/notes',
+      {
+        title: formData.get('notetitle'),
+        content: formData.get('notecontent'),
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${Cookies.get('token')}`,
+        },
+      },
+    )
     router.refresh()
   }
   return (

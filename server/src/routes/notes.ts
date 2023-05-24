@@ -4,9 +4,9 @@ import { prisma } from "../lib/prisma";
 
 export async function notesRoutes(app: FastifyInstance) {
   // Verify if user is logged
-  // app.addHook('preHandler', async (request) => {
-  //   await request.jwtVerify()
-  // })
+  app.addHook('preHandler', async (request) => {
+    await request.jwtVerify()
+  })
 
   // Create a note
   app.post('/notes', async (req, resp) => {
@@ -60,9 +60,10 @@ export async function notesRoutes(app: FastifyInstance) {
     
     const { id } = paramsSchema.parse(req.params)
 
-    const note = await prisma.notes.findUniqueOrThrow({
+    const note = await prisma.notes.findFirst({
       where: {
-        id
+        id,
+        userId: req.user.sub
       }
     })
 
