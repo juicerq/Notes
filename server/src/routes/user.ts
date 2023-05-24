@@ -70,12 +70,81 @@ export async function userRoutes(app: FastifyInstance) {
         createdAt: user.createdAt
       }, {
         sub: user.id,
-        expiresIn: '30 days'
+        expiresIn: '7 days'
       })
   
       return {
         token
       }
     }
+  })
+
+  // Edit name info
+  app.put('/edit/name', async (req) => {
+    const editNameSchema = z.object({
+      name: z.string()
+    })
+
+    const newName = editNameSchema.parse(req.body)
+
+    await prisma.user.update({
+      where: {
+        id: req.user.sub
+      },
+      data: {
+        name: newName.name
+      }
+    })
+  })
+
+  // Edit email info
+  app.put('/edit/email', async (req) => {
+    const emailSchema = z.object({
+      email: z.string()
+    })
+
+    const newEmail = emailSchema.parse(req.body)
+
+    await prisma.user.update({
+      where: {
+        id: req.user.sub
+      },
+      data: {
+        email: newEmail.email
+      }
+    })
+  })
+
+  // Edit password info
+  app.put('/edit/password', async (req) => {
+    const passwordSchema = z.object({
+      password: z.string()
+    })
+
+    const newPassword = passwordSchema.parse(req.body)
+
+    await prisma.user.update({
+      where: {
+        id: req.user.sub
+      },
+      data: {
+        password: newPassword.password
+      }
+    })
+  })
+
+  // Delete user and all his notes
+  app.delete('/delete', async (req) => {
+    await prisma.notes.deleteMany({
+      where: {
+        userId: req.user.sub
+      }
+    })
+
+    await prisma.user.delete({
+      where: {
+        id: req.user.sub
+      }
+    })
   })
 }
