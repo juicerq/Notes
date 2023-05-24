@@ -4,18 +4,17 @@ import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import Cookies from 'js-cookie'
 
 async function getNote(noteId: string) {
-  const note = await api
-    .get(`/notes/${noteId}`, {
-      headers: {
-        Authorization: `Bearer ${Cookies.get('token')}`,
-      },
-    })
-    .then((res) => res.data)
-  return note
+  const res = await api.get(`/notes/${noteId}`, {
+    headers: {
+      Authorization: `Bearer ${Cookies.get('token')}`,
+    },
+  })
+  const data = res.data
+  return data
 }
 
-export default function NotePage({ params }: Params) {
-  const note = getNote(params.id)
+export default async function NotePage({ params }: Params) {
+  const note = await getNote(params.id)
 
   return (
     <div className="h-screen justify-center items-center bg-gray-950">
