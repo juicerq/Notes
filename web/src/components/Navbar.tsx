@@ -42,7 +42,7 @@ export function Navbar() {
         <Link href="/">
           <li>Home</li>
         </Link>
-        <Link href="/notes">
+        <Link href={hasToken ? '/notes' : 'user/login'}>
           <li>Notes</li>
         </Link>
       </ul>

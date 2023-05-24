@@ -96,7 +96,7 @@ export async function notesRoutes(app: FastifyInstance) {
   })
 
   // Delete note
-  app.delete('/notes/:id/:title/:content', { config: { bodyParsing: false } }, async (req, res) => {
+  app.delete('/notes/:id', { config: { bodyParsing: false } }, async (req, res) => {
     const paramsSchema = z.object({
       id: z.string().uuid()
     })
