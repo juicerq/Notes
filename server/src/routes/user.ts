@@ -48,7 +48,7 @@ export async function userRoutes(app: FastifyInstance) {
     }
   })
 
-  app.get('/login', async (req) => {
+  app.post('/login', async (req) => {
     const loginSchema = z.object({
       email: z.string(),
       password: z.string()

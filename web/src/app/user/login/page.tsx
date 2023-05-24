@@ -1,23 +1,30 @@
 'use client'
 
-import { FormEvent } from 'react'
+import { FormEvent, useState } from 'react'
 import Link from 'next/link'
 
-import { api } from '@/lib/api'
 import { useRouter } from 'next/navigation'
+import { loginUser } from '@/hooks/loginUser'
 
 export default function Login() {
   const router = useRouter()
+  const [logInFormData, setLogInFormData] = useState({
+    email: '',
+    password: '',
+  })
+
   async function handleSignIn(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    const formData = new FormData(e.currentTarget)
-
-    await api.post('/login', {
-      email: formData.get('email'),
-      password: formData.get('password'),
-    })
+    await loginUser(logInFormData.email, logInFormData.password)
+    router.push('/')
     router.refresh()
+  }
+
+  function handleChangeInput(e: FormEvent<HTMLInputElement>) {
+    const { name, value } = e.currentTarget
+
+    setLogInFormData({ ...logInFormData, [name]: value })
   }
 
   return (
@@ -35,6 +42,8 @@ export default function Login() {
           type="text"
           name="email"
           id="email"
+          value={logInFormData.email}
+          onChange={handleChangeInput}
           placeholder="Email"
         />
         <label htmlFor="password" />
@@ -42,6 +51,8 @@ export default function Login() {
           className="p-2 w-[240px] rounded bg-zinc-700"
           type="password"
           name="password"
+          value={logInFormData.password}
+          onChange={handleChangeInput}
           id="password"
           placeholder="Password"
         />

@@ -1,16 +1,16 @@
 import { getUser } from '@/hooks/getUser'
+import { useIsLogged } from '@/hooks/useIsLogged'
 import { User } from 'lucide-react'
-import { cookies } from 'next/headers'
 import Link from 'next/link'
 import { LogOutButton } from './LogOutButton'
 
 export function Navbar() {
-  const token = cookies().get('token')?.value
+  const hasToken = useIsLogged()
 
   return (
     <nav className="text-zinc-400 flex w-full h-16 justify-between items-center px-12 bg-gray-500">
       <div className="flex items-center justify-center">
-        {!token ? (
+        {!hasToken ? (
           <Link
             className="text-sm underline flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors"
             href="/user/login"
@@ -42,7 +42,7 @@ export function Navbar() {
         <Link href="/">
           <li>Home</li>
         </Link>
-        <Link href="/notes">
+        <Link href={hasToken ? '/notes' : 'user/login'}>
           <li>Notes</li>
         </Link>
         <Link href="/test">

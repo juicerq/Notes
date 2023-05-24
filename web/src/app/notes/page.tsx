@@ -24,7 +24,11 @@ export default async function Notes() {
     <div className="p-12 flex justify-center items-start bg-zinc-900 flex-wrap gap-8">
       {notes.map((note: NoteType) => {
         async function handleDeleteNote() {
-          await api.delete(`notes/${note.id}/${note.title}/${note.content}`)
+          await api.delete(`notes/${note.id}`, {
+            headers: {
+              Authorization: `Bearer ${Cookies.get('token')}`,
+            },
+          })
         }
         return (
           <div key={note.id} className="relative w-[300px]">
