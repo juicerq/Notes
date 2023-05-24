@@ -6,7 +6,7 @@ import Cookies from 'js-cookie'
 export function LogOutButton() {
   const router = useRouter()
   function logOut() {
-    Cookies.set('token', '')
+    Cookies.remove('token')
     router.refresh()
     router.push('/')
   }
