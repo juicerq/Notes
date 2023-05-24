@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { registerUser } from '@/hooks/useRegisterUser'
 
 export default function Signup() {
-  const [formData, setFormData] = useState({
+  const [signUpFormData, setSignUpFormData] = useState({
     name: '',
     email: '',
     password: '',
@@ -17,16 +17,19 @@ export default function Signup() {
   async function handleSignUp(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    registerUser(formData.name, formData.email, formData.password)
-    window.location.reload()
-    router.refresh()
+    await registerUser(
+      signUpFormData.name,
+      signUpFormData.email,
+      signUpFormData.password,
+    )
     router.push('/')
+    router.refresh()
   }
 
   function handleChangeInput(e: FormEvent<HTMLInputElement>) {
     const { name, value } = e.currentTarget
 
-    setFormData({ ...formData, [name]: value })
+    setSignUpFormData({ ...signUpFormData, [name]: value })
   }
 
   return (
@@ -43,7 +46,7 @@ export default function Signup() {
           className="p-2 w-[240px] rounded bg-zinc-700"
           type="text"
           name="name"
-          value={formData.name}
+          value={signUpFormData.name}
           onChange={handleChangeInput}
           id="name"
           placeholder="Name"
@@ -53,7 +56,7 @@ export default function Signup() {
           className="p-2 w-[240px] rounded bg-zinc-700"
           type="text"
           name="email"
-          value={formData.email}
+          value={signUpFormData.email}
           onChange={handleChangeInput}
           id="email"
           placeholder="Email"
@@ -63,7 +66,7 @@ export default function Signup() {
           className="p-2 w-[240px] rounded bg-zinc-700"
           type="password"
           name="password"
-          value={formData.password}
+          value={signUpFormData.password}
           onChange={handleChangeInput}
           id="password"
           placeholder="Password"

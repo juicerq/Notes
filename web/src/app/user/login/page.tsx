@@ -8,7 +8,7 @@ import { loginUser } from '@/hooks/loginUser'
 
 export default function Login() {
   const router = useRouter()
-  const [formData, setFormData] = useState({
+  const [logInFormData, setLogInFormData] = useState({
     email: '',
     password: '',
   })
@@ -16,15 +16,15 @@ export default function Login() {
   async function handleSignIn(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    loginUser(formData.email, formData.password)
-    router.refresh()
+    await loginUser(logInFormData.email, logInFormData.password)
     router.push('/')
+    router.refresh()
   }
 
   function handleChangeInput(e: FormEvent<HTMLInputElement>) {
     const { name, value } = e.currentTarget
 
-    setFormData({ ...formData, [name]: value })
+    setLogInFormData({ ...logInFormData, [name]: value })
   }
 
   return (
@@ -42,7 +42,7 @@ export default function Login() {
           type="text"
           name="email"
           id="email"
-          value={formData.email}
+          value={logInFormData.email}
           onChange={handleChangeInput}
           placeholder="Email"
         />
@@ -51,7 +51,7 @@ export default function Login() {
           className="p-2 w-[240px] rounded bg-zinc-700"
           type="password"
           name="password"
-          value={formData.password}
+          value={logInFormData.password}
           onChange={handleChangeInput}
           id="password"
           placeholder="Password"
