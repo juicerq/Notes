@@ -70,6 +70,30 @@ export async function notesRoutes(app: FastifyInstance) {
     return note
   })
 
+  // Edit note
+  app.put('/notes/:id', async (req) => {
+    const noteSchema = z.object({
+      title: z.string(),
+      content: z.string(),
+    })
+    const paramsSchema = z.object({
+      id: z.string().uuid(),
+    })
+
+    const noteInfo = noteSchema.parse(req.body)
+    const { id } = paramsSchema.parse(req.params)
+
+    await prisma.notes.update({
+      where: {
+        id,
+      },
+      data: {
+        title: noteInfo.title,
+        content: noteInfo.content
+      }
+    })
+  })
+
   // Delete note
   app.delete('/notes/:id/:title/:content', { config: { bodyParsing: false } }, async (req, res) => {
     const paramsSchema = z.object({
