@@ -1,8 +1,8 @@
+'use client'
 import { api } from '@/lib/api'
 import Cookies from 'js-cookie'
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 
-export default async function NotePage({ params }: Params) {
+export default async function NotePage({ params }: any) {
   const note = await api
     .get(`/notes/${params.id}`, {
       headers: {

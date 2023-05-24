@@ -1,6 +1,13 @@
 import { api } from '@/lib/api'
 import Cookies from 'js-cookie'
 
+const expiresIn30Days = 60 * 60 * 24 * 30
+
+const options: Cookies.CookieAttributes = {
+  expires: expiresIn30Days,
+  httpOnly: true,
+}
+
 export async function registerUser(
   name: String,
   email: String,
@@ -14,5 +21,5 @@ export async function registerUser(
     })
     .then((res) => res.data)
 
-  Cookies.set('token', token)
+  Cookies.set('token', token, options)
 }

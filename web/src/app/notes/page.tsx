@@ -22,7 +22,11 @@ export default async function Notes() {
     <div className="flex flex-wrap h-screen overflow-y-scroll border bg-gray-900">
       {notes.map((note: NoteType) => {
         async function handleDeleteNote() {
-          await api.delete(`notes/${note.id}/${note.title}/${note.content}`)
+          await api.delete(`notes/${note.id}/${note.title}/${note.content}`, {
+            headers: {
+              Authorization: `Bearer ${Cookies.get('token')}`,
+            },
+          })
         }
         return (
           <Link key={note.id} href={`/notes/${note.id}`}>
