@@ -77,7 +77,7 @@ export function NewNoteForm() {
         value={noteFormData.content}
         onChange={handleChangeInput}
         placeholder="Note content"
-        className="bg-zinc-700 rounded flex-1 resize-none text-white p-2 w-[240px] border-0 focus:ring-0"
+        className="bg-zinc-700 rounded resize-none text-white p-2 w-[240px] min-h-[200px] border-0 focus:ring-0"
       />
 
       <button

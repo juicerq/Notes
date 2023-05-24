@@ -1,16 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
+// import { useRouter } from 'next/navigation'
 
-const signInUrl = 'localhost:3000/user/signup'
+const signInUrl = 'http://localhost:3000/user/signup'
 
 export function middleware(req: NextRequest) {
   const token = req.cookies.get('token')?.value
 
   if (!token) {
-    NextResponse.redirect(signInUrl, {
-      headers: {
-        'Set-Cookie': `redirectTo=${req.url}; Path=/; HttpOnly; max-age=15`,
-      },
-    })
+    return NextResponse.redirect(signInUrl)
   }
 
   return NextResponse.next()

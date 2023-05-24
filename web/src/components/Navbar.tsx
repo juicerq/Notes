@@ -31,7 +31,7 @@ export function Navbar() {
               </div>
             </Link>
             <div className="flex flex-col p-2 items-center relative">
-              <p className="text-sm">{getUser().name}</p>
+              <p className="text-sm uppercase">{getUser().name}</p>
               <LogOutButton />
             </div>
           </>
@@ -42,11 +42,14 @@ export function Navbar() {
         <Link href="/">
           <li>Home</li>
         </Link>
-        <Link href={hasToken ? '/notes' : 'user/login'}>
+        <Link href="/notes">
           <li>Notes</li>
         </Link>
         <Link href="/test">
           <li>Test</li>
+        </Link>
+        <Link href="/user/account">
+          <li>Account</li>
         </Link>
       </ul>
     </nav>
