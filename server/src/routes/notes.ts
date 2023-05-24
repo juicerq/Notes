@@ -45,6 +45,7 @@ export async function notesRoutes(app: FastifyInstance) {
         id: note.id,
         title: note.title,
         content: note.content,
+        resume: note.content.substring(0, 115).concat('...'),
         createdAt: note.createdAt
       }
 
