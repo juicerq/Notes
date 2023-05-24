@@ -31,14 +31,14 @@ export default function Login() {
     <>
       <form
         onSubmit={handleSignIn}
-        className="flex relative flex-col gap-4 items-center justify-center m-12"
+        className="flex text-zinc-300 relative flex-col gap-4 items-center justify-center m-12"
       >
         <h2 className="text-3xl font-bold text-zinc-300 text-center">
           Sign in
         </h2>
         <label className="" htmlFor="email"></label>
         <input
-          className="p-2 w-[240px] rounded bg-zinc-700"
+          className="p-2 w-[240px] rounded  bg-zinc-700"
           type="text"
           name="email"
           id="email"

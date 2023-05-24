@@ -4,6 +4,7 @@ import Cookies from 'js-cookie'
 import { Trash2 } from 'lucide-react'
 import Link from 'next/link'
 import dayjs from 'dayjs'
+import { useRouter } from 'next/navigation'
 
 interface NoteType {
   id: string
@@ -13,6 +14,7 @@ interface NoteType {
 }
 
 export default async function Notes() {
+  const router = useRouter()
   const response = await api.get('/notes', {
     headers: {
       Authorization: `Bearer ${Cookies.get('token')}`,
@@ -29,6 +31,7 @@ export default async function Notes() {
               Authorization: `Bearer ${Cookies.get('token')}`,
             },
           })
+          router.refresh()
         }
         return (
           <div key={note.id} className="relative w-[300px]">
