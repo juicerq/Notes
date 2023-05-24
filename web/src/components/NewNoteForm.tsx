@@ -1,22 +1,34 @@
 'use client'
 
 import { api } from '@/lib/api'
-import { FormEvent } from 'react'
+import { FormEvent, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Cookies from 'js-cookie'
 
 export function NewNoteForm() {
+  const [noteFormData, setNoteFormData] = useState({
+    title: '',
+    content: '',
+  })
+
   const router = useRouter()
+
+  function handleChangeInput(
+    e: FormEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) {
+    const { name, value } = e.currentTarget
+
+    setNoteFormData({ ...noteFormData, [name]: value })
+  }
+
   async function handleCreateNote(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
-
-    const formData = new FormData(e.currentTarget)
 
     await api.post(
       '/notes',
       {
-        title: formData.get('notetitle'),
-        content: formData.get('notecontent'),
+        title: noteFormData.title,
+        content: noteFormData.content,
       },
       {
         headers: {
@@ -25,6 +37,11 @@ export function NewNoteForm() {
       },
     )
     router.refresh()
+
+    setNoteFormData({
+      title: '',
+      content: '',
+    })
   }
   return (
     <form
@@ -41,7 +58,9 @@ export function NewNoteForm() {
       <input
         className="rounded p-2 bg-zinc-700 text-white focus:ring-0 leading-relaxed"
         type="text"
-        name="notetitle"
+        name="title"
+        value={noteFormData.title}
+        onChange={handleChangeInput}
         id="notetitle"
         placeholder="Note title"
       />
@@ -54,7 +73,9 @@ export function NewNoteForm() {
       </label>
       <textarea
         id="notecontent"
-        name="notecontent"
+        name="content"
+        value={noteFormData.content}
+        onChange={handleChangeInput}
         placeholder="Note content"
         className="bg-zinc-700 rounded flex-1 resize-none text-white p-2 w-[240px] border-0 focus:ring-0"
       />

@@ -45,6 +45,9 @@ export function Navbar() {
         <Link href="/notes">
           <li>Notes</li>
         </Link>
+        <Link href="/test">
+          <li>Test</li>
+        </Link>
       </ul>
     </nav>
   )

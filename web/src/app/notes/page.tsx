@@ -1,7 +1,9 @@
 'use client'
 import { api } from '@/lib/api'
 import Cookies from 'js-cookie'
+import { Trash2 } from 'lucide-react'
 import Link from 'next/link'
+import dayjs from 'dayjs'
 
 interface NoteType {
   id: string
@@ -19,25 +21,31 @@ export default async function Notes() {
   const notes = response.data
 
   return (
-    <div className="flex flex-wrap h-screen overflow-y-scroll border bg-gray-900">
+    <div className="p-12 flex justify-center items-start bg-zinc-900 flex-wrap gap-8">
       {notes.map((note: NoteType) => {
         async function handleDeleteNote() {
           await api.delete(`notes/${note.id}/${note.title}/${note.content}`)
         }
         return (
-          <Link key={note.id} href={`/notes/${note.id}`}>
-            <div className="flex flex-col relative gap-6 border m-4">
-              <h1 className="text-white">{note.title}</h1>
-              <p className="text-green-500">{note.content}</p>
-              <p className="text-green-700 text-[10px]">{note.createdAt}</p>
-              <button
-                onClick={handleDeleteNote}
-                className="text-red-500 text-[10px] absolute right-0 bottom-0 mx-1"
-              >
-                DELETE
-              </button>
-            </div>
-          </Link>
+          <div key={note.id} className="relative w-[300px]">
+            <Link href={`/notes/${note.id}`}>
+              <div className="text-zinc-200 p-6 flex flex-col items-center gap-4 border rounded bg-teal-800">
+                <h1 className="text-xl font-bold">{note.title}</h1>
+                <p className="text-sm indent-4 leading-relaxed">
+                  {note.content.concat('...')}
+                </p>
+                <p className="text-xs">
+                  {dayjs(note.createdAt).format('MMMM[ ]DD[, ]YYYY')}
+                </p>
+              </div>
+            </Link>
+            <button
+              onClick={handleDeleteNote}
+              className="text-red-500 absolute right-2 top-[85%] z-10"
+            >
+              <Trash2 />
+            </button>
+          </div>
         )
       })}
     </div>

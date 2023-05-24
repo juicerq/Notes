@@ -14,19 +14,19 @@ export default function Signup() {
 
   const router = useRouter()
 
-  async function handleSignUp(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-
-    registerUser(formData.name, formData.email, formData.password)
-    window.location.reload()
-    router.refresh()
-    router.push('/')
-  }
-
   function handleChangeInput(e: FormEvent<HTMLInputElement>) {
     const { name, value } = e.currentTarget
 
     setFormData({ ...formData, [name]: value })
+  }
+
+  async function handleSignUp(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    registerUser(formData.name, formData.email, formData.password)
+    router.refresh()
+    router.push('/')
+    window.location.reload()
   }
 
   return (
