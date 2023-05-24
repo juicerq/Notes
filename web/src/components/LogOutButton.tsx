@@ -12,7 +12,10 @@ export function LogOutButton() {
   }
 
   return (
-    <button onClick={logOut} className="text-[10px] text-red-500 underline">
+    <button
+      onClick={logOut}
+      className="text-[10px] self-start text-red-500 underline"
+    >
       Log out
     </button>
   )

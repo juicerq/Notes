@@ -35,7 +35,7 @@ export default function Signup() {
     <>
       <form
         onSubmit={handleSignUp}
-        className="flex relative flex-col gap-4 items-center justify-center m-12"
+        className="flex relative text-zinc-300 flex-col gap-4 items-center justify-center m-12"
       >
         <h2 className="text-3xl font-bold text-zinc-300 text-center">
           Sign up
