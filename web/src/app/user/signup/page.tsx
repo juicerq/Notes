@@ -23,7 +23,6 @@ export default function Signup() {
       signUpFormData.password,
     )
     router.push('/')
-    router.refresh()
   }
 
   function handleChangeInput(e: FormEvent<HTMLInputElement>) {
