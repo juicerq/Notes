@@ -13,6 +13,7 @@ export default function Account() {
         </h1>
         <p>Your email is: {user.email}</p>
         <p>Member since: {dayjs(user.createdAt).format('MMMM[ ]DD[, ]YYYY')}</p>
+        <p>{user.sub}</p>
       </div>
       <div className="border-2 p-2 bg-zinc-700 border-zinc-600 text-center rounded-lg flex flex-col gap-4">
         <ManageAccount />
