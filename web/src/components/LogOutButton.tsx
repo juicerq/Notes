@@ -7,14 +7,14 @@ export function LogOutButton() {
   const router = useRouter()
   function logOut() {
     Cookies.remove('token')
-    router.refresh()
     router.push('/')
+    router.refresh()
   }
 
   return (
     <button
       onClick={logOut}
-      className="text-[10px] self-start text-red-500 underline"
+      className="text-xs self-start text-pallete-darkgold underline"
     >
       Log out
     </button>

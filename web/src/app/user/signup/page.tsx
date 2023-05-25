@@ -12,6 +12,9 @@ export default function Signup() {
     password: '',
   })
 
+  const inputStyle =
+    'p-2 w-full rounded focus:outline-0 border-2 border-transparent focus:border-2 focus:border-pallete-brown transition-colors bg-pallete-inputbg'
+
   const router = useRouter()
 
   async function handleSignUp(e: FormEvent<HTMLFormElement>) {
@@ -36,14 +39,14 @@ export default function Signup() {
     <>
       <form
         onSubmit={handleSignUp}
-        className="flex relative text-zinc-300 flex-col gap-4 items-center justify-center m-12"
+        className="flex relative w-96 text-zinc-300 flex-col gap-4 items-center justify-center h-full"
       >
-        <h2 className="text-3xl font-bold text-zinc-300 text-center">
+        <h2 className="text-6xl font-bold font-sans text-pallete-gold text-center">
           Sign up
         </h2>
         <label className="" htmlFor="name"></label>
         <input
-          className="p-2 w-[240px] rounded bg-zinc-700"
+          className={inputStyle}
           type="text"
           name="name"
           value={signUpFormData.name}
@@ -53,7 +56,7 @@ export default function Signup() {
         />
         <label className="" htmlFor="email"></label>
         <input
-          className="p-2 w-[240px] rounded bg-zinc-700"
+          className={inputStyle}
           type="text"
           name="email"
           value={signUpFormData.email}
@@ -63,7 +66,7 @@ export default function Signup() {
         />
         <label htmlFor="password" />
         <input
-          className="p-2 w-[240px] rounded bg-zinc-700"
+          className={inputStyle}
           type="password"
           name="password"
           value={signUpFormData.password}
@@ -71,15 +74,19 @@ export default function Signup() {
           id="password"
           placeholder="Password"
         />
-        <div className="flex w-[240px] justify-between items-center mt-3">
+        <div className="flex w-full justify-between items-center mt-3">
           <Link
-            className="text-zinc-400 underline hover:text-zinc-300 transition-colors"
+            className="text-pallete-text text-start font-sans transition-colors"
             href={'/user/login'}
           >
-            Sign in
+            <p className="text-xs">Already have an account?</p>
+            <p className="underline text-pallete-gold hover:text-pallete-darkgold">
+              {' '}
+              Sign in
+            </p>
           </Link>
           <button
-            className="rounded hover:bg-zinc-500 transition-colors text-white text-sm bg-zinc-800 py-1 px-6 border uppercase leading-relaxed"
+            className="rounded hover:bg-pallete-gold transition-colors hover:text-pallete-brown text-pallete-gold text-sm bg-pallete-bg py-1 px-6 border border-pallete-gold font-sans uppercase flex justify-center"
             type="submit"
           >
             Create
