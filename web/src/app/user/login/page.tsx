@@ -8,6 +8,9 @@ import { loginUser } from '@/hooks/loginUser'
 
 export default function Login() {
   const router = useRouter()
+  const inputStyle =
+    'p-2 w-full rounded focus:outline-0 border-2 border-transparent focus:border-2 focus:border-pallete-brown transition-colors bg-pallete-inputbg'
+
   const [logInFormData, setLogInFormData] = useState({
     email: '',
     password: '',
@@ -31,14 +34,14 @@ export default function Login() {
     <>
       <form
         onSubmit={handleSignIn}
-        className="flex text-zinc-300 relative flex-col gap-4 items-center justify-center m-12"
+        className="flex w-96 text-pallete-bg relative flex-col gap-4 items-center justify-center h-full"
       >
-        <h2 className="text-3xl font-bold text-zinc-300 text-center">
+        <h2 className="text-6xl font-bold font-sans text-pallete-gold text-center">
           Sign in
         </h2>
         <label className="" htmlFor="email"></label>
         <input
-          className="p-2 w-[240px] rounded  bg-zinc-700"
+          className={inputStyle}
           type="text"
           name="email"
           id="email"
@@ -48,7 +51,7 @@ export default function Login() {
         />
         <label htmlFor="password" />
         <input
-          className="p-2 w-[240px] rounded bg-zinc-700"
+          className={inputStyle}
           type="password"
           name="password"
           value={logInFormData.password}
@@ -56,15 +59,19 @@ export default function Login() {
           id="password"
           placeholder="Password"
         />
-        <div className="flex w-[240px] justify-between items-center mt-3">
+        <div className="flex w-full font-sans justify-between items-center mt-3">
           <Link
-            className="text-zinc-400 underline hover:text-zinc-300 transition-colors"
+            className="text-pallete-text transition-colors"
             href={'/user/signup'}
           >
-            Sign up
+            <p className="text-xs">Don&apos;t have an account?</p>
+            <p className=" text-pallete-gold underline hover:text-pallete-darkgold">
+              {' '}
+              Sign up
+            </p>
           </Link>
           <button
-            className="rounded hover:bg-zinc-500 transition-colors text-white text-sm bg-zinc-800 py-1 px-6 border uppercase leading-relaxed"
+            className="rounded hover:bg-pallete-gold transition-colors hover:text-pallete-brown text-pallete-gold text-sm bg-pallete-bg py-1 px-6 border border-pallete-gold font-sans uppercase flex justify-center"
             type="submit"
           >
             Login
