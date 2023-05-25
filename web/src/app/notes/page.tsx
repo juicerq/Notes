@@ -10,6 +10,7 @@ interface NoteType {
   id: string
   title: string
   content: string
+  resume: string
   createdAt: string
 }
 
@@ -39,7 +40,7 @@ export default async function Notes() {
               <div className="text-zinc-200 p-6 flex flex-col items-center gap-4 border rounded bg-teal-800">
                 <h1 className="text-xl font-bold">{note.title}</h1>
                 <p className="text-sm indent-4 leading-relaxed">
-                  {note.content.substring(0, 100).concat('...')}
+                  {note.resume}
                 </p>
                 <p className="text-xs">
                   {dayjs(note.createdAt).format('MMMM[ ]DD[, ]YYYY')}
