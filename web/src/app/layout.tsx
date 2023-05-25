@@ -1,9 +1,17 @@
 import './globals.css'
 import { ReactNode } from 'react'
-import { Inter } from 'next/font/google'
+import {
+  Roboto_Flex as Roboto,
+  Bai_Jamjuree as BaiJamjuree,
+} from 'next/font/google'
 import { Navbar } from '@/components/Navbar'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
+const baiJamjuree = BaiJamjuree({
+  subsets: ['latin'],
+  weight: '700',
+  variable: '--font-bai-jamjurree',
+})
 
 export const metadata = {
   title: 'Practice',
@@ -13,9 +21,15 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className + ' bg-zinc-900'}>
+      <body
+        className={`${roboto.variable} ${baiJamjuree.variable} bg-gray-800 h-screen relative`}
+      >
         <Navbar />
-        {children}
+        {/* Blur */}
+        {/* <div className="absolute top-1/2 h-[288px] w-[526px] -translate-y-1/2 right-1/2 translate-x-1/2 rounded-full bg-pallete-lightgold opacity-70 blur-full" /> */}
+        <div className="flex justify-center items-center h-full">
+          {children}
+        </div>
       </body>
     </html>
   )

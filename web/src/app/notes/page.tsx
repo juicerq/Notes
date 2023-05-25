@@ -35,9 +35,12 @@ export default async function Notes() {
           router.refresh()
         }
         return (
-          <div key={note.id} className="relative w-[300px]">
+          <div
+            key={note.id}
+            className="relative w-[300px] border rounded bg-teal-800"
+          >
             <Link href={`/notes/${note.id}`}>
-              <div className="text-zinc-200 p-6 flex flex-col items-center gap-4 border rounded bg-teal-800">
+              <div className="text-zinc-200 p-6 flex flex-col items-center gap-4 ">
                 <h1 className="text-xl font-bold">{note.title}</h1>
                 <p className="text-sm indent-4 leading-relaxed">
                   {note.resume}
@@ -49,7 +52,7 @@ export default async function Notes() {
             </Link>
             <button
               onClick={handleDeleteNote}
-              className="text-red-500 absolute right-2 top-[85%] z-10"
+              className="text-red-500 absolute right-2 bottom-2 z-10"
             >
               <Trash2 />
             </button>

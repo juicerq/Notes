@@ -1,11 +1,9 @@
-import { NewNoteForm } from '@/components/NewNoteForm'
+import { Hero } from '@/components/Hero'
 
 export default async function Home() {
   return (
-    <div className="bg-zinc-900">
-      <div className="flex items-center justify-center">
-        <NewNoteForm />
-      </div>
-    </div>
+    <>
+      <Hero />
+    </>
   )
 }
