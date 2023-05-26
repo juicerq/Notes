@@ -2,8 +2,9 @@
 
 import { FormEvent, useState } from 'react'
 import Link from 'next/link'
-
+import Cookies from 'js-cookie'
 import { useRouter } from 'next/navigation'
+
 import { loginUser } from '@/hooks/loginUser'
 
 export default function Login() {
@@ -19,9 +20,14 @@ export default function Login() {
   async function handleSignIn(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    await loginUser(logInFormData.email, logInFormData.password)
-    router.push('/')
-    router.refresh()
+    try {
+      const token = await loginUser(logInFormData.email, logInFormData.password)
+      router.push('/')
+      router.refresh()
+      Cookies.set('token', token)
+    } catch (error) {
+      console.error('Erro ao fazer login:', error)
+    }
   }
 
   function handleChangeInput(e: FormEvent<HTMLInputElement>) {

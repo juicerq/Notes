@@ -48,7 +48,7 @@ export async function userRoutes(app: FastifyInstance) {
     }
   })
 
-  app.post('/login', async (req) => {
+  app.post('/login', async (req, res) => {
     const loginSchema = z.object({
       email: z.string(),
       password: z.string()
@@ -63,19 +63,21 @@ export async function userRoutes(app: FastifyInstance) {
       }
     })
 
-    if (user) {
-      const token = app.jwt.sign({
-        name: user.name,
-        email: user.email,
-        createdAt: user.createdAt
-      }, {
-        sub: user.id,
-        expiresIn: '7 days'
-      })
-  
-      return {
-        token
-      }
+    if (!user) {
+      return res.send('User dont exist')
+    } 
+
+    const token = app.jwt.sign({
+      name: user.name,
+      email: user.email,
+      createdAt: user.createdAt
+    }, {
+      sub: user.id,
+      expiresIn: '30 days'
+    })
+
+    return {
+      token
     }
   })
 
