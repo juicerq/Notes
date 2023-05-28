@@ -5,6 +5,7 @@ import { Trash2 } from 'lucide-react'
 import Link from 'next/link'
 import dayjs from 'dayjs'
 import { useRouter } from 'next/navigation'
+import { NewNoteForm } from '@/components/NewNoteForm'
 
 interface NoteType {
   id: string
@@ -24,41 +25,46 @@ export default async function Notes() {
   const notes = response.data
 
   return (
-    <div className="p-12 flex justify-center items-start bg-zinc-900 flex-wrap gap-8">
-      {notes.map((note: NoteType) => {
-        async function handleDeleteNote() {
-          await api.delete(`notes/${note.id}`, {
-            headers: {
-              Authorization: `Bearer ${Cookies.get('token')}`,
-            },
-          })
-          router.refresh()
-        }
-        return (
-          <div
-            key={note.id}
-            className="relative w-[300px] border rounded bg-teal-800"
-          >
-            <Link href={`/notes/${note.id}`}>
-              <div className="text-zinc-200 p-6 flex flex-col items-center gap-4 ">
-                <h1 className="text-xl font-bold">{note.title}</h1>
-                <p className="text-sm indent-4 leading-relaxed">
-                  {note.resume}
-                </p>
-                <p className="text-xs">
-                  {dayjs(note.createdAt).format('MMMM[ ]DD[, ]YYYY')}
-                </p>
-              </div>
-            </Link>
-            <button
-              onClick={handleDeleteNote}
-              className="text-red-500 absolute right-2 bottom-2 z-10"
+    <div className="flex h-full justify-center items-center">
+      <div>
+        <NewNoteForm />
+      </div>
+      <div className="p-12 flex justify-center items-center bg-zinc-900 flex-wrap gap-8">
+        {notes.map((note: NoteType) => {
+          async function handleDeleteNote() {
+            await api.delete(`notes/${note.id}`, {
+              headers: {
+                Authorization: `Bearer ${Cookies.get('token')}`,
+              },
+            })
+            router.refresh()
+          }
+          return (
+            <div
+              key={note.id}
+              className="relative w-[300px] border rounded bg-teal-800"
             >
-              <Trash2 />
-            </button>
-          </div>
-        )
-      })}
+              <Link href={`/notes/${note.id}`}>
+                <div className="text-zinc-200 p-6 flex flex-col items-center gap-4 ">
+                  <h1 className="text-xl font-bold">{note.title}</h1>
+                  <p className="text-sm indent-4 leading-relaxed">
+                    {note.resume}
+                  </p>
+                  <p className="text-xs">
+                    {dayjs(note.createdAt).format('MMMM[ ]DD[, ]YYYY')}
+                  </p>
+                </div>
+              </Link>
+              <button
+                onClick={handleDeleteNote}
+                className="text-red-500 absolute right-2 bottom-2 z-10"
+              >
+                <Trash2 />
+              </button>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

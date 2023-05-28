@@ -13,6 +13,9 @@ export function NewNoteForm() {
 
   const router = useRouter()
 
+  const inputStyle =
+    'p-2 w-full rounded focus:outline-0 border-2 border-transparent focus:border-2 focus:border-pallete-brown transition-colors bg-pallete-inputbg'
+
   function handleChangeInput(
     e: FormEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
@@ -46,17 +49,19 @@ export function NewNoteForm() {
   return (
     <form
       onSubmit={handleCreateNote}
-      className="flex relative flex-col gap-4 items-center justify-center m-12"
+      className="flex relative text-pallete-bg flex-col gap-4 items-center justify-center bg-[url(../assets/stars-notes.svg)] h-screen px-8 bg-cover bg-gray-900"
     >
-      <h1 className="text-3xl text-zinc-300 font-bold">New Note</h1>
+      <h1 className="text-3xl font-bold font-sans text-pallete-gold">
+        New Note
+      </h1>
       <label
         htmlFor="notetitle"
-        className="mb-[-10px] text-2xl text-zinc-300 text-center"
+        className="mb-[-10px] text-pallete-darkgold text-2xl text-center"
       >
         Title
       </label>
       <input
-        className="rounded p-2 bg-zinc-700 text-white focus:ring-0 leading-relaxed"
+        className={inputStyle}
         type="text"
         name="title"
         value={noteFormData.title}
@@ -67,7 +72,7 @@ export function NewNoteForm() {
 
       <label
         htmlFor="notecontent"
-        className="mb-[-10px] text-2xl text-zinc-300 text-center"
+        className="text-pallete-darkgold mb-[-10px] text-2xl text-center"
       >
         Content
       </label>
@@ -77,12 +82,12 @@ export function NewNoteForm() {
         value={noteFormData.content}
         onChange={handleChangeInput}
         placeholder="Note content"
-        className="bg-zinc-700 rounded resize-none text-white p-2 w-[240px] min-h-[200px] border-0 focus:ring-0"
+        className={`${inputStyle} min-h-[200px]`}
       />
 
       <button
         type="submit"
-        className="rounded hover:bg-zinc-500 transition-colors text-white text-sm bg-zinc-800 py-1 px-6 border uppercase leading-relaxed"
+        className="rounded hover:bg-pallete-gold transition-colors hover:text-pallete-brown text-pallete-gold text-sm bg-pallete-bg py-1 px-6 border border-pallete-gold font-sans uppercase flex justify-center"
       >
         Create Note
       </button>
