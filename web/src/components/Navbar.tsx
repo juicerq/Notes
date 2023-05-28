@@ -1,16 +1,14 @@
 import { getUser } from '@/hooks/getUser'
-import { useIsLogged } from '@/hooks/useIsLogged'
+import { isLogged } from '@/hooks/isLogged'
 import { User } from 'lucide-react'
 import Link from 'next/link'
 import { LogOutButton } from './LogOutButton'
 
 export function Navbar() {
-  const hasToken = useIsLogged()
-
   return (
     <nav className="z-20 bg-[url(../assets/stars-notes.svg)] bg-cover font-sans flex w-full h-20 justify-between fixed items-center px-20 bg-gray-900">
       <div className="flex items-center justify-center">
-        {!hasToken ? (
+        {!isLogged() ? (
           <Link
             className="text-sm underline text-pallete-title flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors"
             href="/user/login"
