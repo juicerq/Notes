@@ -5,6 +5,7 @@ import { Trash2 } from 'lucide-react'
 import Link from 'next/link'
 import dayjs from 'dayjs'
 import { useRouter } from 'next/navigation'
+import { motion } from 'framer-motion'
 
 interface NoteType {
   id: string
@@ -35,7 +36,9 @@ export default async function Notes() {
           router.refresh()
         }
         return (
-          <div
+          <motion.div
+            whileInView={{ y: [100, 0] }}
+            transition={{ duration: 1 }}
             key={note.id}
             className="relative w-[300px] border rounded bg-teal-800"
           >
@@ -56,7 +59,7 @@ export default async function Notes() {
             >
               <Trash2 />
             </button>
-          </div>
+          </motion.div>
         )
       })}
     </div>
