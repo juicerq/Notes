@@ -1,9 +1,9 @@
 import { api } from '@/lib/api'
 import Cookies from 'js-cookie'
 
-const options: Cookies.CookieAttributes = {
+const signUpCookieOptions: Cookies.CookieAttributes = {
   expires: 7,
-  path: '',
+  path: '/',
 }
 
 export async function registerUser(
@@ -19,5 +19,5 @@ export async function registerUser(
     })
     .then((res) => res.data)
 
-  Cookies.set('token', token, options)
+  Cookies.set('token', token, signUpCookieOptions)
 }
