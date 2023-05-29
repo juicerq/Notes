@@ -22,7 +22,7 @@ export function Navbar() {
           <>
             <Link
               className="text-sm underline flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors"
-              href="/user/login"
+              href="/user/account"
             >
               <div className="w-10 h-10 bg-pallete-brown rounded-full flex items-center justify-center">
                 <User className="w-7 h-7 text-pallete-lightgold" />
