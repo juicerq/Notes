@@ -1,9 +1,10 @@
 import { api } from '@/lib/api'
 
 export async function loginUser(email: String, password: String) {
-  const { token } = await api
-    .post('/login', { email, password })
-    .then((res) => res.data)
+  const response = await api.post('/login', { email, password })
 
-  return token
+  if (response.data === null) {
+    return null
+  }
+  return response.data.token
 }
