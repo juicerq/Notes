@@ -33,14 +33,14 @@ export async function userRoutes(app: FastifyInstance) {
         }
       })
     }
-
+    
     const token = app.jwt.sign({
       name: user.name,
       email: user.email,
       createdAt: user.createdAt
     }, {
       sub: user.id,
-      expiresIn: '30 days'
+      expiresIn: '7 days'
     })
 
     return {
@@ -48,6 +48,7 @@ export async function userRoutes(app: FastifyInstance) {
     }
   })
 
+  // Route to login
   app.post('/login', async (req, res) => {
     const loginSchema = z.object({
       email: z.string(),
@@ -64,7 +65,7 @@ export async function userRoutes(app: FastifyInstance) {
     })
 
     if (!user) {
-      return res.send('User dont exist')
+      return null
     } 
 
     const token = app.jwt.sign({
@@ -79,6 +80,27 @@ export async function userRoutes(app: FastifyInstance) {
     return {
       token
     }
+  })
+
+  //Route to verify if a user already exist
+  app.post('/verify/user', async (req) => {
+    const verifySchema = z.object({
+      email: z.string()
+    })
+
+    const emailToVerify = verifySchema.parse(req.body)
+
+    const user = await prisma.user.findUnique({
+      where: {
+        email: emailToVerify.email
+      }
+    })
+
+    if (!user) {
+      return false
+    }
+
+    return true
   })
 
   // Edit name info
