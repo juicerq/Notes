@@ -1,7 +1,7 @@
 'use client'
 import { api } from '@/lib/api'
 import Cookies from 'js-cookie'
-import { Trash2 } from 'lucide-react'
+import { PlusSquare, Trash2 } from 'lucide-react'
 import Link from 'next/link'
 import dayjs from 'dayjs'
 import { useRouter } from 'next/navigation'
@@ -26,6 +26,9 @@ export default async function Notes() {
 
   return (
     <div className="p-12 flex justify-center items-start bg-zinc-900 flex-wrap gap-8">
+      <div className="text-zinc-300">
+        <PlusSquare />
+      </div>
       {notes.map((note: NoteType) => {
         async function handleDeleteNote() {
           await api.delete(`notes/${note.id}`, {
@@ -37,7 +40,7 @@ export default async function Notes() {
         }
         return (
           <motion.div
-            whileInView={{ y: [100, 0] }}
+            whileInView={{ y: [100, 0], opacity: [0, 1] }}
             transition={{ duration: 1 }}
             key={note.id}
             className="relative w-[300px] border rounded bg-teal-800"

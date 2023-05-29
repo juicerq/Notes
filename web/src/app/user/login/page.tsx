@@ -10,7 +10,7 @@ import { loginUser } from '@/hooks/loginUser'
 export default function Login() {
   const router = useRouter()
   const inputStyle =
-    'p-2 w-full rounded focus:outline-0 border-2 border-transparent focus:border-2 focus:border-pallete-brown transition-colors bg-pallete-inputbg'
+    'p-2 w-full rounded focus:outline-0 border-2 border-transparent focus:border-2 focus:border-pallete-accent transition-colors bg-gray-400 placeholder-gray-200'
 
   const [logInFormData, setLogInFormData] = useState({
     email: '',
@@ -44,9 +44,9 @@ export default function Login() {
     <>
       <form
         onSubmit={handleSignIn}
-        className="flex w-96 text-pallete-bg relative flex-col gap-4 items-center justify-center h-full"
+        className="flex w-96 text-pallete-text relative flex-col gap-4 items-center justify-center h-full"
       >
-        <h2 className="text-6xl font-bold font-sans text-pallete-gold text-center">
+        <h2 className="text-6xl font-bold font-sans text-pallete-primaryButton text-center">
           Sign in
         </h2>
         {loginError.show ? (
@@ -82,13 +82,13 @@ export default function Login() {
             href={'/user/signup'}
           >
             <p className="text-xs">Don&apos;t have an account?</p>
-            <p className=" text-pallete-gold underline hover:text-pallete-darkgold">
+            <p className=" text-pallete-primaryButton underline hover:text-pallete-darkgold">
               {' '}
               Sign up
             </p>
           </Link>
           <button
-            className="rounded hover:bg-pallete-gold transition-colors hover:text-pallete-brown text-pallete-gold text-sm bg-pallete-bg py-1 px-6 border border-pallete-gold font-sans uppercase flex justify-center"
+            className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-8 border border-pallete-primaryButton font-sans uppercase flex justify-center"
             type="submit"
           >
             Login

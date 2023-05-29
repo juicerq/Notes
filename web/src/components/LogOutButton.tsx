@@ -14,7 +14,7 @@ export function LogOutButton() {
   return (
     <button
       onClick={logOut}
-      className="text-xs self-start text-pallete-darkgold underline"
+      className="text-xs self-start text-pallete-accent underline"
     >
       Log out
     </button>

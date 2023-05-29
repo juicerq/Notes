@@ -18,7 +18,7 @@ export default function Signup() {
   })
 
   const inputStyle =
-    'p-2 w-full rounded focus:outline-0 border-2 border-transparent focus:border-2 focus:border-pallete-brown transition-colors bg-pallete-inputbg'
+    'p-2 w-full rounded focus:outline-0 border-2 border-transparent focus:border-2 focus:border-pallete-accent transition-colors bg-gray-400 placeholder-gray-200'
 
   const router = useRouter()
 
@@ -62,9 +62,9 @@ export default function Signup() {
     <>
       <form
         onSubmit={handleSignUp}
-        className="flex relative w-96 text-pallete-bg flex-col gap-4 items-center justify-center h-full"
+        className="flex relative w-96 text-pallete-text flex-col gap-4 items-center justify-center h-full"
       >
-        <h2 className="text-6xl font-bold font-sans text-pallete-gold text-center">
+        <h2 className="text-6xl font-bold font-sans text-pallete-primaryButton text-center">
           Sign up
         </h2>
         {signUpError.show ? (

@@ -1,12 +1,13 @@
 export function Hero() {
-  const highlight = 'text-pallete-darkgold uppercase'
+  const highlight = 'text-pallete-accent uppercase'
 
   return (
     <main className="text-center font-alt font-bold h-full flex flex-col justify-center items-center">
       <div className="flex flex-col items-center w-full gap-6 md:w-2/3 px-4">
         <h1 className="text-zinc-300 text-5xl">
-          Welcome to <span className="text-pallete-gold"> WebWizards</span>{' '}
-          <br /> showcase website
+          Welcome to{' '}
+          <span className="text-pallete-primaryButton"> WebWizards</span> <br />{' '}
+          showcase website
         </h1>
         <p className="text-pallete-text text-lg leading-relaxed w-2/3 ">
           With a deep understanding of your unique needs, I&apos;ll create a{' '}

@@ -22,11 +22,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${baiJamjuree.variable} bg-gray-800 h-screen relative`}
+        className={`${roboto.variable} ${baiJamjuree.variable} bg-pallete-bg h-screen relative`}
       >
         <Navbar />
         {/* Blur */}
-        <div className="absolute top-1/2 h-20 w-40 -translate-y-1/2 right-1/2 translate-x-1/2 rounded-full bg-pallete-lightgold opacity-70 blur-full" />
+        <div className="absolute top-1/2 h-20 w-40 -translate-y-1/2 right-1/2 translate-x-1/2 rounded-full bg-pallete-primaryButton opacity-70 blur-full" />
         <div className="flex justify-center items-center h-full">
           {children}
         </div>
