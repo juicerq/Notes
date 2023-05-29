@@ -3,13 +3,18 @@
 import { FormEvent, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { registerUser } from '@/hooks/useRegisterUser'
+import { registerUser } from '@/hooks/registerUser'
+import { api } from '@/lib/api'
 
 export default function Signup() {
   const [signUpFormData, setSignUpFormData] = useState({
     name: '',
     email: '',
     password: '',
+  })
+  const [signUpError, setSignUpError] = useState({
+    show: false,
+    message: '',
   })
 
   const inputStyle =
@@ -19,7 +24,25 @@ export default function Signup() {
 
   async function handleSignUp(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
-
+    if (
+      !signUpFormData.name ||
+      !signUpFormData.email ||
+      !signUpFormData.password
+    ) {
+      return setSignUpError({
+        show: true,
+        message: 'There cant be empty fields',
+      })
+    }
+    const userExist = await api.post('/verify/user', {
+      email: signUpFormData.email,
+    })
+    if (userExist) {
+      return setSignUpError({
+        show: true,
+        message: 'Email already exists!',
+      })
+    }
     await registerUser(
       signUpFormData.name,
       signUpFormData.email,
@@ -44,6 +67,13 @@ export default function Signup() {
         <h2 className="text-6xl font-bold font-sans text-pallete-gold text-center">
           Sign up
         </h2>
+        {signUpError.show ? (
+          <p className="text-pallete-text text-sm font-sans font-light">
+            {signUpError.message}
+          </p>
+        ) : (
+          ''
+        )}
         <label className="" htmlFor="name"></label>
         <input
           className={inputStyle}

@@ -17,17 +17,21 @@ export default function Login() {
     password: '',
   })
 
+  const [loginError, setLoginError] = useState({
+    show: false,
+    message: 'Email or password are wrong, please try again!',
+  })
+
   async function handleSignIn(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    try {
-      const token = await loginUser(logInFormData.email, logInFormData.password)
-      router.push('/')
-      router.refresh()
-      Cookies.set('token', token)
-    } catch (error) {
-      console.error('Erro ao fazer login:', error)
+    const token = await loginUser(logInFormData.email, logInFormData.password)
+    if (!token) {
+      return setLoginError({ ...loginError, show: true })
     }
+    router.push('/')
+    Cookies.set('token', token)
+    router.refresh()
   }
 
   function handleChangeInput(e: FormEvent<HTMLInputElement>) {
@@ -45,6 +49,13 @@ export default function Login() {
         <h2 className="text-6xl font-bold font-sans text-pallete-gold text-center">
           Sign in
         </h2>
+        {loginError.show ? (
+          <p className="text-pallete-text text-sm font-sans font-light">
+            {loginError.message}
+          </p>
+        ) : (
+          ''
+        )}
         <label className="" htmlFor="email"></label>
         <input
           className={inputStyle}
