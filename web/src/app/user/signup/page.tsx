@@ -69,7 +69,7 @@ export default function Signup() {
         </h2>
 
         {signUpError.show ? (
-          <p className="text-pallete-text text-sm font-sans font-light">
+          <p className="text-pallete-text text-sm font-light">
             {signUpError.message}
           </p>
         ) : (
@@ -77,7 +77,7 @@ export default function Signup() {
         )}
 
         <div className="w-full flex flex-col gap-2">
-          <label className="font-sans tracking-wide font-bold" htmlFor="name">
+          <label className="tracking-wide font-bold" htmlFor="name">
             Qual o seu nome?
           </label>
           <input
@@ -94,7 +94,7 @@ export default function Signup() {
         <div className="w-full border border-gray-400" />
 
         <div className="w-full flex flex-col gap-2">
-          <label className="font-sans tracking-wide font-bold" htmlFor="email">
+          <label className="tracking-wide font-bold" htmlFor="email">
             Digite um email válido
           </label>
           <input
@@ -111,10 +111,7 @@ export default function Signup() {
         <div className="w-full border border-gray-400" />
 
         <div className="w-full flex flex-col gap-2">
-          <label
-            className="font-sans tracking-wide font-bold"
-            htmlFor="password"
-          >
+          <label className="tracking-wide font-bold" htmlFor="password">
             Crie uma senha
           </label>
           <input
@@ -146,7 +143,7 @@ export default function Signup() {
             </div>
           </div>
           <button
-            className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-6 border border-pallete-primaryButton font-sans uppercase flex justify-center"
+            className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-6 border border-pallete-primaryButton uppercase flex justify-center"
             type="submit"
           >
             Create

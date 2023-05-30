@@ -62,7 +62,7 @@ export function NewNoteForm() {
         value={noteFormData.title}
         onChange={handleChangeInput}
         id="notetitle"
-        placeholder="Note title"
+        placeholder="Insira um título"
       />
 
       <label
@@ -76,7 +76,7 @@ export function NewNoteForm() {
         name="content"
         value={noteFormData.content}
         onChange={handleChangeInput}
-        placeholder="Note content"
+        placeholder="Insira o conteúdo"
         className="bg-zinc-700 rounded resize-none text-white p-2 w-[240px] min-h-[200px] border-0 focus:ring-0"
       />
 

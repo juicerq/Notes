@@ -13,7 +13,7 @@ export default function test() {
 
   return (
     <>
-      <div className="text-pallete-title font-sans border-gray-950 justify-center items-center py-1 px-3 gap-1 flex absolute left-0 top-24 border-2 border-l-0 bg-pallete-brown rounded-sm">
+      <div className="text-pallete-title border-gray-950 justify-center items-center py-1 px-3 gap-1 flex absolute left-0 top-24 border-2 border-l-0 bg-pallete-brown rounded-sm">
         <Plus className="w-5 h-5 text-pallete-midgold" />
         <span className="text-pallete-midgold uppercase">Add note</span>
       </div>

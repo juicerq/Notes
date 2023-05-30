@@ -21,11 +21,11 @@ export default function Admin() {
         // onSubmit={handleSignIn}
         className="flex w-96 text-pallete-text relative flex-col gap-4 items-center justify-center h-full"
       >
-        <h2 className="text-6xl inline-block tracking-wide mb-6 font-bold font-sans text-pallete-primaryButton text-center">
+        <h2 className="text-6xl inline-block tracking-wide mb-6 font-bold text-pallete-primaryButton text-center">
           Matrix
         </h2>
         <div className="w-full flex flex-col gap-2">
-          <label className="font-sans tracking-wide font-bold" htmlFor="email">
+          <label className="tracking-wide font-bold" htmlFor="email">
             Digite seu nickname
           </label>
           <input
@@ -39,10 +39,7 @@ export default function Admin() {
           />
         </div>
         <div className="w-full flex flex-col gap-2">
-          <label
-            className="font-sans tracking-wide font-bold"
-            htmlFor="password"
-          >
+          <label className="tracking-wide font-bold" htmlFor="password">
             Digite sua senha
           </label>
           <input
@@ -55,9 +52,9 @@ export default function Admin() {
             placeholder="Password"
           />
         </div>
-        <div className="flex w-full font-sans justify-center items-center mt-3">
+        <div className="flex w-full justify-center items-center mt-3">
           <button
-            className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-6 border border-pallete-primaryButton font-sans uppercase flex justify-center"
+            className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-6 border border-pallete-primaryButton uppercase flex justify-center"
             type="submit"
           >
             Estou Pronto

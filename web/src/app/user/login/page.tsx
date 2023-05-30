@@ -50,14 +50,14 @@ export default function Login() {
           Conectar
         </h2>
         {loginError.show ? (
-          <p className="text-pallete-text text-sm font-sans font-light">
+          <p className="text-pallete-text text-sm font-light">
             {loginError.message}
           </p>
         ) : (
           ''
         )}
         <div className="w-full flex flex-col gap-2">
-          <label className="font-sans tracking-wide font-bold" htmlFor="email">
+          <label className="tracking-wide font-bold" htmlFor="email">
             Digite seu e-mail
           </label>
           <input
@@ -67,15 +67,12 @@ export default function Login() {
             id="email"
             value={logInFormData.email}
             onChange={handleChangeInput}
-            placeholder="E-mail"
+            placeholder="Insira seu e-mail"
           />
         </div>
         <div className="w-full border border-gray-400" />
         <div className="w-full flex flex-col gap-2">
-          <label
-            className="font-sans tracking-wide font-bold"
-            htmlFor="password"
-          >
+          <label className="tracking-wide font-bold" htmlFor="password">
             Digite sua senha
           </label>
           <input
@@ -85,10 +82,10 @@ export default function Login() {
             value={logInFormData.password}
             onChange={handleChangeInput}
             id="password"
-            placeholder="Password"
+            placeholder="Insira sua senha"
           />
         </div>
-        <div className="flex w-full font-sans justify-between items-center mt-3">
+        <div className="flex w-full justify-between items-center mt-3">
           <div className="flex flex-col">
             <p className="inline-block text-xs text-gray-300">
               Não possui conta?
@@ -106,7 +103,7 @@ export default function Login() {
             </div>
           </div>
           <button
-            className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-6 border border-pallete-primaryButton font-sans uppercase flex justify-center"
+            className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-6 border border-pallete-primaryButton uppercase flex justify-center"
             type="submit"
           >
             Entrar

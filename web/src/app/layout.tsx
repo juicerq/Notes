@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${baiJamjuree.variable} bg-pallete-bg h-screen relative`}
+        className={`${roboto.variable} ${baiJamjuree.variable} bg-pallete-bg font-sans h-screen relative`}
       >
         <Navbar />
         {/* Blur */}

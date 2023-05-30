@@ -6,10 +6,12 @@ import { LogOutButton } from './LogOutButton'
 
 export function Navbar() {
   return (
-    <nav className="z-20 bg-cover font-sans flex w-full h-20 justify-between fixed items-center px-20 bg-transparent">
-      <div className="flex items-center justify-center text-white">LOGO</div>
+    <nav className="z-20 bg-cover flex w-full h-20 justify-between fixed items-center px-20 bg-transparent">
+      <div className="flex items-center w-32 justify-center text-white">
+        LOGO
+      </div>
 
-      <ul className="flex gap-4 text-pallete-text uppercase">
+      <ul className="flex gap-8 text-pallete-text uppercase">
         <Link href="/">
           <li className="border-transparent tracking-wider transition-all border-b hover:border-pallete-primaryButton">
             Início
@@ -32,7 +34,7 @@ export function Navbar() {
         </Link>
       </ul>
 
-      <div className="flex">
+      <div className="flex w-32 justify-center">
         {isLogged() ? (
           <>
             <div className="font-bold text-pallete-text flex flex-col p-2 items-center relative">
@@ -45,7 +47,7 @@ export function Navbar() {
               className="text-sm underline flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors"
               href="/user/account"
             >
-              <User className="w-10 h-10 border border-pallete-primaryButton rounded-full p-1 text-pallete-primaryButton" />
+              <User className="w-10 h-10 border-2 border-pallete-primaryButton rounded-full p-1 text-pallete-primaryButton" />
             </Link>
           </>
         ) : (
@@ -56,7 +58,7 @@ export function Navbar() {
             <p className="px-1 font-semibold tracking-wider text-pallete-text border-b border-pallete-primaryButton">
               Entrar
             </p>
-            <User className="w-10 h-10 border border-pallete-accent rounded-full p-1 text-pallete-accent" />
+            <User className="w-10 h-10 border-2 border-pallete-accent rounded-full p-1 text-pallete-accent" />
           </Link>
         )}
       </div>
