@@ -25,7 +25,7 @@ export function NewNoteForm() {
     e.preventDefault()
 
     await api.post(
-      '/notes',
+      '/requests',
       {
         title: noteFormData.title,
         content: noteFormData.content,

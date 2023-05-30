@@ -14,9 +14,9 @@ export function LogOutButton() {
   return (
     <button
       onClick={logOut}
-      className="text-xs self-start text-pallete-accent underline"
+      className="text-xs self-end text-pallete-accent underline"
     >
-      Log out
+      Sair
     </button>
   )
 }
