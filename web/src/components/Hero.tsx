@@ -1,4 +1,4 @@
-export function Hero() {
+export default function Hero() {
   const highlight = 'text-pallete-accent uppercase'
 
   return (

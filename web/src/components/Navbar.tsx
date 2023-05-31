@@ -6,7 +6,7 @@ import { LogOutButton } from './LogOutButton'
 
 export function Navbar() {
   return (
-    <nav className="z-20 bg-cover flex w-full h-20 justify-between fixed items-center px-20 bg-transparent">
+    <nav className="z-20 bg-cover flex w-full h-20 justify-between fixed items-center px-96 bg-transparent">
       <div className="flex items-center w-32 justify-center text-white">
         LOGO
       </div>

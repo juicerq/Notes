@@ -46,9 +46,9 @@ export function NewNoteForm() {
   return (
     <form
       onSubmit={handleCreateNote}
-      className="flex relative flex-col gap-4 items-center justify-center m-12"
+      className="flex relative flex-col gap-4 items-center justify-center m-8"
     >
-      <h1 className="text-3xl text-zinc-300 font-bold">New Note</h1>
+      <h1 className="text-3xl text-pallete-text font-bold">New Note</h1>
       <label
         htmlFor="notetitle"
         className="mb-[-10px] text-2xl text-zinc-300 text-center"
@@ -56,7 +56,7 @@ export function NewNoteForm() {
         Title
       </label>
       <input
-        className="rounded p-2 bg-zinc-700 text-white focus:ring-0 leading-relaxed"
+        className="rounded p-2 bg-gray-300 focus:ring-0 leading-relaxed"
         type="text"
         name="title"
         value={noteFormData.title}
@@ -76,15 +76,15 @@ export function NewNoteForm() {
         name="content"
         value={noteFormData.content}
         onChange={handleChangeInput}
-        placeholder="Insira o conteúdo"
-        className="bg-zinc-700 rounded resize-none text-white p-2 w-[240px] min-h-[200px] border-0 focus:ring-0"
+        placeholder="Note content"
+        className="bg-gray-300 rounded resize-none text-white p-2 w-[200px] min-h-[200px] border-0 focus:ring-0"
       />
 
       <button
         type="submit"
-        className="rounded hover:bg-zinc-500 transition-colors text-white text-sm bg-zinc-800 py-1 px-6 border uppercase leading-relaxed"
+        className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-8 border border-pallete-primaryButton font-sans uppercase flex justify-center"
       >
-        Create Note
+        Create
       </button>
     </form>
   )
