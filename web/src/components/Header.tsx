@@ -1,6 +1,8 @@
 'use client'
 import { UserButton, useUser } from '@clerk/nextjs'
+import Image from 'next/image'
 import Link from 'next/link'
+import logo from '../assets/WebCraftLogo.png'
 
 // export async function getUser() {
 //   const user = await axios
@@ -15,9 +17,11 @@ import Link from 'next/link'
 export default function Header() {
   const { user } = useUser()
   return (
-    <nav className="z-20 bg-cover flex w-full h-20 justify-between fixed items-center px-20 bg-transparent">
+    <nav className="z-20 bg-cover flex w-full h-20 justify-between fixed items-center px-60 bg-transparent">
       <div className="flex items-center w-60 justify-center text-white">
-        LOGO
+        <Link href={'/'}>
+          <Image src={logo} alt="logo" width={240} height={80} />
+        </Link>
       </div>
 
       <ul className="flex gap-8 text-pallete-text uppercase">
@@ -32,7 +36,7 @@ export default function Header() {
         </Link>
       </ul>
 
-      <div className="flex w-60 justify-center">
+      <div className="flex w-60 justify-center items-center">
         {user ? (
           <div className="text-sm text-pallete-text flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors">
             <p className="px-1 text-center uppercase font-semibold tracking-wider text-pallete-text border-b border-pallete-primaryButton">
@@ -43,7 +47,7 @@ export default function Header() {
             </div>
           </div>
         ) : (
-          <div className="text-base text-pallete-text flex w-full justify-between ">
+          <div className="text-base text-pallete-text flex w-full justify-between items-center">
             <a
               href="/sign-in"
               className="my-2 mx-6 font-semibold inline-block hover:text-pallete-primaryButton transition-colors"

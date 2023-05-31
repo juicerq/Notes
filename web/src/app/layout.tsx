@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${roboto.variable} ${baiJamjuree.variable} bg-pallete-bg font-sans h-screen relative`}
+          className={`${roboto.variable} ${baiJamjuree.variable} bg-pallete-bg font-sans overflow-y-hidden h-screen relative`}
         >
           <Header />
           {/* Blur */}
