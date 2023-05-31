@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .navbar-li {
+    @apply border-transparent tracking-wider transition-all border-b hover:border-pallete-primaryButton;
+  }
+
+  .button-hover {
+    @apply rounded hover:bg-pallete-primaryButton hover:text-pallete-bg transition-colors;
+  }
+}
