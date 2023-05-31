@@ -4,7 +4,8 @@ import {
   Roboto_Flex as Roboto,
   Bai_Jamjuree as BaiJamjuree,
 } from 'next/font/google'
-import { Navbar } from '@/components/Navbar'
+import { ClerkProvider } from '@clerk/nextjs'
+import Header from '@/components/Header'
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 const baiJamjuree = BaiJamjuree({
@@ -20,17 +21,19 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${roboto.variable} ${baiJamjuree.variable} bg-pallete-bg font-sans h-screen relative`}
-      >
-        <Navbar />
-        {/* Blur */}
-        <div className="absolute top-1/2 h-20 w-40 -translate-y-1/2 right-1/2 translate-x-1/2 rounded-full bg-pallete-primaryButton opacity-70 blur-full" />
-        <div className="flex justify-center items-center h-full">
-          {children}
-        </div>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${roboto.variable} ${baiJamjuree.variable} bg-pallete-bg font-sans h-screen relative`}
+        >
+          <Header />
+          {/* Blur */}
+          <div className="absolute top-1/2 h-20 w-40 -translate-y-1/2 right-1/2 translate-x-1/2 rounded-full bg-pallete-primaryButton opacity-70 blur-full" />
+          <div className="flex justify-center items-center h-full">
+            {children}
+          </div>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
