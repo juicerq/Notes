@@ -40,11 +40,9 @@ export default function Header() {
         {user ? (
           <div className="text-sm text-pallete-text flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors">
             <p className="px-1 text-center uppercase font-semibold tracking-wider text-pallete-text border-b border-pallete-primaryButton">
-              {user.firstName}
+              {user?.firstName}
             </p>
-            <div className="border-2 border-pallete-primaryButton hover:border-pallete-accent rounded-full">
-              <UserButton />
-            </div>
+            <UserButton />
           </div>
         ) : (
           <div className="text-base text-pallete-text flex w-full justify-between items-center">
