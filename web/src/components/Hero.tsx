@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="flex flex-col items-center w-full gap-6 md:w-2/3 px-4">
         <h1 className="text-zinc-300 text-5xl">
           Welcome to{' '}
-          <span className="text-pallete-primaryButton"> WebWizards</span> <br />{' '}
+          <span className="text-pallete-primaryButton"> WebCraft</span> <br />{' '}
           showcase website
         </h1>
         <p className="text-pallete-text text-lg leading-relaxed w-2/3 ">

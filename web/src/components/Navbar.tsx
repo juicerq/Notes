@@ -3,12 +3,14 @@ import { isLogged } from '@/hooks/isLogged'
 import { User } from 'lucide-react'
 import Link from 'next/link'
 import { LogOutButton } from './LogOutButton'
+import logo from '../assets/WebCraftLogo.png'
+import Image from 'next/image'
 
 export function Navbar() {
   return (
     <nav className="z-20 bg-cover flex w-full h-20 justify-between fixed items-center px-96 bg-transparent">
-      <div className="flex items-center w-32 justify-center text-white">
-        LOGO
+      <div className="flex items-center w-60 justify-center text-white">
+        <Image src={logo} alt="logo" width={200} height={60} />
       </div>
 
       <ul className="flex gap-8 text-pallete-text uppercase">
@@ -34,7 +36,7 @@ export function Navbar() {
         </Link>
       </ul>
 
-      <div className="flex w-32 justify-center">
+      <div className="flex w-60 justify-center">
         {isLogged() ? (
           <>
             <div className="font-bold text-pallete-text flex flex-col p-2 items-center relative">
