@@ -4,18 +4,18 @@
 
 @layer components {
   .navbar-li {
-    @apply border-transparent tracking-wider transition-all border-b hover:border-pallete-primaryButton;
+    @apply border-transparent tracking-wider transition-all border-b hover:border-mainPalette-primaryButton;
   }
 
   .button-hover {
-    @apply rounded hover:bg-pallete-primaryButton hover:text-pallete-bg transition-colors;
+    @apply rounded hover:bg-mainPalette-primaryButton hover:text-mainPalette-bg transition-colors;
   }
 
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 m-2 hover:bg-pallete-primaryButton bg-gray-800 rounded-3xl hover:rounded-xl hover:text-pallete-extra transition-all text-pallete-text ease-linear
+    @apply relative flex items-center justify-center h-12 w-12 m-2 hover:bg-mainPalette-primaryButton bg-gray-800 rounded-3xl hover:rounded-xl hover:text-mainPalette-extra transition-all text-mainPalette-text ease-linear
   }
 
   .sidebar-tooltip {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-pallete-text bg-gray-900 border-2 border-pallete-primaryButton text-xs font-bold transition-all duration-100 scale-0 origin-left;
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-mainPalette-text bg-gray-900 border-2 border-mainPalette-primaryButton text-xs font-bold transition-all duration-100 scale-0 origin-left;
   }
 }

@@ -1,15 +1,15 @@
 export default function Hero() {
-  const highlight = 'text-pallete-accent uppercase'
+  const highlight = 'text-mainPalette-accent uppercase'
 
   return (
     <main className="text-center font-alt font-bold h-full flex flex-col justify-center items-center">
       <div className="flex flex-col items-center w-full gap-6 md:w-2/3 px-4">
         <h1 className="text-zinc-300 text-5xl">
           Welcome to{' '}
-          <span className="text-pallete-primaryButton"> WebCraft</span> <br />{' '}
+          <span className="text-mainPalette-primaryButton"> WebCraft</span> <br />{' '}
           showcase website
         </h1>
-        <p className="text-pallete-text text-lg leading-relaxed w-2/3 ">
+        <p className="text-mainPalette-text text-lg leading-relaxed w-2/3 ">
           With a deep understanding of your unique needs, I&apos;ll create a{' '}
           <span className={highlight}>website</span> that reflects the essence
           of your <span className={highlight}>brand</span>, whether you&apos;re

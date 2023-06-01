@@ -5,37 +5,37 @@ export default function LandingPage() {
     <div className="h-[810px] relative">
       {/* HEADER */}
       <div className="w-[1660px] px-12 h-16 flex justify-between items-center bg-transparent fixed">
-        <div className="flex items-center justify-center text-zinc-800">
+        <div className="flex items-center justify-center text-previewPalette0-text">
           <BoxSelect size={48} />
           <p>Logo</p>
         </div>
 
-        <ul className="flex gap-8 text-pallete-text uppercase text-sm ">
-          <li className="cursor-pointer text-zinc-700 hover:text-pink-500 transition-all">
+        <ul className="flex gap-8 text-previewPalette0-text-text uppercase text-sm ">
+          <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
             Home
           </li>
-          <li className="cursor-pointer text-zinc-700 hover:text-pink-500 transition-all">
+          <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
             About
           </li>
-          <li className="cursor-pointer text-zinc-700 hover:text-pink-500 transition-all">
+          <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
             Work
           </li>
-          <li className="cursor-pointer text-zinc-700 hover:text-pink-500 transition-all">
+          <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
             Skills
           </li>
-          <li className="cursor-pointer text-zinc-700 hover:text-pink-500 transition-all">
+          <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
             Contact
           </li>
         </ul>
       </div>
       {/* Content */}
-      <div className="bg-zinc-200 grid grid-cols-2 h-full">
+      <div className="bg-previewPalette0-bg grid grid-cols-2 h-full">
         <div className="flex flex-col justify-center items-start gap-8 ml-64">
           <h2 className="text-5xl font-bold">
             <span className="text-5xl">E</span>sse é um modelo de site que você
             pode customizar e adquirir
           </h2>
-          <div className="border-2 w-full border-black rounded-full" />
+          <div className="border-2 w-full border-previewPalette0-text rounded-full" />
           <p className="text-xl"> • Lorem ipsum dolor amet adipiscing elit!</p>
           <p className="text-md leading-relaxed">
             Estes é apenas um dos modelos de site que você pode adquirir
@@ -45,10 +45,10 @@ export default function LandingPage() {
             desejar.
           </p>
           <div className="flex justify-center gap-12 w-full">
-            <button className="border rounded-full bg-zinc-400 py-3 px-16">
+            <button className="rounded-full bg-previewPalette0-secondaryButton py-4 transition-colors px-16">
               Exemplo Botão 1
             </button>
-            <button className="border rounded-full bg-pink-500 py-3 px-16">
+            <button className="rounded-full bg-previewPalette0-primaryButton py-4 transition-colors px-16">
               Botão 2
             </button>
           </div>

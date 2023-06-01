@@ -44,7 +44,7 @@ module.exports = {
           800: "#18181b",
           900: "#121215",
         },
-        pallete: {
+        mainPalette: {
           text: "#f3edfd",
           bg: "#121215",
           primaryButton: '#74c313',
@@ -52,6 +52,14 @@ module.exports = {
           extra: '#253514',
           accent: '#4D7C14',
         },
+        previewPalette0: {
+          text: "#14171f",
+          bg: "#f2f4f7",
+          primaryButton: '#d6cebd',
+          secondaryButton: '#e9ecf1',
+          extra: '#DDD8CC',
+          accent: '#E2E1DE',
+        }
       },
       blur: {
         full: "194px",

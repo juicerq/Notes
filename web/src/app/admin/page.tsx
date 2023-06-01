@@ -8,7 +8,7 @@ export default function Admin() {
     password: '',
   })
   const inputStyle =
-    'p-2 w-full rounded focus:outline-0 border-2 border-transparent focus:border-2 focus:border-pallete-accent transition-colors bg-gray-50 placeholder-gray-400'
+    'p-2 w-full rounded focus:outline-0 border-2 border-transparent focus:border-2 focus:border-mainPalette-accent transition-colors bg-gray-50 placeholder-gray-400'
 
   function handleChangeInput(e: FormEvent<HTMLInputElement>) {
     const { name, value } = e.currentTarget
@@ -19,9 +19,9 @@ export default function Admin() {
     <>
       <form
         // onSubmit={handleSignIn}
-        className="flex w-96 text-pallete-text relative flex-col gap-4 items-center justify-center h-full"
+        className="flex w-96 text-mainPalette-text relative flex-col gap-4 items-center justify-center h-full"
       >
-        <h2 className="text-6xl inline-block tracking-wide mb-6 font-bold text-pallete-primaryButton text-center">
+        <h2 className="text-6xl inline-block tracking-wide mb-6 font-bold text-mainPalette-primaryButton text-center">
           Matrix
         </h2>
         <div className="w-full flex flex-col gap-2">
@@ -54,7 +54,7 @@ export default function Admin() {
         </div>
         <div className="flex w-full justify-center items-center mt-3">
           <button
-            className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-6 border border-pallete-primaryButton uppercase flex justify-center"
+            className="rounded hover:bg-mainPalette-primaryButton transition-colors hover:text-mainPalette-bg text-mainPalette-text bg-mainPalette-bg py-2 px-6 border border-mainPalette-primaryButton uppercase flex justify-center"
             type="submit"
           >
             Estou Pronto

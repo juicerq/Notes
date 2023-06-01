@@ -8,7 +8,7 @@ import {
 
 export function SideBar() {
   return (
-    <div className="fixed z-50 text-pallete-text top-0 left-0 h-full w-32 flex justify-center items-center flex-col space-y-12">
+    <div className="fixed z-50 text-mainPalette-text top-0 left-0 h-full w-32 flex justify-center items-center flex-col space-y-12">
       <SideBarIcon text="Resumo" icon={<Activity size={32} />} />
       <SideBarIcon text="Notifição" icon={<AlertOctagon size={32} />} />
       <SideBarIcon text="Dispositivo" icon={<Wallpaper size={32} />} />

@@ -24,7 +24,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <ul className="flex gap-8 text-pallete-text uppercase">
+      <ul className="flex gap-8 text-mainPalette-text uppercase">
         <Link href="/">
           <li className="navbar-li">Início</li>
         </Link>
@@ -38,23 +38,23 @@ export default function Header() {
 
       <div className="flex w-60 justify-center items-center">
         {user ? (
-          <div className="text-sm text-pallete-text flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors">
-            <p className="px-1 text-center uppercase font-semibold tracking-wider text-pallete-text border-b border-pallete-primaryButton">
+          <div className="text-sm text-mainPalette-text flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors">
+            <p className="px-1 text-center uppercase font-semibold tracking-wider text-mainPalette-text border-b border-mainPalette-primaryButton">
               {user?.firstName}
             </p>
             <UserButton />
           </div>
         ) : (
-          <div className="text-base text-pallete-text flex w-full justify-between items-center">
+          <div className="text-base text-mainPalette-text flex w-full justify-between items-center">
             <a
               href="/sign-in"
-              className="my-2 mx-6 font-semibold inline-block hover:text-pallete-primaryButton transition-colors"
+              className="my-2 mx-6 font-semibold inline-block hover:text-mainPalette-primaryButton transition-colors"
             >
               Entrar
             </a>
             <a
               href="/sign-up"
-              className="border font-semibold border-pallete-primaryButton py-2 rounded px-6 button-hover"
+              className="border font-semibold border-mainPalette-primaryButton py-2 rounded px-6 button-hover"
             >
               Criar conta
             </a>

@@ -48,7 +48,7 @@ export function NewNoteForm() {
       onSubmit={handleCreateNote}
       className="flex relative flex-col gap-4 items-center justify-center m-8"
     >
-      <h1 className="text-3xl text-pallete-text font-bold">New Note</h1>
+      <h1 className="text-3xl text-mainPalette-text font-bold">New Note</h1>
       <label
         htmlFor="notetitle"
         className="mb-[-10px] text-2xl text-zinc-300 text-center"
@@ -82,7 +82,7 @@ export function NewNoteForm() {
 
       <button
         type="submit"
-        className="rounded hover:bg-pallete-primaryButton transition-colors hover:text-pallete-bg text-pallete-text bg-pallete-bg py-2 px-8 border border-pallete-primaryButton font-sans uppercase flex justify-center"
+        className="rounded hover:bg-mainPalette-primaryButton transition-colors hover:text-mainPalette-bg text-mainPalette-text bg-mainPalette-bg py-2 px-8 border border-mainPalette-primaryButton font-sans uppercase flex justify-center"
       >
         Create
       </button>
