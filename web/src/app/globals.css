@@ -18,4 +18,8 @@
   .sidebar-tooltip {
     @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-mainPalette-text bg-gray-900 border-2 border-mainPalette-primaryButton text-xs font-bold transition-all duration-100 scale-0 origin-left;
   }
+
+  .highlight {
+    @apply text-mainPalette-accent uppercase;
+  }
 }

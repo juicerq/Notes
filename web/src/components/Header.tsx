@@ -34,15 +34,18 @@ export default function Header() {
         <Link href="/test">
           <li className="navbar-li">Test</li>
         </Link>
+        <Link href="/contact">
+          <li className="navbar-li">Contato</li>
+        </Link>
       </ul>
 
       <div className="flex w-60 justify-center items-center">
         {user ? (
           <div className="text-sm text-mainPalette-text flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors">
             <p className="px-1 text-center uppercase font-semibold tracking-wider text-mainPalette-text border-b border-mainPalette-primaryButton">
-              {user?.firstName}
+              {user?.fullName}
             </p>
-            <UserButton />
+            <UserButton afterSignOutUrl="/" signInUrl="/sign-in" />
           </div>
         ) : (
           <div className="text-base text-mainPalette-text flex w-full justify-between items-center">
