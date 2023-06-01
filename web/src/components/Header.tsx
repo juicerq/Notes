@@ -28,9 +28,6 @@ export default function Header() {
         <Link href="/">
           <li className="navbar-li">Início</li>
         </Link>
-        <Link href="/notes">
-          <li className="navbar-li">Notas</li>
-        </Link>
         <Link href="/test">
           <li className="navbar-li">Test</li>
         </Link>
