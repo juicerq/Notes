@@ -32,7 +32,7 @@ export default function Header() {
           <li className="navbar-li">Notas</li>
         </Link>
         <Link href="/test">
-          <li className="navbar-li">Test</li>
+          <li className="navbar-li">Demo</li>
         </Link>
       </ul>
 

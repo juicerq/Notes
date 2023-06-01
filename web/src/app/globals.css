@@ -19,3 +19,26 @@
     @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-mainPalette-text bg-gray-900 border-2 border-mainPalette-primaryButton text-xs font-bold transition-all duration-100 scale-0 origin-left;
   }
 }
+
+:root {
+  --text-color:
+}
+
+*{
+  scroll-behavior: smooth
+}
+
+.remove-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.remove-scrollbar::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}

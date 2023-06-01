@@ -6,8 +6,8 @@ export default function Hero() {
       <div className="flex flex-col items-center w-full gap-6 md:w-2/3 px-4">
         <h1 className="text-zinc-300 text-5xl">
           Welcome to{' '}
-          <span className="text-mainPalette-primaryButton"> WebCraft</span> <br />{' '}
-          showcase website
+          <span className="text-mainPalette-primaryButton"> WebCraft</span>{' '}
+          <br /> showcase website
         </h1>
         <p className="text-mainPalette-text text-lg leading-relaxed w-2/3 ">
           With a deep understanding of your unique needs, I&apos;ll create a{' '}

@@ -1,23 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require("tailwindcss/plugin");
-
-module.exports = {
-  plugins: [
-    plugin(function ({ addUtilities }) {
-      addUtilities({
-        ".content-auto": {
-          "content-visibility": "auto",
-        },
-        ".content-hidden": {
-          "content-visibility": "hidden",
-        },
-        ".content-visible": {
-          "content-visibility": "visible",
-        },
-      });
-    }),
-  ],
-};
 
 module.exports = {
   content: [
@@ -53,6 +34,14 @@ module.exports = {
           accent: '#4D7C14',
         },
         previewPalette0: {
+          text: "#e1ebf5",
+          bg: "#050a0f",
+          primaryButton: '#274e2e',
+          secondaryButton: '#e0f0e3',
+          extra: '#192A22',
+          accent: '#305f38',
+        },
+        previewPalette1: {
           text: "#14171f",
           bg: "#f2f4f7",
           primaryButton: '#d6cebd',
