@@ -12,12 +12,12 @@ import { Textarea } from '@/components/ui/textarea'
 
 export default function Contact() {
   return (
-    <div className="w-full h-screen flex justify-center items-center flex-col">
-      <h1 className="text-4xl tracking-wider text-center uppercase font-bold text-mainPalette-text">
+    <div className="flex h-screen w-full flex-col items-center justify-center">
+      <h1 className="text-center text-4xl font-bold uppercase tracking-wider text-mainPalette-text">
         Entre em <span className="highlight">contato</span> conosco
       </h1>
-      <form className="w-1/2 flex flex-col gap-5 pt-5">
-        <div className="flex w-full gap-10 flex-wrap py-4 tracking-wide">
+      <form className="flex w-1/2 flex-col gap-5 pt-5">
+        <div className="flex w-full flex-wrap gap-10 py-4 tracking-wide">
           <div className="contact-input-container">
             <label
               htmlFor="contact-name"
