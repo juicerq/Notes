@@ -34,15 +34,18 @@ export default function Contact() {
 
           <div className="flex w-56  flex-col gap-1">
             <label htmlFor="input02" className="text-lg text-mainPalette-text">
-              Texto do Input Aqui
+              Tipo de site
             </label>
             <Select>
               <SelectTrigger className="w-[180px] contact-input text-mainPalette-primaryButton">
                 <SelectValue placeholder="Landing Page" />
               </SelectTrigger>
               <SelectContent className="bg-mainPalette-bg text-mainPalette-primaryButton">
-                <SelectItem value="light">Portfolio</SelectItem>
+                <SelectItem value="dark">Blog</SelectItem>
                 <SelectItem value="dark">E-commerce</SelectItem>
+                <SelectItem value="dark">Informativo</SelectItem>
+                <SelectItem value="dark">Landing Page</SelectItem>
+                <SelectItem value="light">Portfolio</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -54,13 +57,13 @@ export default function Contact() {
           </div>
           <div className="flex w-56 flex-col gap-1">
             <label htmlFor="input02" className="text-lg text-mainPalette-text">
-              Texto do Input Aqui
+              Email para contato
             </label>
             <Input id="input02" className="contact-input" />
           </div>
           <div className="flex w-full flex-col gap-1">
             <label htmlFor="input02" className="text-lg text-mainPalette-text">
-              Texto do Input Aqui
+              Se tiver mais informações ou se tem alguma dúvida insira aqui ↓
             </label>
             <Textarea id="textarea" className="contact-input" />
           </div>

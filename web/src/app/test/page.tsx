@@ -5,9 +5,9 @@ import LandingPage from '@/components/SitePreview/LandingPage'
 
 export default function Test() {
   return (
-    <div className="h-full w-full flex justify-center items-center">
+    <div className="h-screen w-full">
       <SideBar />
-      <div className="h-[810px] fixed top-24 w-[1660px] rounded-lg border-2 border-mainPalette0-text overflow-y-scroll remove-scrollbar">
+      <div className="w-full remove-scrollbar">
         <LandingPage />
       </div>
     </div>

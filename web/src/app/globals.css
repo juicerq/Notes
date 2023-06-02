@@ -14,7 +14,7 @@
   }
 
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 m-2 hover:bg-mainPalette-primaryButton bg-gray-800 rounded-3xl hover:rounded-xl hover:text-mainPalette-extra transition-all text-mainPalette-text ease-linear
+    @apply relative flex items-center justify-center h-12 w-12 m-2 hover:bg-mainPalette-primaryButton bg-mainPalette-bgAlt rounded-3xl hover:rounded-xl hover:text-mainPalette-extra transition-all text-mainPalette-text ease-linear
   }
 
   .sidebar-tooltip {
@@ -106,4 +106,18 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.remove-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.remove-scrollbar::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
 }

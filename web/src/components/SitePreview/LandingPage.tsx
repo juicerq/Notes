@@ -1,50 +1,18 @@
-import { AlarmClock, BarChart4, BoxSelect, Building2, Ship } from 'lucide-react'
+import { AlarmClock, BarChart4, Building2, Ship } from 'lucide-react'
 import art from '../../assets/Art.svg'
 import Image from 'next/image'
+import { LandingPageHeader } from './LandingPageHeader'
 
 export default function LandingPage() {
   return (
-    <div className="h-[810px] relative text-previewPalette0-text">
+    <div className="text-previewPalette0-text">
       {/* HEADER */}
-      <div className="w-[1660px] px-12 h-16 flex justify-between items-center bg-transparent backdrop-blur z-20 fixed">
-        <div className="flex items-center justify-center text-previewPalette0-text">
-          <BoxSelect size={48} />
-          <p>Logo</p>
-        </div>
-
-        <ul className="flex gap-8 uppercase text-sm ">
-          <a href="#home">
-            <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
-              Home
-            </li>
-          </a>
-          <a href="#about">
-            <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
-              About
-            </li>
-          </a>
-          <a href="#work">
-            <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
-              Work
-            </li>
-          </a>
-          <a href="#skills">
-            <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
-              Skills
-            </li>
-          </a>
-          <a href="#contact">
-            <li className="cursor-pointer hover:text-previewPalette0-primaryButton transition-all">
-              Contact
-            </li>
-          </a>
-        </ul>
-      </div>
+      <LandingPageHeader />
       {/* Content */}
       {/* Container 1 */}
       <div
         id="home"
-        className="bg-previewPalette0-bg flex justify-center items-center gap-36 h-full"
+        className="bg-previewPalette0-bg flex justify-center items-center gap-36 h-screen"
       >
         <div className="flex flex-col justify-center items-start gap-8 w-[570px]">
           <h2 className="text-5xl font-bold">
@@ -79,7 +47,7 @@ export default function LandingPage() {
       {/* Container 2 */}
       <div
         id="about"
-        className="bg-previewPalette0-bg flex flex-col justify-center items-center gap-16 h-full"
+        className="bg-previewPalette0-bg h-screen flex flex-col justify-center items-center gap-16"
       >
         <h2 className="text-5xl font-bold text-center">
           Conheca um pouco a <br />
@@ -89,8 +57,11 @@ export default function LandingPage() {
         </h2>
 
         <div className="flex gap-36 relative justify-center items-center text-previewPalette0-text">
-          <div className="w-80 h-80 p-6 rounded-xl bg-previewPalette0-extra flex flex-col justify-center items-center gap-6">
-            <BarChart4 size={64} />
+          <div className="w-80 h-80 p-6 rounded-xl bg-previewPalette0-bgAlt flex flex-col justify-center items-center gap-6">
+            <BarChart4
+              className="text-previewPalette0-primaryButton"
+              size={64}
+            />
             <h4 className="text-2xl font-bold text-previewPalette0-">
               Exemplo 1
             </h4>
@@ -100,8 +71,11 @@ export default function LandingPage() {
               amet consectetur.
             </p>
           </div>
-          <div className="w-80 h-80 p-6 rounded-xl bg-previewPalette0-extra flex flex-col justify-center items-center gap-6">
-            <AlarmClock size={64} />
+          <div className="w-80 h-80 p-6 rounded-xl bg-previewPalette0-bgAlt flex flex-col justify-center items-center gap-6">
+            <AlarmClock
+              className="text-previewPalette0-primaryButton"
+              size={64}
+            />
             <h4 className="text-2xl font-bold text-previewPalette0-">
               Exemplo 2
             </h4>
@@ -111,8 +85,11 @@ export default function LandingPage() {
               amet consectetur.
             </p>
           </div>
-          <div className="w-80 h-80 p-6 rounded-xl bg-previewPalette0-extra flex flex-col justify-center items-center gap-6">
-            <Building2 size={64} />
+          <div className="w-80 h-80 p-6 rounded-xl bg-previewPalette0-bgAlt flex flex-col justify-center items-center gap-6">
+            <Building2
+              className="text-previewPalette0-primaryButton"
+              size={64}
+            />
             <h4 className="text-2xl font-bold text-previewPalette0-">
               Exemplo 3
             </h4>
