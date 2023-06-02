@@ -25,9 +25,10 @@
     @apply text-mainPalette-accent uppercase;
   }
 
-  .contact-input {
-    @apply text-mainPalette-text h-7 focus-visible:ring-opacity-0;
+  .contact-input-container {
+    @apply flex flex-col w-full gap-2;
   }
+  
 }
 
 @layer base {

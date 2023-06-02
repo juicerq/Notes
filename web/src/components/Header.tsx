@@ -17,7 +17,7 @@ import logo from '../assets/WebCraftLogo.png'
 export default function Header() {
   const { user } = useUser()
   return (
-    <nav className="z-20 bg-cover flex w-full h-20 justify-between fixed items-center px-60 bg-transparent">
+    <nav className="z-20 backdrop-blur bg-cover flex w-full h-20 justify-between fixed items-center px-60 bg-transparent">
       <div className="flex items-center w-60 justify-center text-white">
         <Link href={'/'}>
           <Image src={logo} alt="logo" width={240} height={80} />

@@ -16,53 +16,48 @@ export default function Contact() {
       <h1 className="text-4xl tracking-wider py-2 text-center uppercase font-bold text-mainPalette-text">
         Envie um <span className="highlight">email</span> para nós
       </h1>
-      <form className=" flex flex-col gap-10 flex-1 p-10">
-        <h2 className="text-2xl text-semibold tracking-wide text-mainPalette-text text-center">
-          Entre em contato e descreva aqui as ideias iniciais
-        </h2>
-
-        <div className="flex w-full gap-2 flex-wrap justify-around py-4 tracking-wide">
-          <div className="flex w-56 flex-col gap-1">
+      <form className=" flex flex-col gap-5 flex-1 p-10">
+        <div className="flex w-full gap-10 flex-wrap py-4 tracking-wide">
+          <div className="contact-input-container">
             <label
-              htmlFor="nameInput"
+              htmlFor="contact-name"
               className="text-lg text-mainPalette-text"
             >
               Qual o seu nome?
             </label>
-            <Input id="nameInput" className="contact-input" />
+            <Input placeholder="Insira o seu nome" id="contact-name" />
           </div>
 
-          <div className="flex w-56  flex-col gap-1">
-            <label htmlFor="input02" className="text-lg text-mainPalette-text">
-              Texto do Input Aqui
+          <div className="contact-input-container">
+            <label
+              htmlFor="contact-style"
+              className="text-lg text-mainPalette-text"
+            >
+              Escolha um modelo de site
             </label>
             <Select>
-              <SelectTrigger className="w-[180px] contact-input text-mainPalette-primaryButton">
-                <SelectValue placeholder="Landing Page" />
+              <SelectTrigger id="contact-style" className="text-gray-400">
+                <SelectValue placeholder="Modelos" />
               </SelectTrigger>
-              <SelectContent className="bg-mainPalette-bg text-mainPalette-primaryButton">
-                <SelectItem value="light">Portfolio</SelectItem>
-                <SelectItem value="dark">E-commerce</SelectItem>
+              <SelectContent className="bg-mainPalette-bg text-mainPalette-text border-mainPalette-accent">
+                <SelectItem value="portfolio">Portfolio</SelectItem>
+                <SelectItem value="landing-page">Landing Page</SelectItem>
+                <SelectItem value="e-commerce">E-commerce</SelectItem>
               </SelectContent>
             </Select>
           </div>
-          <div className="flex w-56 flex-col gap-1">
-            <label htmlFor="input02" className="text-lg text-mainPalette-text">
-              Texto do Input Aqui
+
+          <div className="contact-input-container">
+            <label
+              htmlFor="contact-textarea"
+              className="text-lg text-mainPalette-text"
+            >
+              Digite sua mensagem
             </label>
-            <Input id="input02" className="contact-input" />
-          </div>
-          <div className="flex w-56 flex-col gap-1">
-            <label htmlFor="input02" className="text-lg text-mainPalette-text">
-              Texto do Input Aqui
-            </label>
-            <Input id="input02" className="contact-input" />
-          </div>
-          <div className="flex w-full flex-col gap-1">
-            <label htmlFor="input02" className="text-lg text-mainPalette-text">
-              Texto do Input Aqui
-            </label>
-            <Textarea id="textarea" className="contact-input" />
+            <Textarea
+              id="contact-textarea"
+              className="contact-input resize-none"
+            />
           </div>
         </div>
       </form>
