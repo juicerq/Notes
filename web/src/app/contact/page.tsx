@@ -13,13 +13,13 @@ import { Mail, Phone, User } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <div className="w-full h-screen flex justify-center items-center flex-col">
-      <h1 className="text-4xl tracking-wider text-center font-bold text-mainPalette-text pb-1 border-b-2 border-mainPalette-accent">
+    <div className="flex h-screen w-full flex-col items-center justify-center">
+      <h1 className="border-b-2 border-mainPalette-accent pb-1 text-center text-4xl font-bold tracking-wider text-mainPalette-text">
         Entre em <span className="text-mainPalette-primaryButton">contato</span>{' '}
         conosco
       </h1>
-      <form className="w-1/2 flex flex-col gap-5 pt-5 text-lg text-mainPalette-text indent-1">
-        <div className="flex w-full gap-10 flex-wrap py-4 tracking-wide">
+      <form className="flex w-1/2 flex-col gap-5 pt-5 indent-1 text-lg text-mainPalette-text">
+        <div className="flex w-full flex-wrap gap-10 py-4 tracking-wide">
           <div className="contact-input-container">
             <div className="flex items-center">
               <User size={18} />
@@ -61,7 +61,7 @@ export default function Contact() {
               <SelectTrigger id="contact-model">
                 <SelectValue placeholder="Selecione um modelo" />
               </SelectTrigger>
-              <SelectContent className="backdrop-blur bg-transparent text-mainPalette-text">
+              <SelectContent className="bg-transparent text-mainPalette-text backdrop-blur">
                 <SelectItem value="blog">Blog</SelectItem>
                 <SelectItem value="e-commerce">E-commerce</SelectItem>
                 <SelectItem value="informativo">Informativo</SelectItem>
@@ -81,7 +81,7 @@ export default function Contact() {
             <Textarea
               id="contact-message"
               placeholder="Insira sua mensagem"
-              className="contact-input resize-none h-56"
+              className="contact-input h-56 resize-none"
             />
           </div>
         </div>

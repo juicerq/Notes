@@ -1,13 +1,13 @@
 export default function Hero() {
   return (
-    <main className="text-center font-alt font-bold h-full flex flex-col justify-center items-center">
-      <div className="flex flex-col items-center w-full gap-6 md:w-2/3 px-4">
-        <h1 className="text-zinc-300 text-5xl">
+    <main className="flex h-full flex-col items-center justify-center text-center font-alt font-bold">
+      <div className="flex w-full flex-col items-center gap-6 px-4 md:w-2/3">
+        <h1 className="text-5xl text-zinc-300">
           Welcome to{' '}
           <span className="text-mainPalette-primaryButton"> WebCraft</span>{' '}
           <br /> showcase website
         </h1>
-        <p className="text-mainPalette-text text-lg leading-relaxed w-2/3 ">
+        <p className="w-2/3 text-lg leading-relaxed text-mainPalette-text ">
           With a deep understanding of your unique needs, I&apos;ll create a{' '}
           <span className="highlight">website</span> that reflects the essence
           of your <span className="highlight">brand</span>, whether you&apos;re

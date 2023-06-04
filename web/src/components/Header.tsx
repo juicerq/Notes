@@ -15,14 +15,14 @@ export default function Header() {
       {pathName === '/test' ? (
         ''
       ) : (
-        <nav className="z-20 bg-cover flex w-full h-20 justify-between fixed items-center px-60 bg-transparent">
-          <div className="flex items-center w-60 justify-center text-white">
+        <nav className="fixed z-20 flex h-20 w-full items-center justify-between bg-transparent bg-cover px-60">
+          <div className="flex w-60 items-center justify-center text-white">
             <Link href={'/'}>
               <Image src={logo} alt="logo" width={240} height={80} />
             </Link>
           </div>
 
-          <ul className="flex gap-8 text-mainPalette-text uppercase">
+          <ul className="flex gap-8 uppercase text-mainPalette-text">
             <Link href="/">
               <li className="navbar-li">Início</li>
             </Link>
@@ -34,25 +34,25 @@ export default function Header() {
             </Link>
           </ul>
 
-          <div className="flex w-60 justify-center items-center">
+          <div className="flex w-60 items-center justify-center">
             {user ? (
-              <div className="text-sm text-mainPalette-text flex justify-center items-center gap-3 hover:text-zinc-300 transition-colors">
-                <p className="px-1 text-center uppercase font-semibold tracking-wider text-mainPalette-text border-b border-mainPalette-primaryButton">
+              <div className="flex items-center justify-center gap-3 text-sm text-mainPalette-text transition-colors hover:text-zinc-300">
+                <p className="border-b border-mainPalette-primaryButton px-1 text-center font-semibold uppercase tracking-wider text-mainPalette-text">
                   {user?.fullName}
                 </p>
                 <UserButton afterSignOutUrl="/" signInUrl="/sign-in" />
               </div>
             ) : (
-              <div className="text-base text-mainPalette-text flex w-full justify-between items-center">
+              <div className="flex w-full items-center justify-between text-base text-mainPalette-text">
                 <a
                   href="/sign-in"
-                  className="my-2 mx-6 font-semibold inline-block hover:text-mainPalette-primaryButton transition-colors"
+                  className="mx-6 my-2 inline-block font-semibold transition-colors hover:text-mainPalette-primaryButton"
                 >
                   Entrar
                 </a>
                 <a
                   href="/sign-up"
-                  className="border font-semibold border-mainPalette-primaryButton py-2 rounded px-6 button-hover"
+                  className="button-hover rounded border border-mainPalette-primaryButton px-6 py-2 font-semibold"
                 >
                   Criar conta
                 </a>
