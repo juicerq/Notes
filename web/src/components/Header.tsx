@@ -23,14 +23,17 @@ export default function Header() {
           </div>
 
           <ul className="flex gap-8 uppercase text-mainPalette-text">
-            <Link href="/">
+            <Link href="/" className="group">
               <li className="navbar-li">Início</li>
+              <div className="h-1 w-0 bg-mainPalette-primaryButton transition-all group-hover:w-full" />
             </Link>
-            <Link href="/test">
-              <li className="navbar-li">Demo</li>
+            <Link href="/test" className="group">
+              <li className="navbar-li ">Demo</li>
+              <div className="h-1 w-0 bg-mainPalette-primaryButton transition-all group-hover:w-full" />
             </Link>
-            <Link href="/contact">
+            <Link href="/contact" className="group">
               <li className="navbar-li">Contato</li>
+              <div className="h-1 w-0 bg-mainPalette-primaryButton transition-all group-hover:w-full" />
             </Link>
           </ul>
 

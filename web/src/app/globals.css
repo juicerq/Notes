@@ -22,7 +22,7 @@
 
 @layer components {
   .navbar-li {
-    @apply border-transparent tracking-wider transition-all border-b hover:border-mainPalette-primaryButton;
+    @apply border-transparent tracking-wider;
   }
 
   .button-hover {
