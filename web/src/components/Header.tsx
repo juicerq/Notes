@@ -33,7 +33,7 @@ export default function Header() {
 
           <div className="flex w-60 items-center justify-center">
             <Link href={'/test'}>
-              <button className="button-hover font-lg rounded bg-mainPalette-primaryButton px-12 py-4 text-lg font-semibold uppercase tracking-wider transition-all duration-75 hover:-translate-y-1">
+              <button className="button-hover font-lg rounded bg-mainPalette-primaryButton px-12 py-4 text-lg font-semibold uppercase tracking-wider">
                 Craft
               </button>
             </Link>

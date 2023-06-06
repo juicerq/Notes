@@ -18,7 +18,7 @@ export default function Contact() {
         Entre em <span className="text-mainPalette-primaryButton">contato</span>{' '}
         conosco
       </h1>
-      <form className="flex w-1/2 flex-col gap-5 pt-5 indent-1 text-lg text-mainPalette-text">
+      <form className="flex w-1/2 flex-col gap-7 pt-5 indent-1 text-lg text-mainPalette-text">
         <div className="flex w-full flex-wrap gap-10 py-4 tracking-wide">
           <div className="contact-input-container">
             <div className="flex items-center">
@@ -85,6 +85,9 @@ export default function Contact() {
             />
           </div>
         </div>
+        <button className="button-hover font-lg w-1/2 self-center rounded bg-mainPalette-primaryButton px-12 py-4 text-lg font-semibold uppercase tracking-wider">
+          Enviar
+        </button>
       </form>
     </div>
   )

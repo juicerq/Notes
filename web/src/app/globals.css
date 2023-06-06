@@ -26,7 +26,7 @@
   }
 
   .button-hover {
-    @apply rounded hover:bg-mainPalette-accent transition-colors;
+    @apply rounded text-mainPalette-bg hover:bg-mainPalette-accent transition-all;
   }
 
   .sidebar-icon {
