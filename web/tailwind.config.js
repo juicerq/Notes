@@ -63,6 +63,7 @@ module.exports = {
           secondaryButton: '#07010e',
           extra: '#253514',
           accent: '#4D7C14',
+          fadedBlack: 'rgba(0, 0, 0, 0.55)',
         },
         previewPalette0: {
           text: '#e1ebf5',

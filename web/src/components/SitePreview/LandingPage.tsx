@@ -3,6 +3,33 @@ import art from '../../assets/art.svg'
 import Image from 'next/image'
 import { LandingPageHeader } from './LandingPageHeader'
 
+const arrayImgs = [
+  {
+    title: 'Projeto Alpha',
+    image: 'https://source.unsplash.com/random/?tech&1',
+  },
+  {
+    title: 'Projeto Aurora',
+    image: 'https://source.unsplash.com/random/?tech&2',
+  },
+  {
+    title: 'Projeto Centauro',
+    image: 'https://source.unsplash.com/random/?tech&3',
+  },
+  {
+    title: 'Projeto Nexus',
+    image: 'https://source.unsplash.com/random/?tech&4',
+  },
+  {
+    title: 'Projeto Prometeu',
+    image: 'https://source.unsplash.com/random/?tech&5',
+  },
+  {
+    title: 'Projeto Vanguarda',
+    image: 'https://source.unsplash.com/random/?tech&6',
+  },
+]
+
 export default function LandingPage() {
   return (
     <div className="text-previewPalette0-text">
@@ -150,31 +177,28 @@ export default function LandingPage() {
         </div>
       </div>
       {/* Container 4 */}
-      <div
-        id="skills"
-        className="flex h-full flex-col items-center justify-center gap-16 bg-previewPalette0-bg"
-      >
-        <h2 className="text-center text-5xl font-bold">
-          Conheca um pouco a <br />
-          <span className="text-previewPalette0-primaryButton">
-            [Nome da empresa]
-          </span>{' '}
-        </h2>
-
-        <div className="relative flex items-center justify-center gap-36 text-previewPalette0-text">
-          <div className="flex h-80 w-80 flex-col items-center justify-center gap-6 rounded-xl bg-previewPalette0-extra p-6">
-            <BarChart4 size={64} />
-            <h4 className="text-previewPalette0- text-2xl font-bold">
-              Exemplo 1
-            </h4>
-            <p className="text-center text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est
-              molestiae odio rerum bus nesciunt incidunt Lorem ipsum dolor sit
-              amet consectetur.
-            </p>
-          </div>
-          <div className="h-80 w-80 rounded-lg bg-previewPalette0-extra"></div>
-          <div className="h-80 w-80 rounded-lg bg-previewPalette0-extra"></div>
+      <div id="skills" className="mx-32 flex h-full flex-col ">
+        <h1 className="py-44 text-center text-5xl uppercase tracking-widest">
+          Projetos
+        </h1>
+        <div className="grid h-full w-full grid-cols-4 gap-4">
+          {arrayImgs.map((image, i) => (
+            <div key={i} className="col-span-2 h-full w-full">
+              <div className="relative aspect-video">
+                <div className="group absolute z-20 flex h-full w-full items-center justify-center rounded-md text-xl text-white opacity-0 transition-all duration-500 ease-in-out hover:bg-mainPalette-fadedBlack hover:opacity-100">
+                  <p className="text-xl font-semibold uppercase tracking-widest">
+                    {image.title}
+                  </p>
+                </div>
+                <Image
+                  src={image.image}
+                  alt="project"
+                  fill
+                  className="rounded-md object-cover grayscale filter"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       {/* Container 5 */}
