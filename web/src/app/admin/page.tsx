@@ -19,13 +19,13 @@ export default function Admin() {
     <>
       <form
         // onSubmit={handleSignIn}
-        className="flex w-96 text-mainPalette-text relative flex-col gap-4 items-center justify-center h-full"
+        className="relative flex h-full w-96 flex-col items-center justify-center gap-4 text-mainPalette-text"
       >
-        <h2 className="text-6xl inline-block tracking-wide mb-6 font-bold text-mainPalette-primaryButton text-center">
+        <h2 className="mb-6 inline-block text-center text-6xl font-bold tracking-wide text-mainPalette-primaryButton">
           Matrix
         </h2>
-        <div className="w-full flex flex-col gap-2">
-          <label className="tracking-wide font-bold" htmlFor="email">
+        <div className="flex w-full flex-col gap-2">
+          <label className="font-bold tracking-wide" htmlFor="email">
             Digite seu nickname
           </label>
           <input
@@ -38,8 +38,8 @@ export default function Admin() {
             placeholder="E-mail"
           />
         </div>
-        <div className="w-full flex flex-col gap-2">
-          <label className="tracking-wide font-bold" htmlFor="password">
+        <div className="flex w-full flex-col gap-2">
+          <label className="font-bold tracking-wide" htmlFor="password">
             Digite sua senha
           </label>
           <input
@@ -52,9 +52,9 @@ export default function Admin() {
             placeholder="Password"
           />
         </div>
-        <div className="flex w-full justify-center items-center mt-3">
+        <div className="mt-3 flex w-full items-center justify-center">
           <button
-            className="rounded hover:bg-mainPalette-primaryButton transition-colors hover:text-mainPalette-bg text-mainPalette-text bg-mainPalette-bg py-2 px-6 border border-mainPalette-primaryButton uppercase flex justify-center"
+            className="flex justify-center rounded border border-mainPalette-primaryButton bg-mainPalette-bg px-6 py-2 uppercase text-mainPalette-text transition-colors hover:bg-mainPalette-primaryButton hover:text-mainPalette-bg"
             type="submit"
           >
             Estou Pronto

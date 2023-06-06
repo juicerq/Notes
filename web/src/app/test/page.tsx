@@ -7,7 +7,7 @@ export default function Test() {
   return (
     <div className="h-screen w-full">
       <SideBar />
-      <div className="w-full remove-scrollbar">
+      <div className="remove-scrollbar w-full">
         <LandingPage />
       </div>
     </div>

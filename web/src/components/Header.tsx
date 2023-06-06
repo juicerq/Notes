@@ -24,6 +24,7 @@ export default function Header() {
           <ul className="flex gap-8 text-mainPalette-text text-lg uppercase">
             <Link href="/">
               <li className="navbar-li">Início</li>
+              <div className="h-1 w-0 bg-mainPalette-primaryButton transition-all group-hover:w-full" />
             </Link>
             
             <Link href="/contact">
@@ -36,6 +37,7 @@ export default function Header() {
 
             <Link href="/contact">
               <li className="navbar-li">Contato</li>
+              <div className="h-1 w-0 bg-mainPalette-primaryButton transition-all group-hover:w-full" />
             </Link>
           </ul>
 
