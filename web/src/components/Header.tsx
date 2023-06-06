@@ -25,15 +25,15 @@ export default function Header() {
           <ul className="flex gap-8 uppercase text-mainPalette-text">
             <Link href="/" className="group">
               <li className="navbar-li">Início</li>
-              <div className="h-1 w-0 bg-mainPalette-primaryButton transition-all group-hover:w-full" />
+              <div className="h-1 w-0 border-b-2 border-mainPalette-primaryButton transition-all group-hover:w-full" />
             </Link>
             <Link href="/test" className="group">
               <li className="navbar-li ">Demo</li>
-              <div className="h-1 w-0 bg-mainPalette-primaryButton transition-all group-hover:w-full" />
+              <div className="h-1 w-0 border-b-2 border-mainPalette-primaryButton transition-all group-hover:w-full" />
             </Link>
             <Link href="/contact" className="group">
               <li className="navbar-li">Contato</li>
-              <div className="h-1 w-0 bg-mainPalette-primaryButton transition-all group-hover:w-full" />
+              <div className="h-1 w-0 border-b-2 border-mainPalette-primaryButton transition-all group-hover:w-full" />
             </Link>
           </ul>
 
