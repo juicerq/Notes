@@ -22,7 +22,7 @@
 
 @layer components {
   .navbar-li {
-    @apply border-transparent tracking-wider;
+    @apply border-transparent text-lg tracking-wider;
   }
 
   .button-hover {
