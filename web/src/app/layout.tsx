@@ -23,15 +23,15 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-      <html lang="en">
-        <body
-          className={`${roboto.variable} ${baiJamjuree.variable} relative h-screen bg-mainPalette-bg font-sans`}
-        >
-          <Header />
-          {/* Blur */}
-          <div className="absolute right-1/2 top-1/2 h-20 w-40 -translate-y-1/2 translate-x-1/2 rounded-full bg-mainPalette-primaryButton opacity-70 blur-full" />
-          <div className="flex h-full">{children}</div>
-        </body>
-      </html>
+    <html lang="en">
+      <body
+        className={`${roboto.variable} ${baiJamjuree.variable} relative h-screen bg-mainPalette-bg font-sans`}
+      >
+        <Header />
+        {/* Blur */}
+        <div className="absolute right-1/2 top-1/2 h-20 w-40 -translate-y-1/2 translate-x-1/2 rounded-full bg-mainPalette-primaryButton opacity-70 blur-full" />
+        <div className="flex h-full">{children}</div>
+      </body>
+    </html>
   )
 }
