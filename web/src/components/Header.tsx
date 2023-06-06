@@ -24,10 +24,7 @@ export default function Header() {
               <li className="navbar-li">Início</li>
               <NavbarAnimationHover />{' '}
             </Link>
-            <Link href="/test" className="group">
-              <li className="navbar-li ">Demo</li>
-              <NavbarAnimationHover />{' '}
-            </Link>
+
             <Link href="/contact" className="group">
               <li className="navbar-li">Contato</li>
               <NavbarAnimationHover />
