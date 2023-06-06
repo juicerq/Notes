@@ -1,5 +1,5 @@
 import { AlarmClock, BarChart4, Building2, Ship } from 'lucide-react'
-import art from '../../assets/Art.svg'
+import art from '../../assets/art.svg'
 import Image from 'next/image'
 import { LandingPageHeader } from './LandingPageHeader'
 
