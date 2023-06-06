@@ -4,7 +4,6 @@ import {
   Roboto_Flex as Roboto,
   Bai_Jamjuree as BaiJamjuree,
 } from 'next/font/google'
-import { ClerkProvider } from '@clerk/nextjs'
 import Header from '@/components/Header'
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
@@ -24,7 +23,6 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <ClerkProvider>
       <html lang="en">
         <body
           className={`${roboto.variable} ${baiJamjuree.variable} relative h-screen bg-mainPalette-bg font-sans`}
@@ -35,6 +33,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <div className="flex h-full">{children}</div>
         </body>
       </html>
-    </ClerkProvider>
   )
 }
