@@ -1,11 +1,11 @@
 export default function Hero() {
   return (
-    <main className="flex-center font-alt font-bold">
-      <div className="flex flex-col items-center justify-center gap-6 px-4">
-        <h1 className=" text-2xl text-zinc-300 xl:text-7xl">
+    <main className=" font-alt">
+      <div className="flex h-screen flex-col items-center justify-center gap-6 text-center font-main">
+        <h1 className=" text-2xl text-zinc-300">
           Descubra o seu site perfeito em segundos
         </h1>
-        <p className="w-1/2 text-lg leading-relaxed text-mainPalette-text ">
+        <p className="text-lg leading-relaxed text-mainPalette-text ">
           Experimente nossa incrível ferramente de demonstração.
         </p>
 

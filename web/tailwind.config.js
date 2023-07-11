@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-const { fontFamily } = require('tailwindcss/defaultTheme')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -11,6 +9,14 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      xs: '400px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     container: {
       center: true,
       padding: '2rem',
@@ -20,8 +26,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: 'var(--font-roboto)',
-        alt: 'var(--font-bai-jamjuree)',
+        alt: 'var(--font-roboto)',
+        main: 'var(--font-main)',
       },
       blur: {
         full: '194px',

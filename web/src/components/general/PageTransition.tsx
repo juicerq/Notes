@@ -1,6 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 import { ReactNode } from 'react'
 
 interface PageTransitionProps {
@@ -8,10 +9,12 @@ interface PageTransitionProps {
 }
 
 export default function PageTransition({ children }: PageTransitionProps) {
+  const pathName = usePathname()
   return (
     <AnimatePresence>
       <motion.div
-        key={'home-page'}
+        className="w-screen px-4"
+        key={`page-${pathName}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

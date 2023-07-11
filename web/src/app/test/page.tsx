@@ -2,14 +2,17 @@
 
 import { SideBar } from '@/components/SideBar'
 import LandingPage from '@/components/SitePreview/LandingPage'
+import PageTransition from '@/components/general/PageTransition'
 
 export default function Test() {
   return (
-    <div className="h-screen w-full">
-      <SideBar />
-      <div className="remove-scrollbar w-full">
-        <LandingPage />
+    <PageTransition>
+      <div className="h-screen w-full">
+        <SideBar />
+        <div className="remove-scrollbar w-full">
+          <LandingPage />
+        </div>
       </div>
-    </div>
+    </PageTransition>
   )
 }
