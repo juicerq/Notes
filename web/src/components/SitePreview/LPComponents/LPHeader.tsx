@@ -2,7 +2,7 @@ import { BoxSelect } from 'lucide-react'
 
 const navSections = ['home', 'about', 'work', 'skills', 'contact']
 
-export function LandingPageHeader() {
+export function LPHeader() {
   return (
     <div className="z-60 fixed left-0 flex h-20 w-full items-center justify-between bg-transparent px-60 backdrop-blur">
       <div className="flex items-center justify-center text-previewPalette0-text">

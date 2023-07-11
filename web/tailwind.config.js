@@ -11,22 +11,6 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    screens: {
-      '2xl': { max: '1535px' },
-      // => @media (max-width: 1535px) { ... }
-
-      xl: { max: '1279px' },
-      // => @media (max-width: 1279px) { ... }
-
-      lg: { max: '1023px' },
-      // => @media (max-width: 1023px) { ... }
-
-      md: { max: '767px' },
-      // => @media (max-width: 767px) { ... }
-
-      sm: { max: '639px' },
-      // => @media (max-width: 639px) { ... }
-    },
     container: {
       center: true,
       padding: '2rem',
@@ -66,13 +50,13 @@ module.exports = {
           fadedBlack: 'rgba(0, 0, 0, 0.55)',
         },
         previewPalette0: {
-          text: '#e1ebf5',
-          bg: '#050a0f',
-          bgAlt: '#2C2C2C',
-          primaryButton: '#274e2e',
-          secondaryButton: '#e0f0e3',
-          extra: '#192A22',
-          accent: '#305f38',
+          text: 'var(--text)',
+          bg: 'var(--bg)',
+          bgAlt: 'var(--bgAlt)',
+          primaryButton: 'var(--primaryButton)',
+          secondaryButton: 'var(--secondaryButton)',
+          extra: 'var(--extra)',
+          accent: 'var(--accent)',
         },
         previewPalette1: {
           text: '#14171f',
