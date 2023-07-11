@@ -60,10 +60,9 @@ export default function NavbarDesktop(props: NavDesktopProps) {
           ))}
         </ul>
         <Link
-          target="_blank"
           rel="noopener noreferrer"
-          href="https://api.whatsapp.com/send?phone=554891082848&text=Ol%C3%A1%21%20Estou%20interessado%28a%29%20em%20um%20projeto%20de%20interiores%21%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os.%20Aguardo%20sua%20resposta.%20Obrigado%21"
-          className={` text-palette-outerSpace duration-400 rounded border-2 bg-white px-8 py-4 tracking-wider transition-all ${
+          href="/test"
+          className={` text-palette-outerSpace duration-400 rounded border-2 bg-transparent px-8 py-4 tracking-wider transition-all ${
             prevScrollPos === 0
               ? 'hover:bg-transparent hover:text-white hover:backdrop-blur'
               : 'hover:border-white hover:bg-transparent hover:text-white hover:backdrop-blur'

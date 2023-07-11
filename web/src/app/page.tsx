@@ -1,9 +1,10 @@
 import Hero from '@/components/Hero'
+import PageTransition from '@/components/general/PageTransition'
 
 export default async function Home() {
   return (
-    <div className="flex h-full w-full items-center">
+    <PageTransition>
       <Hero />
-    </div>
+    </PageTransition>
   )
 }
