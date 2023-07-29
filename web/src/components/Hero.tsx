@@ -9,7 +9,7 @@ export default function Hero() {
             perfeito em segundos
           </h1>
           <p className="text-lg leading-relaxed text-mainPalette-text xl:text-2xl ">
-            Experimente nossa incrível ferramente de demonstração.
+            Experimente nossa ferramenta de demonstração.
           </p>
         </div>
 
