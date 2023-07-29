@@ -10,7 +10,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
-import { Mail, Phone, User, Pen } from 'lucide-react'
+import { Mail, Phone, User, Pen, LayoutTemplate } from 'lucide-react'
 
 export default function Contact() {
   return (
@@ -25,7 +25,7 @@ export default function Contact() {
           <div className="flex w-full flex-wrap gap-10 py-4 tracking-wide">
             <div className="contact-input-container">
               <div className="flex items-center">
-                <User size={18} />
+                <User size={18} className="opacity-80" />
                 <label htmlFor="contact-name">Nome</label>
               </div>
               <Input placeholder="Insira o seu nome" id="contact-name" />
@@ -33,7 +33,7 @@ export default function Contact() {
 
             <div className="contact-input-container">
               <div className="flex items-center gap-1">
-                <Mail size={18} />
+                <Mail size={18} className="opacity-80" />
                 <label htmlFor="contact-email">Email</label>
               </div>
               <Input
@@ -46,7 +46,7 @@ export default function Contact() {
             <div className="flex w-full flex-col gap-10 md:flex-row">
               <div className="contact-input-container">
                 <div className="flex items-center gap-1">
-                  <Phone size={18} />
+                  <Phone size={18} className="opacity-80" />
                   <label htmlFor="contact-cellphone">
                     Celular{' '}
                     <span className="text-mainPalette-accent">
@@ -62,7 +62,10 @@ export default function Contact() {
                 />
               </div>
               <div className="contact-input-container">
-                <label htmlFor="contact-model">Modelo de site</label>
+                <div className="flex items-center gap-1">
+                  <LayoutTemplate size={18} className="opacity-80" />
+                  <label htmlFor="contact-model">Modelo de site</label>
+                </div>
                 <Select>
                   <SelectTrigger
                     id="contact-model"
@@ -83,7 +86,7 @@ export default function Contact() {
 
             <div className="flex w-full flex-col gap-1">
               <div className="flex items-center gap-1">
-                <Pen size={18} />
+                <Pen size={18} className="opacity-80" />
                 <label
                   htmlFor="contact-message"
                   className="text-lg text-mainPalette-text"
