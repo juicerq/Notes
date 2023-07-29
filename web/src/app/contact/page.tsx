@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <PageTransition>
       <div className="my-20 flex flex-col items-center justify-center lg:my-32">
-        <h1 className=" pb-1 text-center text-3xl font-bold tracking-wider text-mainPalette-text">
+        <h1 className="pb-1 text-center font-main text-3xl font-bold tracking-wider text-mainPalette-text">
           Entre em{' '}
           <span className="text-mainPalette-primaryButton">contato</span>{' '}
           conosco
