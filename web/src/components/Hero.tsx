@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <main className=" font-alt">
+    <main className="font-alt">
       <div className="flex h-screen flex-col items-center justify-center gap-6 text-center font-main">
         <h1 className=" text-2xl text-zinc-300">
           Descubra o seu site perfeito em segundos
