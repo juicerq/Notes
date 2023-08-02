@@ -7,14 +7,14 @@ import LPNavbar from './LPComponents/Navbar/LPNavbar'
 
 export default function LandingPage() {
   return (
-    <div className="bg-previewPalette0-bg px-4 text-previewPalette0-text xs:px-10">
+    <div className="bg-previewPalette0-bg px-6 text-previewPalette0-text xs:px-10 md:px-16 xl:px-28">
       <LPNavbar />
       <LPHome />
       <LPAbout />
-      <LPWork />
-      <LPProjects />
+      {/* <LPWork />
+      <LPProjects /> */}
 
-      <div
+      {/* <div
         id="contact"
         className="flex h-full flex-col items-center justify-center gap-16 bg-previewPalette0-bg"
       >
@@ -40,7 +40,7 @@ export default function LandingPage() {
           <div className="h-80 w-80 rounded-lg bg-previewPalette0-extra"></div>
           <div className="h-80 w-80 rounded-lg bg-previewPalette0-extra"></div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

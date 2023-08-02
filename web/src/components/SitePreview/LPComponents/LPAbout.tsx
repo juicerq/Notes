@@ -2,10 +2,7 @@ import { BarChart4, AlarmClock, Building2 } from 'lucide-react'
 
 export function LPAbout() {
   return (
-    <div
-      id="lp-about"
-      className="flex h-screen flex-col items-center justify-center gap-16 bg-previewPalette0-bg"
-    >
+    <div id="lp-about" className="flex flex-col gap-16 bg-previewPalette0-bg">
       <h2 className="text-center text-5xl font-bold">
         Conheca um pouco a <br />
         <span className="text-previewPalette0-primaryButton">
@@ -13,8 +10,9 @@ export function LPAbout() {
         </span>{' '}
       </h2>
 
-      <div className="relative flex items-center justify-center gap-36 text-previewPalette0-text">
-        <div className="flex h-80 w-80 flex-col items-center justify-center gap-6 rounded-xl bg-previewPalette0-bgAlt p-6">
+      <div className="flex flex-col items-center justify-center gap-24 text-previewPalette0-text xl:flex-row">
+        {/* About Card */}
+        <div className="flex flex-col items-center justify-center gap-6 rounded-xl bg-previewPalette0-bgAlt p-6 md:w-80">
           <BarChart4 className="text-previewPalette0-primaryButton" size={64} />
           <h4 className="text-previewPalette0- text-2xl font-bold">
             Exemplo 1
@@ -25,7 +23,9 @@ export function LPAbout() {
             amet consectetur.
           </p>
         </div>
-        <div className="flex h-80 w-80 flex-col items-center justify-center gap-6 rounded-xl bg-previewPalette0-bgAlt p-6">
+
+        {/* About Card */}
+        <div className="flex flex-col items-center justify-center gap-6 rounded-xl bg-previewPalette0-bgAlt p-6 md:w-80">
           <AlarmClock
             className="text-previewPalette0-primaryButton"
             size={64}
@@ -39,7 +39,9 @@ export function LPAbout() {
             amet consectetur.
           </p>
         </div>
-        <div className="flex h-80 w-80 flex-col items-center justify-center gap-6 rounded-xl bg-previewPalette0-bgAlt p-6">
+
+        {/* About Card */}
+        <div className="flex flex-col items-center justify-center gap-6 rounded-xl bg-previewPalette0-bgAlt p-6 md:w-80">
           <Building2 className="text-previewPalette0-primaryButton" size={64} />
           <h4 className="text-previewPalette0- text-2xl font-bold">
             Exemplo 3

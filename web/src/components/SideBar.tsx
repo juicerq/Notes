@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 export function SideBar() {
   return (
-    <div className="fixed left-0 top-0 z-50 flex h-full w-32 flex-col items-center justify-center space-y-12 text-mainPalette-text">
+    <div className="fixed left-0 top-28 z-50 hidden h-full w-32 flex-col items-center justify-center space-y-12 text-mainPalette-text lg:flex">
       <Link
         href={'/'}
         className="absolute top-10 flex h-12 w-12 items-center justify-center rounded-3xl bg-mainPalette-bgAlt text-mainPalette-text transition-all ease-linear hover:-translate-x-1 hover:bg-mainPalette-text hover:text-mainPalette-bg"
