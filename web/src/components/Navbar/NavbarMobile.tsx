@@ -58,7 +58,7 @@ export default function NavbarMobile(props: NavMobileProps) {
       <div
         className={`${
           toggle ? 'right-0' : 'right-[-100vw]'
-        } z-60 fixed bottom-0 right-0 top-0 flex flex-col items-start justify-evenly bg-[#2c2c2c] py-12 ${
+        } fixed bottom-0 right-0 top-0 z-50 flex flex-col items-start justify-evenly bg-[#2c2c2c] py-12 ${
           deviceHeight < 600 ? 'w-1/2 py-6' : 'w-3/4 py-12'
         } text-white transition-all duration-700 lg:hidden `}
       >
@@ -136,10 +136,10 @@ export default function NavbarMobile(props: NavMobileProps) {
         </ul>
         {/* Links */}
         <div className="flex w-full items-center justify-center gap-5">
-          <Link href="https://wa.me/5548991082848" target="_blank">
+          <Link href="https://wa.me/5519997855562" target="_blank">
             <div className="bg-palette-beaver flex items-center justify-center rounded-full p-2.5">
               <FaWhatsapp
-                fill="#2E4040"
+                fill="#fff"
                 className="text-palette-outerSpace"
                 size={20}
               />

@@ -1,6 +1,7 @@
 export default function Hero() {
   return (
     <main className="font-alt">
+      {/* Container 1 */}
       <div className="flex h-screen flex-col items-center justify-center gap-20 text-center font-main">
         <div className="flex flex-col gap-6">
           <h1 className=" text-4xl text-zinc-300 xl:text-6xl">
@@ -24,6 +25,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      {/*  */}
     </main>
   )
 }

@@ -4,7 +4,7 @@ import { SideBar } from '@/components/SideBar'
 import LandingPage from '@/components/SitePreview/LandingPage'
 import PageTransition from '@/components/general/PageTransition'
 
-export default function Test() {
+export default function Demo() {
   return (
     <PageTransition>
       <div className="h-screen w-full">

@@ -61,7 +61,7 @@ export default function NavbarDesktop(props: NavDesktopProps) {
         </ul>
         <Link
           rel="noopener noreferrer"
-          href="/test"
+          href="/demo"
           className={`duration-400 rounded border-2 border-mainPalette-primaryButton bg-transparent px-8 py-4 uppercase tracking-widest text-white transition-all ${
             prevScrollPos === 0
               ? 'hover:bg-transparent hover:text-white hover:backdrop-blur'
