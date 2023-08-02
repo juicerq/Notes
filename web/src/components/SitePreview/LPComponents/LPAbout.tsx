@@ -2,7 +2,10 @@ import { BarChart4, AlarmClock, Building2 } from 'lucide-react'
 
 export function LPAbout() {
   return (
-    <div id="lp-about" className="flex flex-col gap-16 bg-previewPalette0-bg">
+    <div
+      id="lp-about"
+      className="section-spacing flex h-screen flex-col items-center justify-center gap-16 bg-previewPalette0-bg"
+    >
       <h2 className="text-center text-5xl font-bold">
         Conheca um pouco a <br />
         <span className="text-previewPalette0-primaryButton">

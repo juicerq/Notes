@@ -45,6 +45,10 @@ html {
     @apply border-transparent text-lg tracking-wider;
   }
 
+  .section-spacing {
+    @apply py-12;
+  }
+
   .button-hover {
     @apply rounded text-mainPalette-bg hover:bg-mainPalette-accent transition-all;
   }
