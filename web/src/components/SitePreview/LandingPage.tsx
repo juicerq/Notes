@@ -1,24 +1,19 @@
-import { LPHeader } from './LPComponents/LPHeader'
-import { LPHome } from './LPComponents/LPHome'
 import { LPAbout } from './LPComponents/LPAbout'
 import { LPWork } from './LPComponents/LPWork'
 import { BarChart4 } from 'lucide-react'
-import { LPSkills } from './LPComponents/LPSkills'
+import { LPProjects } from './LPComponents/LPSkills'
+import { LPHome } from './LPComponents/LPHome'
+import LPNavbar from './LPComponents/Navbar/LPNavbar'
 
 export default function LandingPage() {
   return (
-    <div className="text-previewPalette0-text">
-      {/* HEADER */}
-      <LPHeader />
-      {/* Container 1 */}
+    <div className="bg-previewPalette0-bg px-4 text-previewPalette0-text xs:px-10">
+      <LPNavbar />
       <LPHome />
-      {/* Container 2 */}
       <LPAbout />
-      {/* Container 3 */}
       <LPWork />
-      {/* Container 4 */}
-      <LPSkills />
-      {/* Container 5 */}
+      <LPProjects />
+
       <div
         id="contact"
         className="flex h-full flex-col items-center justify-center gap-16 bg-previewPalette0-bg"

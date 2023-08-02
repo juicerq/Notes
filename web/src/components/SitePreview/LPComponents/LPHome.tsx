@@ -4,10 +4,10 @@ import art from '../../../assets/art.svg'
 export function LPHome() {
   return (
     <div
-      id="home"
-      className="flex h-screen items-center justify-center gap-36 bg-previewPalette0-bg"
+      id="lp-home"
+      className="flex flex-col items-center justify-center gap-36"
     >
-      <div className="flex w-[570px] flex-col items-start justify-center gap-8">
+      <div className="flex flex-col items-start justify-center gap-8">
         <h2 className="text-5xl font-bold">
           Esse é um modelo de{' '}
           <span className="text-previewPalette0-primaryButton">

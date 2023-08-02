@@ -3,7 +3,7 @@ import { Ship, BarChart4, Building2 } from 'lucide-react'
 export function LPWork() {
   return (
     <div
-      id="work"
+      id="lp-work"
       className="flex h-full flex-col items-center justify-center gap-16 bg-previewPalette0-bg"
     >
       <h2 className="text-center text-5xl font-bold">Nosso trabalho</h2>
