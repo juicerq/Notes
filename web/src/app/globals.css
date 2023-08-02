@@ -67,6 +67,19 @@ html {
   
 }
 
+@layer utilities {
+  .clip-inset {
+    clip-path: inset(7px);
+  }
+  .clip-hover {
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0);
+    transition: -webkit-clip-path .5s cubic-bezier(.29,.51,.27,.96);
+    transition: clip-path .5s cubic-bezier(.29,.51,.27,.96);
+    transition: clip-path .5s cubic-bezier(.29,.51,.27,.96),-webkit-clip-path .5s cubic-bezier(.29,.51,.27,.96);
+  }
+}
+
 
 @layer base {
   :root {

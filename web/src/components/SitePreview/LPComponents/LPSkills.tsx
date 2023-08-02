@@ -35,7 +35,10 @@ export function LPSkills() {
       </h1>
       <div className="grid h-full w-full grid-cols-8 gap-4">
         {arrayImgs.map((image, i) => (
-          <div key={i} className="col-span-2 h-full w-full">
+          <div
+            key={i}
+            className="clip-hover hover:clip-inset col-span-2 h-full w-full"
+          >
             <div className="relative h-[380px] w-[220px]">
               <Image
                 src={image.image}
@@ -43,7 +46,7 @@ export function LPSkills() {
                 fill
                 className="object-cover grayscale filter"
               />
-              <div className="group absolute z-20 flex h-full w-full items-center justify-center border border-mainPalette-bg text-xs text-white transition-all duration-500 hover:border-8">
+              <div className="group absolute z-20 flex h-full w-full items-center justify-center border-mainPalette-bg text-xs text-white transition-all">
                 <p className="font-semibold uppercase tracking-widest">
                   {image.title}
                 </p>
