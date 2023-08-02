@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import logo from '../../assets/WebCraftLogo.svg'
-import NavbarLogo from '../general/NavbarLogo'
+import web from '../../assets/Web.svg'
+import craft from '../../assets/Craft.svg'
+import Image from 'next/image'
 
 interface NavDesktopProps {
   links: Array<{ id: string; name: string }>
@@ -30,17 +31,33 @@ export default function NavbarDesktop(props: NavDesktopProps) {
 
   return (
     <div
-      className={`font-mulish fixed left-0 right-0 z-40 hidden ${
+      className={`fixed left-0 right-0 z-40 hidden ${
         prevScrollPos === 0
-          ? 'bg-transparent text-white'
-          : 'bg-palette-outerSpace text-white'
+          ? 'bg-transparent text-mainPalette-text'
+          : 'bg-mainPalette-bgAlt text-mainPalette-bg'
       } h-24 w-full ${
         showNavbar ? 'top-0 transition-all duration-700' : '-top-[110px]'
       } lg:block`}
     >
       <nav className="flex h-full w-full items-center justify-around">
-        <div className="flex-center h-full w-[172px]">
-          <NavbarLogo className="inline-block" logo={logo} />
+        <div className="flex-center h-full w-[172px] gap-1">
+          <Link
+            href="/"
+            className={` flex-center h-full gap-2 ${
+              prevScrollPos === 0 ? 'text-mainPalette-text' : ''
+            }`}
+          >
+            <Image src={web} height={40} alt="logo" />
+            <Image
+              style={{ fill: '#000' }}
+              className={`fill-black [&>path]:fill-mainPalette-text ${
+                prevScrollPos === 0 ? '[&>path]:text-mainPalette-text' : ''
+              }`}
+              src={craft}
+              height={40}
+              alt="logo"
+            />
+          </Link>
         </div>
 
         <ul className="flex gap-10 text-base tracking-wider">
@@ -50,7 +67,7 @@ export default function NavbarDesktop(props: NavDesktopProps) {
               className={` transition-colors duration-300 ${
                 prevScrollPos === 0
                   ? 'hover:text-gray-200'
-                  : 'hover:text-palette-khaki'
+                  : 'hover:bg-mainPalette-text'
               }`}
             >
               <>
@@ -62,11 +79,7 @@ export default function NavbarDesktop(props: NavDesktopProps) {
         <Link
           rel="noopener noreferrer"
           href="/demo"
-          className={`duration-400 rounded border-2 border-mainPalette-primaryButton bg-transparent px-8 py-4 uppercase tracking-widest text-white transition-all ${
-            prevScrollPos === 0
-              ? 'hover:bg-transparent hover:text-white hover:backdrop-blur'
-              : 'hover:border-white hover:bg-transparent hover:text-white hover:backdrop-blur'
-          }`}
+          className={`duration-400 'hover:border-white hover:backdrop-blur' rounded border-2 border-mainPalette-primaryButton bg-transparent px-8 py-4 uppercase tracking-widest text-mainPalette-text transition-all hover:bg-mainPalette-primaryButton hover:text-black`}
         >
           Testar
         </Link>

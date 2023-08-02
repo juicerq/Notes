@@ -14,7 +14,7 @@ export default function NavbarLogo(props: LogoProps) {
     <Link
       onClick={props.onClick}
       href="/"
-      className={`${props.className} flex-center font-krona h-full gap-2`}
+      className={`${props.className} flex-center h-full gap-2`}
     >
       <Image src={props.logo} height={80} alt="logo" />
     </Link>

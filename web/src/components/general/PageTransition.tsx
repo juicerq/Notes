@@ -13,7 +13,7 @@ export default function PageTransition({ children }: PageTransitionProps) {
   return (
     <AnimatePresence>
       <motion.div
-        className={`w-screen ${pathName === '/' ? 'px-4 xs:px-10' : ''}`}
+        className={`w-screen`}
         key={`page-${pathName}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

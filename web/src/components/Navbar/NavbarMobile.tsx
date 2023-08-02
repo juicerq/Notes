@@ -58,7 +58,7 @@ export default function NavbarMobile(props: NavMobileProps) {
       <div
         className={`${
           toggle ? 'right-0' : 'right-[-100vw]'
-        } fixed bottom-0 right-0 top-0 z-50 flex flex-col items-start justify-evenly bg-[#2c2c2c] py-12 ${
+        } fixed bottom-0 right-0 top-0 z-50 flex flex-col items-start justify-evenly bg-mainPalette-bg py-12 ${
           deviceHeight < 600 ? 'w-1/2 py-6' : 'w-3/4 py-12'
         } text-white transition-all duration-700 lg:hidden `}
       >

@@ -44,9 +44,9 @@ module.exports = {
           900: '#121215',
         },
         mainPalette: {
-          text: '#f3edfd',
-          bg: '#121215',
-          bgAlt: '#2C2C2C',
+          text: '#2c2c2c',
+          bg: '#ddd',
+          bgAlt: '#252525',
           primaryButton: '#74c313',
           secondaryButton: '#07010e',
           extra: '#253514',

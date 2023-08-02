@@ -1,10 +1,10 @@
-import Hero from '@/components/Hero'
 import PageTransition from '@/components/general/PageTransition'
+import Main from '@/components/Main/Main'
 
 export default async function Home() {
   return (
     <PageTransition>
-      <Hero />
+      <Main />
     </PageTransition>
   )
 }
