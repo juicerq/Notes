@@ -7,7 +7,7 @@ import LPNavbar from './LPComponents/Navbar/LPNavbar'
 
 export default function LandingPage() {
   return (
-    <div className="bg-previewPalette0-bg px-6 text-previewPalette0-text xs:px-10 md:px-16 xl:px-44">
+    <div className="bg-previewPalette0-bg px-6 text-previewPalette0-text xs:px-10 md:px-16 lg:px-28 xl:px-44">
       <LPNavbar />
       <LPHome />
       <LPAbout />

@@ -6,9 +6,9 @@ export function LPHome() {
   return (
     <div
       id="lp-home"
-      className="section-spacing flex flex-col items-center gap-36 pt-24 md:gap-16 md:pt-36 lg:h-screen lg:flex-row lg:pt-20"
+      className=" flex flex-col items-center gap-36 py-12 pt-24 md:gap-16 md:pt-36 lg:h-screen lg:flex-row lg:pt-20"
     >
-      <div className="flex w-full flex-col items-start justify-center gap-8 lg:gap-12 xl:w-[50%] xl:gap-12 2xl:gap-16">
+      <div className="flex w-full flex-col items-start justify-center gap-8 lg:gap-12 xl:w-1/2 xl:gap-12 2xl:gap-16">
         <div className="flex w-full flex-col gap-6">
           <h2 className="text-4xl font-bold xl:text-3xl 2xl:text-6xl">
             Esse é um modelo de{' '}
@@ -37,10 +37,10 @@ export function LPHome() {
           </p>
         </div>
         <div className="flex w-full flex-col justify-start gap-10 text-lg md:flex-row md:gap-12 lg:text-base">
-          <button className="rounded-full bg-previewPalette0-secondaryButton px-6 py-4 uppercase text-previewPalette0-accent transition-all md:px-10 md:py-6 lg:px-8 lg:hover:-translate-y-[3px]">
+          <button className="rounded-full bg-previewPalette0-secondaryButton px-6 py-4 uppercase text-previewPalette0-accent transition-all md:px-10 lg:px-8 lg:hover:-translate-y-[3px]">
             Exemplo Botão 1
           </button>
-          <button className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase transition-all hover:shadow-md hover:shadow-previewPalette0-extra md:px-10 md:py-6 lg:px-8 lg:hover:-translate-y-[3px]">
+          <button className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase transition-all hover:shadow-md hover:shadow-previewPalette0-extra md:px-10 lg:px-8 lg:hover:-translate-y-[3px]">
             Botão 2
           </button>
         </div>

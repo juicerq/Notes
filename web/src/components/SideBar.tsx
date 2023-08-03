@@ -10,10 +10,10 @@ import Link from 'next/link'
 
 export function SideBar() {
   return (
-    <div className="fixed left-0 top-28 z-50 hidden h-full w-32 flex-col items-center justify-center space-y-12 text-mainPalette-text lg:flex xl:top-12 2xl:top-28">
+    <div className="fixed left-0 top-28 z-50 hidden h-full w-32 flex-col items-center justify-center gap-12 text-mainPalette-bg lg:flex lg:gap-3 xl:top-12 2xl:top-28 2xl:gap-12">
       <Link
         href={'/'}
-        className="absolute top-10 flex h-12 w-12 items-center justify-center rounded-3xl bg-mainPalette-bgAlt text-mainPalette-text transition-all ease-linear hover:-translate-x-1 hover:bg-mainPalette-text hover:text-mainPalette-bg"
+        className="absolute top-10 flex h-12 w-12 items-center justify-center rounded-3xl bg-mainPalette-bgAlt text-mainPalette-bg transition-all ease-linear hover:-translate-x-1 hover:bg-mainPalette-text hover:text-mainPalette-bg"
       >
         <ArrowLeftFromLine size={28} />
       </Link>
@@ -28,8 +28,10 @@ export function SideBar() {
 }
 
 const SideBarIcon = ({ icon, text }: any) => (
-  <div className="sidebar-icon group">
+  <div className="sidebar-icon group text-mainPalette-accent">
     {icon}
-    <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
+    <span className="sidebar-tooltip text-mainPalette-bg group-hover:scale-100">
+      {text}
+    </span>
   </div>
 )
