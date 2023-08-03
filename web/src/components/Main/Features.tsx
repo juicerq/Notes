@@ -4,15 +4,15 @@ import ServiceSection from '../ServiceSection'
 import ContainerTitle from '../ContainerTitle'
 import { images } from '@/constants'
 
-export default function Services() {
+export default function Features() {
   return (
-    <div className="flex flex-col items-center justify-center gap-20 bg-mainPalette-bgAlt">
+    <div className="section-spacing flex flex-col items-center justify-center gap-20 bg-mainPalette-bgAlt">
       <div
-        id="serviços"
-        className="flex-center bg-palette-outerSpace flex-col xl:gap-10 xl:px-[5%] "
+        id="features"
+        className="flex-center bg-palette-outerSpace flex-col xl:gap-10"
       >
         <div className="mb-4">
-          <ContainerTitle title="Serviços" color="text-white" />
+          <ContainerTitle title="Texto da Mari GPT" color="text-white" />
         </div>
         <div className="flex-center flex-col gap-6">
           <ServiceSection title="Landing Page" image={images.lp}>

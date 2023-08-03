@@ -1,11 +1,20 @@
+'use client'
+
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { FaAngleDown } from 'react-icons/fa'
 
 export default function Main() {
+  const router = useRouter()
+
+  const handleLinkClick = (item: string) => {
+    router.push(`/demo#${item.toLocaleLowerCase()}`)
+  }
+
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-12 bg-mainPalette-bg text-center xl:gap-20">
-      <div className="flex flex-col gap-6  font-main">
-        <h1 className=" text-5xl text-zinc-700 xl:text-6xl">
+    <div className="section-spacing flex h-screen flex-col items-center justify-center gap-12 bg-mainPalette-bg text-center xl:gap-20">
+      <div className="flex flex-col gap-6">
+        <h1 className=" font-main text-5xl text-zinc-700 xl:text-6xl">
           O seu{' '}
           <span className="text-mainPalette-primaryButton">site perfeito</span>{' '}
           em segundos
@@ -24,15 +33,19 @@ export default function Main() {
           craft
         </Link>
         <div className="flex flex-col text-mainPalette-text">
-          <button className="rounded border-2 border-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest text-mainPalette-text">
+          <button className="rounded border-2 border-mainPalette-primaryButton px-6 py-4 text-lg uppercase tracking-widest text-mainPalette-text">
             Projetos
           </button>
         </div>
       </div>
-      <div className="relative -bottom-20 flex justify-center gap-2 text-zinc-500">
+      <Link
+        href={'#'}
+        onClick={() => handleLinkClick('features')}
+        className="absolute bottom-20 flex justify-center gap-2 text-zinc-500"
+      >
         <FaAngleDown size={24} className="text-mainPalette-primaryButton" />
         <p>Descubra</p>
-      </div>
+      </Link>
     </div>
   )
 }

@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${main.variable} z-0 overflow-x-hidden`}
+        className={`${roboto.variable} ${main.variable} z-0 overflow-x-hidden bg-mainPalette-bg`}
       >
         <Header />
         {children}

@@ -13,9 +13,9 @@ export default function ServiceSection(props: ServiceSectionProps) {
   const animateReverse = props.reverse ? { x: 20, y: -13 } : { x: -20, y: -20 }
   return (
     <div
-      className={`flex w-full flex-col items-start justify-start gap-3 px-8 pb-12 text-white md:w-2/3 lg:w-screen lg:gap-0 xl:px-44 ${
+      className={`flex w-full flex-col items-start justify-start gap-3 pb-12 text-white lg:gap-0 ${
         props.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
-      } lg:px-16`}
+      }`}
     >
       <div className="flex-center relative z-20 h-80 w-full md:h-[420px] lg:h-80 lg:w-1/2">
         <motion.div

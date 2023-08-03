@@ -3,16 +3,12 @@
 @tailwind utilities;
 
 * {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 ::selection {
   background-color: #74c313; /* Cor de fundo quando o texto é selecionado */
   color: #252525; /* Cor do texto selecionado */
-}
-
-html {
-  accent-color: var(--accent);
 }
 
 :root {
@@ -51,7 +47,7 @@ html {
   }
 
   .section-spacing {
-    @apply py-12;
+    @apply pb-12 px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-64;
   }
 
   .button-hover {

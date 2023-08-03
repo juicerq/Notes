@@ -1,11 +1,11 @@
 import Hero from './Hero'
-import Services from './Services'
+import Features from './Features'
 
 export default function Main() {
   return (
     <main className="font-alt">
       <Hero />
-      <Services />
+      <Features />
     </main>
   )
 }

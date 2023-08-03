@@ -15,7 +15,7 @@ import { Mail, Phone, User, Pen, LayoutTemplate } from 'lucide-react'
 export default function Contact() {
   return (
     <PageTransition>
-      <div className="my-20 flex flex-col items-center justify-center lg:my-32">
+      <div className="my-20 flex flex-col items-center justify-center bg-mainPalette-bg lg:my-32">
         <h1 className="pb-1 text-center font-main text-3xl font-bold tracking-wider text-mainPalette-text">
           Entre em{' '}
           <span className="text-mainPalette-primaryButton">contato</span>{' '}
@@ -101,7 +101,7 @@ export default function Contact() {
               />
             </div>
           </div>
-          <button className="button-hover font-lg self-center rounded bg-mainPalette-primaryButton px-10 py-4 text-lg font-semibold uppercase tracking-wider">
+          <button className="button-hover font-lg self-center rounded bg-mainPalette-primaryButton px-10 py-4 text-lg font-semibold uppercase tracking-wider text-mainPalette-bgAlt">
             Enviar
           </button>
         </form>
