@@ -6,6 +6,11 @@
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: #74c313; /* Cor de fundo quando o texto é selecionado */
+  color: #252525; /* Cor do texto selecionado */
+}
+
 html {
   accent-color: var(--accent);
 }
