@@ -10,7 +10,7 @@ export function LPHome() {
     >
       <div className="flex w-full flex-col items-start justify-center gap-8 lg:gap-12 xl:w-1/2 xl:gap-12 2xl:gap-16">
         <div className="flex w-full flex-col gap-6">
-          <h2 className="text-4xl font-bold xl:text-3xl 2xl:text-6xl">
+          <h2 className="text-4xl font-bold xl:text-3xl 2xl:text-3xl">
             Esse é um modelo de{' '}
             <span className="text-previewPalette0-primaryButton">
               Landing Page
@@ -37,15 +37,15 @@ export function LPHome() {
           </p>
         </div>
         <div className="flex w-full flex-col justify-start gap-10 text-lg md:flex-row md:gap-12 lg:text-base">
-          <button className="rounded-full bg-previewPalette0-secondaryButton px-6 py-4 uppercase text-previewPalette0-accent transition-all md:px-10 lg:px-8 lg:hover:-translate-y-[3px]">
+          <button className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase text-previewPalette0-accent transition-all md:px-10 lg:px-8 lg:hover:-translate-y-[3px]">
             Exemplo Botão 1
           </button>
-          <button className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase transition-all hover:shadow-md hover:shadow-previewPalette0-extra md:px-10 lg:px-8 lg:hover:-translate-y-[3px]">
+          <button className="rounded-full bg-previewPalette0-secondaryButton px-6 py-4 uppercase transition-all hover:shadow-md hover:shadow-previewPalette0-extra md:px-10 lg:px-8 lg:hover:-translate-y-[3px]">
             Botão 2
           </button>
         </div>
       </div>
-      <div className="hidden flex-col items-center justify-center text-previewPalette0-text md:flex">
+      <div className="hidden flex-col items-center justify-center text-previewPalette0-primaryButton md:flex">
         <Image
           src={art}
           alt="art"

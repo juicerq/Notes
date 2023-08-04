@@ -33,7 +33,7 @@ export default function Main() {
           craft
         </Link>
         <div className="flex flex-col text-mainPalette-text">
-          <button className="rounded border-2 border-mainPalette-primaryButton px-6 py-4 text-lg uppercase tracking-widest text-mainPalette-text">
+          <button className="duration-400 rounded border-2 border-mainPalette-primaryButton px-6 py-4 text-lg uppercase tracking-widest text-mainPalette-text transition-all hover:bg-mainPalette-primaryButton">
             Projetos
           </button>
         </div>
@@ -43,7 +43,10 @@ export default function Main() {
         onClick={() => handleLinkClick('features')}
         className="absolute bottom-20 flex justify-center gap-2 text-zinc-500"
       >
-        <FaAngleDown size={24} className="text-mainPalette-primaryButton" />
+        <FaAngleDown
+          size={24}
+          className="animate-bounce text-mainPalette-primaryButton"
+        />
         <p>Descubra</p>
       </Link>
     </div>

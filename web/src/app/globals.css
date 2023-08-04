@@ -12,13 +12,13 @@
 }
 
 :root {
-  --bg: #050a0f;
-  --bgAlt: #2C2C2C;
-  --primaryButton: #274e2e;
-  --secondaryButton: #e0f0e3;
-  --extra: #192A22;
-  --accent: #305f38;
-  --text: #f3edfd;
+  --bg: #fff;
+  --bgAlt: #252525;
+  --primaryButton: #74c313;
+  --secondaryButton: #07010e;
+  --extra: #253514;
+  --accent: #4D7C14;
+  --text: #000;
 }
 
 .remove-scrollbar {
