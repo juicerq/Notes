@@ -45,7 +45,7 @@ module.exports = {
         },
         mainPalette: {
           text: '#2c2c2c',
-          bg: '#ddd',
+          bg: '#eee',
           bgAlt: '#252525',
           primaryButton: '#74c313',
           secondaryButton: '#07010e',

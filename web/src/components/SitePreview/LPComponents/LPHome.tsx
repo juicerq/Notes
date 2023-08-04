@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import art from '../../../assets/art.svg'
+import ArtMobile from './Arts/ArtMobile'
+import ArtTablet from './Arts/ArtTablet'
 
 export function LPHome() {
   return (
@@ -40,17 +40,22 @@ export function LPHome() {
           <button className="rounded-full bg-previewPalette0-secondaryButton px-6 py-4 uppercase text-previewPalette0-accent transition-all md:px-10 lg:px-8 lg:hover:-translate-y-[3px]">
             Exemplo Botão 1
           </button>
-          <button className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase transition-all hover:shadow-md hover:shadow-previewPalette0-extra md:px-10 lg:px-8 lg:hover:-translate-y-[3px]">
+          <button
+            onClick={() =>
+              document.documentElement.style.setProperty(
+                '--primaryButton',
+                'red',
+              )
+            }
+            className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase transition-all hover:shadow-md hover:shadow-previewPalette0-extra md:px-10 lg:px-8 lg:hover:-translate-y-[3px]"
+          >
             Botão 2
           </button>
         </div>
       </div>
-      <div className="hidden flex-col items-center justify-center text-previewPalette0-text md:flex">
-        <Image
-          src={art}
-          alt="art"
-          className="md:w-[550px] lg:w-[750px] xl:w-[600px] 2xl:w-[800px]"
-        />
+      <div>
+        <ArtMobile />
+        <ArtTablet />
       </div>
     </div>
   )
