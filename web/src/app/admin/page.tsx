@@ -54,7 +54,7 @@ export default function Admin() {
         </div>
         <div className="mt-3 flex w-full items-center justify-center">
           <button
-            className="flex justify-center rounded border border-mainPalette-primaryButton bg-mainPalette-bg px-6 py-2 uppercase text-mainPalette-text transition-colors hover:bg-mainPalette-primaryButton hover:text-mainPalette-bg"
+            className="flex justify-center rounded border border-mainPalette-primaryButton bg-mainPalette-bg px-6 py-2 uppercase text-mainPalette-text transition-colors lg:hover:bg-mainPalette-primaryButton lg:hover:text-mainPalette-bg"
             type="submit"
           >
             Estou Pronto

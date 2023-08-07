@@ -1,5 +1,5 @@
 import Hero from './Hero'
-import Features from './Features'
+import Services from './Services'
 import Testimonials from './Testimonials'
 import Footer from './Footer'
 
@@ -7,7 +7,7 @@ export default function Main() {
   return (
     <main className="font-alt">
       <Hero />
-      <Features />
+      <Services />
       <Testimonials />
       <Footer />
     </main>

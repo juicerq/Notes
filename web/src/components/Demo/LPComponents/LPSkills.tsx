@@ -36,7 +36,7 @@ export function LPProjects() {
       <div className="grid h-full w-full grid-cols-8 gap-4">
         {arrayImgs.map((image, i) => (
           <div key={i} className="col-span-2 h-full w-full">
-            <div className="clip-hover hover:clip-inset relative h-[380px] w-[220px]">
+            <div className="clip-hover lg:hover:clip-inset relative h-[380px] w-[220px]">
               <Image
                 src={image.image}
                 alt="project"

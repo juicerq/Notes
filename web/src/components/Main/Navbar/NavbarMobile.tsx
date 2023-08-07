@@ -50,7 +50,7 @@ export default function NavbarMobile(props: NavMobileProps) {
             setCanToggle(false)
           }
         }}
-        className="flex-center z-60 fixed right-6 top-6 h-12 w-12 rounded-full bg-[#2c2c2c] p-2 text-white shadow-md shadow-black lg:hidden"
+        className="flex-center fixed right-6 top-6 z-50 h-12 w-12 rounded-full bg-mainPalette-bgAlt p-2 text-mainPalette-bg shadow-md shadow-black lg:hidden"
       >
         <AlignJustify size={40} />
       </div>

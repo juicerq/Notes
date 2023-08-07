@@ -13,7 +13,7 @@ export function SideBar() {
     <div className="fixed left-0 top-28 z-50 hidden h-full w-32 flex-col items-center justify-center gap-12 text-mainPalette-bg lg:flex lg:gap-3 xl:top-12 2xl:top-28 2xl:gap-12">
       <Link
         href={'/'}
-        className="absolute top-10 flex h-12 w-12 items-center justify-center rounded-3xl bg-mainPalette-bgAlt text-mainPalette-bg transition-all ease-linear hover:-translate-x-1 hover:bg-mainPalette-text hover:text-mainPalette-bg"
+        className="absolute top-10 flex h-12 w-12 items-center justify-center rounded-3xl bg-mainPalette-bgAlt text-mainPalette-bg transition-all ease-linear lg:hover:-translate-x-1 lg:hover:bg-mainPalette-text lg:hover:text-mainPalette-bg"
       >
         <ArrowLeftFromLine size={28} />
       </Link>

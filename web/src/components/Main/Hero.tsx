@@ -12,9 +12,9 @@ export default function Main() {
   }
 
   return (
-    <div className="section-spacing flex h-screen flex-col items-center justify-center gap-12 bg-mainPalette-bg text-center xl:gap-16 xl:pt-24">
+    <div className="section-spacing z-20 flex h-[95vh] flex-col items-center justify-center gap-12 bg-mainPalette-bg text-center xl:gap-16 xl:pt-24">
       <div className="flex flex-col gap-6">
-        <h1 className=" font-main text-5xl text-zinc-700 xl:text-6xl">
+        <h1 className="z-20 font-main text-5xl text-zinc-700 xl:text-6xl">
           O seu{' '}
           <span className="text-mainPalette-primaryButton">site perfeito</span>{' '}
           em segundos
@@ -24,7 +24,7 @@ export default function Main() {
         </p>
       </div>
       {/* Buttons */}
-      <div className="flex w-full flex-col justify-center gap-8 font-main  md:flex-row">
+      <div className="z-20 flex w-full flex-col justify-center gap-8 font-main  md:flex-row">
         <Link
           href="/demo"
           rel="noopener noreferrer"
@@ -34,7 +34,7 @@ export default function Main() {
           craft
         </Link>
         <div className="flex flex-col text-mainPalette-text">
-          <button className="duration-400 rounded border-2 border-mainPalette-primaryButton px-6 py-4 text-lg uppercase tracking-widest text-mainPalette-text transition-all hover:bg-mainPalette-primaryButton">
+          <button className="duration-400 rounded border-2 border-mainPalette-primaryButton bg-mainPalette-bg px-6 py-4 text-lg uppercase tracking-widest text-mainPalette-text transition-all lg:hover:bg-mainPalette-primaryButton">
             Projetos
           </button>
         </div>

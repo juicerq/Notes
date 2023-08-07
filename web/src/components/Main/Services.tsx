@@ -4,7 +4,7 @@ import ServiceSection from './MainComponents/ServiceSection'
 import ContainerTitle from './MainComponents/ContainerTitle'
 import { images } from '@/constants'
 
-export default function Features() {
+export default function Services() {
   return (
     <div className="section-spacing flex flex-col items-center justify-center gap-20 bg-mainPalette-bgAlt">
       <div
@@ -40,24 +40,46 @@ export default function Features() {
             image={images.bike}
           >
             <p className="">
-              Você já pensou em como podemos transformar o estilo do ambiente{' '}
-              <span className="font-semibold">sem fazer reformas</span> ? <br />{' '}
-              Oferecemos serviço de seleção de materiais, decorações, disposição
-              de móveis, iluminação e tendências.{' '}
+              Potencialize o{' '}
               <span className="text-mainPalette-primaryButton">
-                Transformamos
+                engajamento
               </span>{' '}
-              seu espaço em um ambiente funcional e esteticamente agradável.
+              e a{' '}
+              <span className="text-mainPalette-primaryButton">identidade</span>{' '}
+              da sua marca nas redes sociais com layouts profissionais e
+              impactantes! Desenvolvemos layouts criativos e alinhados à sua
+              marca para suas publicações. Seja para{' '}
+              <span className="text-mainPalette-primaryButton">anúncios</span>,{' '}
+              <span className="text-mainPalette-primaryButton">
+                conteúdo promocional
+              </span>{' '}
+              ou{' '}
+              <span className="text-mainPalette-primaryButton">
+                postagens regulares
+              </span>
+              , cada design é cuidadosamente concebido para atrair a atenção do
+              seu público-alvo e transmitir sua mensagem de forma memorável.
             </p>
           </ServiceSection>
           <ServiceSection title="Apresentação informativa" image={images.chair}>
             <p className="">
-              Oferecemos supervisão conjunta da obra, garantindo a{' '}
-              <span className="text-mainPalette-primaryButton">qualidade </span>
-              e o progresso adequado. Disponibilizaremos vídeos e imagens para
-              que você possa acompanhar o desenvolvimento do projeto. Seja qual
-              for o tipo de projeto, estaremos comprometidos em assegurar seu
-              sucesso e alcançar os objetivos propostos.
+              Dê vida às suas ideias e destaque-se em qualquer ocasião com
+              apresentações de slides{' '}
+              <span className="text-mainPalette-primaryButton">
+                profissionais
+              </span>{' '}
+              e{' '}
+              <span className="text-mainPalette-primaryButton">
+                envolventes
+              </span>
+              . Ofereçemos serviços especializados em criar slides impactantes
+              para palestras, reuniões de negócios, workshops e muito mais. Com
+              um design moderno, layouts intuitivos e gráficos atrativos, suas
+              apresentações serão eficazes em transmitir informações complexas
+              de maneira{' '}
+              <span className="text-mainPalette-primaryButton">clara</span> e{' '}
+              <span className="text-mainPalette-primaryButton">persuasiva</span>
+              .
             </p>
           </ServiceSection>
         </div>

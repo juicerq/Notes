@@ -54,10 +54,10 @@ export default function NavbarDesktop(props: NavDesktopProps) {
           {props.links.map((item, i) => (
             <li
               key={i}
-              className={` transition-all duration-700 hover:duration-300 ${
+              className={` transition-all duration-700 lg:hover:duration-300 ${
                 prevScrollPos === 0
-                  ? 'text-mainPalette-text  hover:text-gray-200'
-                  : 'text-mainPalette-bg hover:bg-mainPalette-text'
+                  ? 'text-mainPalette-text  lg:hover:text-gray-200'
+                  : 'text-mainPalette-bg lg:hover:bg-mainPalette-text'
               }`}
             >
               <>
@@ -73,7 +73,7 @@ export default function NavbarDesktop(props: NavDesktopProps) {
             prevScrollPos === 0
               ? 'bg-transparent text-mainPalette-text'
               : 'bg-mainPalette-bgAlt text-mainPalette-bg'
-          } hover:backdrop-blur' rounded border-2 border-mainPalette-primaryButton bg-transparent px-8 py-4 uppercase tracking-widest transition-all duration-700 hover:bg-mainPalette-primaryButton hover:text-black hover:duration-300`}
+          } lg:hover:backdrop-blur' rounded border-2 border-mainPalette-primaryButton bg-transparent px-8 py-4 uppercase tracking-widest transition-all duration-700 lg:hover:duration-300 lg:hover:bg-mainPalette-primaryButton lg:hover:text-black`}
         >
           Testar
         </Link>
