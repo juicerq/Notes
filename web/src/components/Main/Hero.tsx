@@ -29,7 +29,7 @@ export default function Main() {
           href="/demo"
           rel="noopener noreferrer"
           className="button-hover flex
-          items-center justify-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest text-mainPalette-text md:px-12 lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt"
+          items-center justify-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest text-mainPalette-text active:scale-95 md:px-12 lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt"
         >
           craft
         </Link>
@@ -42,7 +42,7 @@ export default function Main() {
       <Link
         href={'#'}
         onClick={() => handleLinkClick('features')}
-        className="absolute bottom-20 flex justify-center gap-2 text-zinc-500"
+        className="absolute bottom-20 flex justify-center gap-2 text-zinc-500 hover:text-mainPalette-bgAlt"
       >
         <FaAngleDown
           size={24}

@@ -37,6 +37,12 @@
   --text: #000;
 }
 
+.item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
 .remove-scrollbar {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
@@ -53,8 +59,8 @@
 
 .flex-center {
   display: flex;
-  justify-items: center;
   align-items: center;
+  justify-items: center;
 }
 
 @layer components {

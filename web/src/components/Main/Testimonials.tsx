@@ -40,7 +40,7 @@ export default function Testimonials() {
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
             >
               <Image
-                src="https://source.unsplash.com/random/150x150?woman=6"
+                src={`https://source.unsplash.com/random/150x150?woman=${currentIndex}`}
                 width={150}
                 height={150}
                 alt="a"
@@ -72,8 +72,8 @@ export default function Testimonials() {
           </div>
 
           <div className="m-6 flex gap-10 rounded-full">
-            <div
-              className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white lg:hover:bg-mainPalette-accent"
+            <button
+              className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white active:scale-95 lg:hover:bg-mainPalette-accent"
               onClick={() =>
                 handleClick(
                   currentIndex === 0
@@ -83,9 +83,9 @@ export default function Testimonials() {
               }
             >
               <HiChevronLeft size={35} />
-            </div>
-            <div
-              className="duration-400 flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white transition-all lg:hover:bg-mainPalette-accent"
+            </button>
+            <button
+              className="duration-400 flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white transition-all active:scale-95 lg:hover:bg-mainPalette-accent"
               onClick={() =>
                 handleClick(
                   currentIndex === testimonials.length - 1
@@ -95,7 +95,7 @@ export default function Testimonials() {
               }
             >
               <HiChevronRight size={35} />
-            </div>
+            </button>
           </div>
         </>
       )}
