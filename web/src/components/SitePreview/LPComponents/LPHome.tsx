@@ -37,7 +37,7 @@ export function LPHome() {
           </p>
         </div>
         <div className="flex w-full flex-col justify-start gap-10 text-lg md:flex-row md:gap-12 lg:text-base">
-          <button className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase text-previewPalette0-accent transition-all md:px-10 lg:px-8 lg:hover:-translate-y-[3px]">
+          <button className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase text-previewPalette0-accent transition-all md:px-10 lg:px-8 lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt">
             Exemplo Botão 1
           </button>
           <button
@@ -47,7 +47,7 @@ export function LPHome() {
                 'red',
               )
             }
-            className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase transition-all hover:shadow-md hover:shadow-previewPalette0-extra md:px-10 lg:px-8 lg:hover:-translate-y-[3px]"
+            className="rounded-full bg-previewPalette0-primaryButton px-6 py-4 uppercase transition-all md:px-10 lg:px-8 lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-previewPalette0-extra"
           >
             Botão 2
           </button>

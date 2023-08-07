@@ -29,7 +29,7 @@ export default function Testimonials() {
       {testimonials && (
         <>
           <div
-            className="flex h-[600px] w-full flex-col items-center justify-evenly gap-16 rounded-md bg-mainPalette-bgAlt p-8 xs:h-[550px] md:h-[400px] lg:h-72 lg:flex-row 2xl:w-5/6"
+            className="flex h-[600px] w-full flex-col items-center justify-evenly gap-4 rounded-md bg-mainPalette-bgAlt p-8 xs:h-[550px] md:h-[400px] lg:h-72 lg:flex-row lg:gap-8 2xl:w-5/6"
             key={testimonials[currentIndex].name}
           >
             <motion.div
@@ -53,7 +53,7 @@ export default function Testimonials() {
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4 }}
-                className=" text-zinc-400 lg:leading-relaxed"
+                className=" text-justify text-zinc-400 lg:leading-relaxed"
               >
                 {testimonials[currentIndex].feedBack}
               </motion.p>

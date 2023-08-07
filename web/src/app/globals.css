@@ -79,7 +79,7 @@
 
 @keyframes travessa {
 	0% {
-		width: 0%;
+		transform: translateX(0);
 	}
 
 	50% {
@@ -103,7 +103,7 @@
   }
 
   .button-hover {
-    @apply rounded text-mainPalette-bg hover:bg-mainPalette-accent transition-all;
+    @apply rounded text-mainPalette-bg lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt transition-all;
   }
 
   .sidebar-icon {

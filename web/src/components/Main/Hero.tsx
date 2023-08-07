@@ -28,7 +28,8 @@ export default function Main() {
         <Link
           href="/demo"
           rel="noopener noreferrer"
-          className="button-hover flex items-center justify-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest text-mainPalette-text md:px-12"
+          className="button-hover flex
+          items-center justify-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest text-mainPalette-text md:px-12 lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt"
         >
           craft
         </Link>
