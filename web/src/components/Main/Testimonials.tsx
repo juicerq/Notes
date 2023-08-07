@@ -73,7 +73,7 @@ export default function Testimonials() {
 
           <div className="m-6 flex gap-10 rounded-full">
             <button
-              className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white active:scale-95 lg:hover:bg-mainPalette-accent"
+              className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white active:scale-95 active:bg-mainPalette-accent lg:hover:bg-mainPalette-accent"
               onClick={() =>
                 handleClick(
                   currentIndex === 0
@@ -85,7 +85,7 @@ export default function Testimonials() {
               <HiChevronLeft size={35} />
             </button>
             <button
-              className="duration-400 flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white transition-all active:scale-95 lg:hover:bg-mainPalette-accent"
+              className="duration-400 flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white transition-all active:scale-95 active:bg-mainPalette-accent lg:hover:bg-mainPalette-accent"
               onClick={() =>
                 handleClick(
                   currentIndex === testimonials.length - 1
