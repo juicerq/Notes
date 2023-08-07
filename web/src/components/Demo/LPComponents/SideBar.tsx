@@ -24,7 +24,7 @@ export function SideBar() {
       <SideBarIcon text="Piriquito" icon={<Bird size={30} />} />
       <SideBarIcon text="Cores" icon={<PaintBucket size={30} />} />
 
-      <div className="absolute top-0 h-full w-full bg-mainPalette-bgAlt bg-opacity-50"></div>
+      {/* <div className="absolute top-0 h-full w-full bg-mainPalette-bgAlt bg-opacity-50"></div> */}
     </div>
   )
 }

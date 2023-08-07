@@ -4,8 +4,8 @@ import {
   Roboto_Flex as Roboto,
   Share_Tech_Mono as ShareTech,
 } from 'next/font/google'
-import Header from '@/components/Header'
-import BackToTop from '@/components/general/BackToTop'
+import Header from '@/components/Main/Header'
+import BackToTop from '@/components/General/BackToTop'
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-alt' })
 const main = ShareTech({

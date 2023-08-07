@@ -1,10 +1,10 @@
 import { X, Instagram, Facebook, AlignJustify } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import NavbarLogo from '../general/NavbarLogo'
+import NavbarLogo from '../../General/NavbarLogo'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { FaWhatsapp } from 'react-icons/fa'
-import logo from '../../assets/WebCraftLogo.svg'
+import logo from '@/assets/WebCraftLogo.svg'
 
 interface NavMobileProps {
   links: Array<{ id: string; name: string }>

@@ -1,6 +1,6 @@
 'use client'
 
-import PageTransition from '@/components/general/PageTransition'
+import PageTransition from '@/components/General/PageTransition'
 import { Input } from '@/components/ui/input'
 import {
   Select,
@@ -15,11 +15,11 @@ import { Mail, Phone, User, Pen, LayoutTemplate } from 'lucide-react'
 export default function Contact() {
   return (
     <PageTransition>
-      <div className="my-20 flex flex-col items-center justify-center bg-mainPalette-bg lg:my-32">
+      <div className="flex flex-col items-center justify-center bg-mainPalette-bg py-20 lg:py-32">
         <h1 className="pb-1 text-center font-main text-3xl font-bold tracking-wider text-mainPalette-text">
-          Entre em{' '}
-          <span className="text-mainPalette-primaryButton">contato</span>{' '}
-          conosco
+          Peça um{' '}
+          <span className="text-mainPalette-primaryButton">orçamento</span>{' '}
+          agora mesmo
         </h1>
         <form className="mt-5 flex w-3/4 flex-col gap-7 indent-1 text-lg text-mainPalette-text lg:w-2/3 2xl:w-1/2">
           <div className="flex w-full flex-wrap gap-10 py-4 tracking-wide">

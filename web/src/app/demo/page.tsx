@@ -1,8 +1,8 @@
 'use client'
 
-import { SideBar } from '@/components/SideBar'
-import LandingPage from '@/components/SitePreview/LandingPage'
-import PageTransition from '@/components/general/PageTransition'
+import { SideBar } from '@/components/Demo/LPComponents/SideBar'
+import LandingPage from '@/components/Demo/LandingPage'
+import PageTransition from '@/components/General/PageTransition'
 
 export default function Demo() {
   return (
