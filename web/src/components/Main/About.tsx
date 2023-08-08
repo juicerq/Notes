@@ -2,11 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Mail } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
+import { images } from '@/constants'
 
 export default function About() {
   return (
-    <div className="section-spacing flex flex-col items-center justify-center py-6 lg:flex-row lg:gap-20 xl:my-20 xl:gap-32">
-      <div className="flex w-full flex-col justify-center gap-8 text-justify text-lg lg:w-1/2">
+    <div className="section-spacing flex w-screen flex-col items-center justify-center py-6 lg:flex-row lg:gap-20 xl:my-20 xl:gap-32">
+      <div className="flex w-full flex-col justify-center gap-8 text-justify text-lg">
         {/* Title n subtitle */}
         <h4 className="font-main text-5xl text-zinc-700 xl:text-6xl">
           Como funciona?
@@ -77,13 +78,8 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="relative flex h-[400px] flex-col gap-6 lg:w-1/4">
-        <Image
-          src={`https://source.unsplash.com/random/?woman=2`}
-          fill
-          alt="a"
-          className="rounded object-cover"
-        />
+      <div className="relative hidden h-[800px] flex-col gap-6 lg:flex lg:w-1/4">
+        <Image src={images.lp} fill alt="a" className="rounded object-cover" />
       </div>
     </div>
   )

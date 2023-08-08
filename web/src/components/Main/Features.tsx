@@ -14,17 +14,17 @@ export default function Features() {
     <div className="section-spacing flex flex-col items-center justify-center lg:w-screen">
       <div
         id="features"
-        className="w-screen lg:rounded-t-lg lg:bg-mainPalette-bgAlt lg:px-8"
+        className="lg:w-full lg:rounded-lg lg:bg-mainPalette-bgAlt lg:px-8"
       >
         <div className="w-full">
-          <h3 className="w-full bg-mainPalette-bgAlt py-4 text-center font-main text-2xl uppercase text-mainPalette-bg lg:rounded-lg lg:pb-6 lg:pt-12">
+          <h3 className="w-full bg-mainPalette-bgAlt py-4 text-center font-main text-2xl uppercase text-mainPalette-bg lg:pb-6 lg:pt-12">
             Nossa Abordagem para seu{' '}
             <span className="text-mainPalette-primaryButton">
               Site de Sucesso
             </span>
           </h3>
         </div>
-        <div className="relative flex w-screen snap-x snap-mandatory scroll-p-3 gap-3 overflow-auto p-3 lg:w-full lg:snap-none lg:scroll-p-0 lg:flex-wrap lg:gap-0 lg:overflow-hidden lg:p-0  xl:justify-around">
+        <div className="relative flex w-screen snap-x snap-mandatory scroll-p-3 gap-3 overflow-auto p-3 lg:w-full lg:snap-none lg:scroll-p-0 lg:flex-wrap lg:justify-between lg:gap-0 lg:overflow-hidden lg:p-0  xl:justify-around">
           <Feature
             icon={<Component size={35} />}
             title="Design Atrativo & Intuitivo"
@@ -45,7 +45,7 @@ export default function Features() {
             <p>Arraste para o lado</p>
           </div>
         </div>
-        <div className="flex w-screen snap-x snap-mandatory scroll-p-3 gap-3 overflow-auto p-3 lg:w-full lg:snap-none lg:scroll-p-0 lg:flex-wrap lg:gap-0 lg:overflow-hidden lg:p-0  lg:pb-12 xl:justify-around">
+        <div className="flex w-screen snap-x snap-mandatory scroll-p-3 gap-3 overflow-auto p-3 lg:w-full lg:snap-none lg:scroll-p-0 lg:flex-wrap lg:justify-between lg:gap-0 lg:overflow-hidden lg:p-0  lg:pb-12 xl:justify-around">
           <Feature
             icon={<Workflow size={35} />}
             title="Integração com Redes Sociais"
