@@ -3,14 +3,14 @@ import Testimonials from './Testimonials'
 import Footer from './Footer'
 import Features from './Features'
 import Services from './Services'
-import About from './MainComponents/About'
+import About from './About'
 
 export default function Main() {
   return (
     <main className="font-alt">
       <Hero />
-      <Features />
       <About />
+      <Features />
       <Services />
       <Testimonials />
       <Footer />
