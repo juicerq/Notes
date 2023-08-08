@@ -37,7 +37,7 @@ export default function BackToTop() {
   return (
     <button
       onClick={() => backToTop()}
-      className={`fixed bottom-3 right-3 z-50 flex h-7 w-7 items-center justify-center rounded border border-white bg-[#2c2c2c] text-xl text-white ${display}`}
+      className={`fixed bottom-3 right-3 z-50 flex h-7 w-7 items-center justify-center rounded-full bg-[#2c2c2c] text-xl text-white ${display} duration-400 transition-all lg:hover:text-mainPalette-primaryButton`}
     >
       <ChevronUp size={20} />
     </button>

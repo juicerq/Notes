@@ -60,7 +60,7 @@ export default function ServiceSection(props: ServiceSectionProps) {
         <div
           className={`min-w-min text-justify ${
             props.reverse ? 'lg:pr-12 xl:pr-20 2xl:pr-36' : '2xl:pr-16'
-          } text-gray-300`}
+          } text-zinc-400`}
         >
           {props.children}
         </div>

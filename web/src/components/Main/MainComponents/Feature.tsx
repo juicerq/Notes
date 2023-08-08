@@ -13,7 +13,7 @@ export default function Feature(props: FeatureProps) {
         {props.icon}
       </div>
       <h2 className="font-main text-lg xl:text-xl">{props.title}</h2>
-      <p className="text-lg text-zinc-500 xl:text-justify">
+      <p className="text-lg text-zinc-400 xl:text-justify">
         {props.description}
       </p>
     </div>

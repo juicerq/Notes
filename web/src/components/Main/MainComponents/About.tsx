@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 
 export default function About() {
   return (
-    <div className="section-spacing flex flex-col items-center justify-around text-center lg:flex-row lg:gap-20 xl:my-20 xl:gap-16">
+    <div className="section-spacing flex w-screen flex-col items-center justify-around text-center lg:flex-row lg:gap-20 xl:my-20 xl:gap-16">
       {/* Buttons */}
       <div className="flex w-full flex-col justify-center gap-8 text-justify text-lg lg:w-1/2">
         <h4 className="font-main text-5xl text-zinc-700 xl:text-6xl">
@@ -33,14 +33,18 @@ export default function About() {
             para um entendimento mais preciso. No entanto, lembre-se de que o
             site de demonstração NÃO REPRESENTA O PRODUTO FINAL.
           </p>
-          <Link
-            href="/demo"
-            rel="noopener noreferrer"
-            className="button-hover flex
+          <div>
+            <button>
+              <Link
+                href="/demo"
+                rel="noopener noreferrer"
+                className="button-hover flex
           items-center justify-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest text-mainPalette-text active:scale-95 md:px-12 lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt"
-          >
-            craft
-          </Link>
+              >
+                craft
+              </Link>
+            </button>
+          </div>
         </div>
 
         <div className="flex flex-1 flex-col gap-2">
@@ -77,13 +81,13 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-col text-mainPalette-text">
+        <div className=" text-mainPalette-text">
           <button className="duration-400 rounded border-2 border-mainPalette-primaryButton bg-mainPalette-bg px-6 py-4 text-lg uppercase tracking-widest text-mainPalette-text transition-all lg:hover:bg-mainPalette-primaryButton">
             Projetos
           </button>
         </div>
       </div>
-      <div className="relative flex h-[400px] flex-col gap-6 lg:w-1/4">
+      <div className=" sticky flex h-[400px] flex-col gap-6 lg:w-1/2">
         <Image
           src={`https://source.unsplash.com/random/?woman=2`}
           fill
