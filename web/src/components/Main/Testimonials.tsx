@@ -29,7 +29,7 @@ export default function Testimonials() {
       {testimonials && (
         <>
           <div
-            className="relative flex h-[600px] w-full flex-col items-center justify-evenly gap-16 rounded-md bg-mainPalette-bgAlt p-8 xs:h-[550px] md:h-[300px] lg:h-72 lg:flex-row 2xl:w-5/6"
+            className="relative flex h-[600px] w-full flex-col items-center justify-center gap-12 rounded-md bg-mainPalette-bgAlt p-8 xs:h-[550px] md:h-[300px] md:gap-0 lg:h-72 lg:flex-row 2xl:w-5/6"
             key={testimonials[currentIndex].name}
           >
             <motion.div

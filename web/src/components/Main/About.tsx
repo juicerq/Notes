@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Instagram } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 
 export default function About() {
   return (
-    <div className="section-spacing flex w-screen flex-col items-center justify-around text-center lg:flex-row lg:gap-20 xl:my-20 xl:gap-16">
-      {/* Buttons */}
+    <div className="section-spacing flex flex-col items-center justify-center py-6 lg:flex-row lg:gap-20 xl:my-20 xl:gap-32">
       <div className="flex w-full flex-col justify-center gap-8 text-justify text-lg lg:w-1/2">
+        {/* Title n subtitle */}
         <h4 className="font-main text-5xl text-zinc-700 xl:text-6xl">
           Como funciona?
         </h4>
@@ -16,7 +16,7 @@ export default function About() {
           <span className="font-bold">duas </span>
           opções convenientes para você.
         </p>
-
+        {/* Opção 1 */}
         <div className="flex flex-1 flex-col gap-2">
           <h4 className="relative z-10 w-fit text-2xl text-mainPalette-bgAlt">
             Opção 1
@@ -33,21 +33,17 @@ export default function About() {
             para um entendimento mais preciso. No entanto, lembre-se de que o
             site de demonstração NÃO REPRESENTA O PRODUTO FINAL.
           </p>
-          <div>
-            <button>
-              <Link
-                href="/demo"
-                rel="noopener noreferrer"
-                className="button-hover flex
-          items-center justify-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest text-mainPalette-text active:scale-95 md:px-12 lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt"
-              >
-                craft
-              </Link>
-            </button>
-          </div>
+          {/* Button Craft */}
+          <Link
+            href="/demo"
+            rel="noopener noreferrer"
+            className="button-hover flex w-full items-center justify-center self-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest text-mainPalette-text shadow-md active:scale-95 md:w-1/3 md:px-12 lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt"
+          >
+            craft
+          </Link>
         </div>
-
         <div className="flex flex-1 flex-col gap-2">
+          {/* Opção 2 */}
           <h4 className="relative z-10 w-fit text-2xl text-mainPalette-bgAlt">
             Opção 2
             <div className="absolute -bottom-0.5 left-1/2 -z-10 h-3 w-[110%] -translate-x-1/2 rounded-sm bg-mainPalette-primaryButton" />
@@ -64,8 +60,8 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-mainPalette-primaryButton transition-all duration-150 lg:hover:-translate-y-1">
-                <FaWhatsapp className="text-mainPalette-bgAlt" size={30} />
+              <div className="button-hover flex h-12 w-12 items-center justify-center rounded-full bg-mainPalette-primaryButton shadow-md transition-all duration-150">
+                <FaWhatsapp className="text-mainPalette-bgAlt" size={25} />
               </div>
             </Link>
 
@@ -74,20 +70,14 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-mainPalette-primaryButton transition-all duration-150 lg:hover:-translate-y-1">
-                <Instagram className="text-mainPalette-bgAlt" size={30} />
+              <div className="button-hover flex h-12 w-12 items-center justify-center rounded-full bg-mainPalette-primaryButton shadow-md transition-all duration-150">
+                <Mail className="text-mainPalette-bgAlt" size={25} />
               </div>
             </Link>
           </div>
         </div>
-
-        <div className=" text-mainPalette-text">
-          <button className="duration-400 rounded border-2 border-mainPalette-primaryButton bg-mainPalette-bg px-6 py-4 text-lg uppercase tracking-widest text-mainPalette-text transition-all lg:hover:bg-mainPalette-primaryButton">
-            Projetos
-          </button>
-        </div>
       </div>
-      <div className=" sticky flex h-[400px] flex-col gap-6 lg:w-1/2">
+      <div className="relative flex h-[400px] flex-col gap-6 lg:w-1/4">
         <Image
           src={`https://source.unsplash.com/random/?woman=2`}
           fill
