@@ -14,7 +14,7 @@ export default function Features() {
     <div className="section-spacing flex flex-col items-center justify-center lg:w-screen">
       <div
         id="features"
-        className="w-full lg:rounded-t-lg lg:bg-mainPalette-bgAlt lg:px-8"
+        className="w-screen lg:rounded-t-lg lg:bg-mainPalette-bgAlt lg:px-8"
       >
         <div className="w-full">
           <h3 className="w-full bg-mainPalette-bgAlt py-4 text-center font-main text-2xl uppercase text-mainPalette-bg lg:rounded-lg lg:pb-6 lg:pt-12">
