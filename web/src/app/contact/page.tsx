@@ -101,7 +101,7 @@ export default function Contact() {
               />
             </div>
           </div>
-          <button className="button-hover font-lg self-center rounded bg-mainPalette-primaryButton px-10 py-4 text-lg font-semibold uppercase tracking-wider text-mainPalette-bgAlt">
+          <button className="button-hover font-lg self-center rounded bg-mainPalette-primaryButton px-10 py-4 text-lg font-semibold uppercase tracking-wider text-mainPalette-text">
             Enviar
           </button>
         </form>

@@ -16,7 +16,7 @@ export default function Admin() {
     setAdminFormData({ ...adminFormData, [name]: value })
   }
   return (
-    <>
+    <div className="flex h-screen w-screen justify-center">
       <form
         // onSubmit={handleSignIn}
         className="relative flex h-full w-96 flex-col items-center justify-center gap-4 text-mainPalette-text"
@@ -61,6 +61,6 @@ export default function Admin() {
           </button>
         </div>
       </form>
-    </>
+    </div>
   )
 }

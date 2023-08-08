@@ -9,8 +9,8 @@ export default function Main() {
   return (
     <main className="font-alt">
       <Hero />
-      <Features />
       <About />
+      <Features />
       <Services />
       <Testimonials />
       <Footer />

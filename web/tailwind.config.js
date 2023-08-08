@@ -50,7 +50,7 @@ module.exports = {
           primaryButton: '#74c313',
           secondaryButton: '#07010e',
           extra: '#253514',
-          accent: '#4D7C14',
+          accent: '#6BB214',
           fadedBlack: 'rgba(0, 0, 0, 0.55)',
         },
         previewPalette0: {

@@ -73,7 +73,7 @@
   }
 
   .button-hover {
-    @apply rounded text-mainPalette-bg lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt transition-all;
+    @apply uppercase rounded-md lg:hover:bg-mainPalette-accent transition-all;
   }
 
   .sidebar-icon {

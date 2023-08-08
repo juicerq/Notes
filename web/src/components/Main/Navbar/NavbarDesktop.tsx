@@ -41,7 +41,7 @@ export default function NavbarDesktop(props: NavDesktopProps) {
             <span
               className={`transition-all duration-700 ${
                 prevScrollPos === 0
-                  ? 'text-mainPalette-bgAlt'
+                  ? 'text-mainPalette-text'
                   : 'text-mainPalette-bg'
               } `}
             >
@@ -71,9 +71,9 @@ export default function NavbarDesktop(props: NavDesktopProps) {
           href="/demo"
           className={`${
             prevScrollPos === 0
-              ? 'bg-transparent text-mainPalette-text'
-              : 'bg-mainPalette-bgAlt text-mainPalette-bg'
-          } lg:hover:backdrop-blur' rounded border-2 border-mainPalette-primaryButton bg-transparent px-8 py-4 uppercase tracking-widest transition-all duration-700 lg:hover:duration-300 lg:hover:bg-mainPalette-primaryButton lg:hover:text-black`}
+              ? 'bg-transparent text-mainPalette-text lg:hover:bg-zinc-200'
+              : 'button-hover bg-mainPalette-primaryButton  text-mainPalette-text'
+          } lg:hover:backdrop-blur' rounded px-8 py-4 uppercase tracking-widest shadow-md transition-all lg:hover:text-black lg:hover:duration-300`}
         >
           Testar
         </Link>

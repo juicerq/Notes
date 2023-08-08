@@ -28,13 +28,12 @@ export default function Main() {
         <Link
           href="/demo"
           rel="noopener noreferrer"
-          className="button-hover flex
-          items-center justify-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest text-mainPalette-text active:scale-95 md:px-12 lg:hover:-translate-y-[3px] lg:hover:shadow-md lg:hover:shadow-mainPalette-bgAlt"
+          className="button-hover flex items-center justify-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest shadow-md active:scale-95 md:px-12"
         >
           craft
         </Link>
-        <div className="flex flex-col text-mainPalette-text">
-          <button className="duration-400 rounded border-2 border-mainPalette-primaryButton bg-mainPalette-bg px-6 py-4 text-lg uppercase tracking-widest text-mainPalette-text transition-all lg:hover:bg-mainPalette-primaryButton">
+        <div className="flex flex-col">
+          <button className="duration-400 rounded-md bg-mainPalette-bg px-6 py-4 text-lg uppercase tracking-widest shadow-md transition-all lg:hover:bg-zinc-200">
             Projetos
           </button>
         </div>
@@ -42,7 +41,7 @@ export default function Main() {
       <Link
         href={'#'}
         onClick={() => handleLinkClick('features')}
-        className="absolute bottom-20 flex justify-center gap-2 text-zinc-500 hover:text-mainPalette-bgAlt"
+        className="absolute bottom-20 flex justify-center gap-2 text-zinc-500 hover:text-mainPalette-text"
       >
         <FaAngleDown
           size={24}

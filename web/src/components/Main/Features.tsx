@@ -11,13 +11,13 @@ import Feature from './MainComponents/Feature'
 
 export default function Features() {
   return (
-    <div className="section-spacing flex flex-col items-center justify-center lg:w-screen">
+    <div className="section-spacing mt-3 flex flex-col items-center justify-center lg:my-16 lg:w-screen">
       <div
         id="features"
         className="lg:w-full lg:rounded-lg lg:bg-mainPalette-bgAlt lg:px-8"
       >
         <div className="w-full">
-          <h3 className="w-full bg-mainPalette-bgAlt py-4 text-center font-main text-2xl uppercase text-mainPalette-bg lg:pb-6 lg:pt-12">
+          <h3 className="w-full bg-mainPalette-bgAlt py-4 text-center font-main text-3xl uppercase text-mainPalette-bg lg:pb-6 lg:pt-12">
             Nossa Abordagem para seu{' '}
             <span className="text-mainPalette-primaryButton">
               Site de Sucesso
