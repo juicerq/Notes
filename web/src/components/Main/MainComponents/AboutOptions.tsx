@@ -15,19 +15,45 @@ export default function AboutOptions() {
   return (
     <div className="flex flex-col gap-12 text-justify lg:w-1/2 lg:gap-16">
       {/* Button to render different option */}
-      <div className="hidden h-2 gap-6 lg:flex lg:items-center">
+      <div className="flex gap-6 lg:items-center">
         <div
+          className="flex flex-col-reverse"
           onClick={() => handleChangeOptionIndex(1)}
-          className={`option-bar ${
-            optionIndex === 1 ? 'opacity-100' : 'opacity-30'
-          }`}
-        />
+        >
+          <div
+            className={`option-bar peer ${
+              optionIndex === 1 ? 'opacity-100' : 'opacity-20 hover:opacity-50'
+            }`}
+          />
+          <p
+            className={`option-bar-text ${
+              optionIndex === 1
+                ? 'opacity-100'
+                : 'opacity-5 peer-hover:opacity-50'
+            }`}
+          >
+            01
+          </p>
+        </div>
         <div
+          className="flex flex-col-reverse"
           onClick={() => handleChangeOptionIndex(2)}
-          className={`option-bar ${
-            optionIndex === 1 ? 'opacity-30' : 'opacity-100'
-          }`}
-        />
+        >
+          <div
+            className={`option-bar peer ${
+              optionIndex === 1 ? 'opacity-20 hover:opacity-50' : 'opacity-100'
+            }`}
+          />
+          <p
+            className={`option-bar-text ${
+              optionIndex === 1
+                ? 'opacity-5 peer-hover:opacity-50'
+                : 'opacity-100'
+            }`}
+          >
+            02
+          </p>
+        </div>
       </div>
 
       {optionIndex === 1 ? (
@@ -37,7 +63,7 @@ export default function AboutOptions() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className="flex h-80 flex-col gap-6"
+            className="flex flex-col gap-6"
             key={'1'}
           >
             <h4 className=" relative z-10 w-fit text-5xl text-mainPalette-bg">
@@ -78,7 +104,7 @@ export default function AboutOptions() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className="flex h-80 flex-col gap-10"
+            className="flex flex-col gap-10 md:h-80"
             key={'2'}
           >
             <h4 className="relative z-10 w-fit text-5xl text-mainPalette-bg">

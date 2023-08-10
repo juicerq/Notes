@@ -8,7 +8,7 @@ export default function About() {
       id="about"
       className="section-spacing flex w-screen flex-col items-center justify-center bg-mainPalette-bgAlt py-6 lg:flex-row lg:gap-8 xl:gap-32"
     >
-      <div className="flex w-full flex-col gap-12 md:gap-16 md:rounded-lg md:py-8">
+      <div className="flex w-full flex-col gap-8 md:rounded-lg md:py-8">
         {/* Title n subtitle */}
         <div className="flex-center flex-col gap-2 text-center">
           <h4 className="font-main text-4xl text-mainPalette-bg lg:text-6xl">
