@@ -57,7 +57,7 @@ export default function NavbarDesktop(props: NavDesktopProps) {
               className={` transition-all duration-700 lg:hover:duration-300 ${
                 prevScrollPos === 0
                   ? 'text-mainPalette-text  lg:hover:text-gray-200'
-                  : 'text-mainPalette-bg lg:hover:bg-mainPalette-text'
+                  : 'lg:hover:text-mainPalette-zinc-200 text-mainPalette-bg'
               }`}
             >
               <>
