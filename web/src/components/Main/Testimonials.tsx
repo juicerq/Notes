@@ -4,17 +4,18 @@ import { motion } from 'framer-motion'
 
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import Image from 'next/image'
+import { CornerDividerTop } from './MainComponents/CornerDivider'
 
 const testimonials = [
   {
     name: 'Toninho Rodrigues',
     feedBack:
-      'As a fellow developer, I have had the pleasure of working with [Your Name] and I am thrilled with the exceptional service they provided. Their expertise, professionalism, and attention to detail were outstanding. They were prompt in their responses and demonstrated a high level of care and dedication to their work.',
+      'As a fellow developer, I have had the pleasure of working with [Your Name] and I am thrilled with the exceptional service they provided. Their expertise, professionalism, and attention to detail were outstanding. ',
   },
   {
     name: 'Xubi Rodrigo',
     feedBack:
-      'As a fellow developer, I have had the pleasure of working with [Your Name] and I am thrilled with the exceptional service they provided. Their expertise, professionalism, and attention to detail were outstanding. They were prompt in their responses and demonstrated a high level of care and dedication to their work.',
+      'As a fellow developer, I have had the pleasure of working with [Your Name] and I am thrilled with the exceptional service they provided. Their expertise.',
   },
 ]
 
@@ -25,15 +26,16 @@ export default function Testimonials() {
   }
 
   return (
-    <div className="section-spacing flex w-screen flex-col items-center justify-center pt-16 md:pt-28">
+    <div className="section-spacing relative flex w-screen flex-col items-center justify-center pt-28">
+      <CornerDividerTop />
       {testimonials && (
         <>
           <div
-            className="relative flex h-[600px] w-full flex-col items-center justify-center gap-12 rounded-md bg-mainPalette-bgAlt p-8 xs:h-[550px] md:h-[300px] md:gap-0 lg:h-72 lg:flex-row 2xl:w-5/6"
+            className="relative flex h-[340px] flex-col items-center justify-around rounded-md bg-mainPalette-bgAlt p-8 md:h-[300px] md:w-[540px] lg:h-72 lg:flex-row"
             key={testimonials[currentIndex].name}
           >
             <motion.div
-              className="h-28 w-28 rounded-full border-2 border-mainPalette-primaryButton md:absolute md:-top-14 lg:bottom-56"
+              className="absolute -top-14 h-28 w-28 rounded-full border-2 border-mainPalette-primaryButton lg:bottom-56"
               viewport={{ once: true }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -47,13 +49,14 @@ export default function Testimonials() {
                 className="rounded-full object-center"
               />
             </motion.div>
-            <div className="flex w-full flex-col items-start gap-4 md:gap-8 md:pt-12 md:text-center">
+            {/* FeedBack */}
+            <div className="flex w-full flex-col items-start gap-4 pt-6 text-justify md:gap-8 md:text-center">
               <motion.p
                 initial={{ opacity: 0 }}
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4 }}
-                className=" text-center text-zinc-400 lg:leading-relaxed"
+                className="text-zinc-400 lg:leading-relaxed"
               >
                 {testimonials[currentIndex].feedBack}
               </motion.p>

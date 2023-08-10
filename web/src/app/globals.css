@@ -189,6 +189,45 @@
   }
 }
 
+/* Divider */
+
+.custom-shape-divider-bottom-1691690588 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1691690588 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 66px;
+}
+
+.shape-fill {
+  fill: var(--bgAlt);
+}
+
+.custom-shape-divider-top-1691690804 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1691690804 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 66px;
+}
+
 /* Hero Animations */
 
 .trace-1{

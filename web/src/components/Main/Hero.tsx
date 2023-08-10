@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { FaAngleDown } from 'react-icons/fa'
+import { CornerDividerBottom } from './MainComponents/CornerDivider'
 
 export default function Main() {
   const router = useRouter()
@@ -12,7 +13,8 @@ export default function Main() {
   }
 
   return (
-    <div className="section-spacing z-20 flex h-[95vh] flex-col items-center justify-center gap-12 bg-mainPalette-bg text-center xl:gap-16 xl:pt-24">
+    <div className="section-spacing relative z-20 flex h-[95vh] flex-col items-center justify-center gap-12 bg-mainPalette-bg text-center xl:gap-16 xl:pt-24">
+      <CornerDividerBottom />
       <div className="flex flex-col gap-6">
         <h1 className="z-20 font-main text-5xl text-zinc-700 xl:text-6xl">
           O seu{' '}
