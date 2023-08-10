@@ -26,12 +26,17 @@ export default function Testimonials() {
   }
 
   return (
-    <div className="section-spacing relative flex w-screen flex-col items-center justify-center pt-28">
+    <div className="section-spacing relative flex w-screen flex-col items-center justify-around gap-24 py-28">
       <CornerDividerTop />
+      <h3 className="w-full text-center font-main text-3xl uppercase text-mainPalette-text">
+        UM POUCO DO QUE NOSSOS{' '}
+        <span className="text-mainPalette-primaryButton">CLIENTES</span> TEM A
+        DIZER
+      </h3>
       {testimonials && (
-        <>
+        <div className="flex w-full flex-col items-center justify-center">
           <div
-            className="relative flex h-[340px] flex-col items-center justify-around rounded-md bg-mainPalette-bgAlt p-8 md:h-[300px] md:w-[540px] lg:h-72 lg:flex-row 2xl:w-[740px]"
+            className="relative flex h-[340px] flex-col items-center justify-center rounded-md bg-mainPalette-bgAlt p-8 md:h-[300px] md:w-[540px] lg:h-72 lg:flex-row 2xl:w-[740px]"
             key={testimonials[currentIndex].name}
           >
             <motion.div
@@ -73,8 +78,7 @@ export default function Testimonials() {
               </motion.div>
             </div>
           </div>
-
-          <div className="m-6 flex gap-10 rounded-full">
+          <div className="m-6 flex gap-10">
             <button
               className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white active:scale-95 active:bg-mainPalette-accent lg:hover:bg-mainPalette-accent"
               onClick={() =>
@@ -100,7 +104,7 @@ export default function Testimonials() {
               <HiChevronRight size={35} />
             </button>
           </div>
-        </>
+        </div>
       )}
     </div>
   )
