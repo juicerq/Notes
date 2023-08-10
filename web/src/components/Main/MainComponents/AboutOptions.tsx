@@ -5,7 +5,7 @@ import Option from './Option'
 import { motion } from 'framer-motion'
 
 export default function AboutOptions() {
-  const [optionIndex, setOptionIndex] = useState(1)
+  const [optionIndex, setOptionIndex] = useState<number>(1)
 
   const handleChangeOptionIndex = (n: number) => {
     setOptionIndex(n)
@@ -116,8 +116,8 @@ export default function AboutOptions() {
 
             <motion.div
               viewport={{ once: true }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: [0, 1], y: [50, 0] }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: [0, 1], y: [10, 0] }}
               transition={{
                 duration: 0.4,
                 ease: 'easeInOut',

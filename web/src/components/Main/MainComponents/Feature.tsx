@@ -11,11 +11,20 @@ interface FeatureProps {
 }
 
 export default function Feature(props: FeatureProps) {
-  const animationDelay = props.delay * 0.225
+  const isNotMobile = window.innerWidth > 500
+  const animationDelay = isNotMobile ? props.delay * 0.225 : 0
+
+  const initialValue = isNotMobile
+    ? { opacity: 0, y: 50 }
+    : { opacity: 1, y: 0 }
+
+  const whileInViewValue = isNotMobile
+    ? { opacity: [0, 1], y: [50, 0] }
+    : { opacity: 1, y: 0 }
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: [0, 1], y: [50, 0] }}
+      initial={initialValue}
+      whileInView={whileInViewValue}
       viewport={{ once: true }}
       transition={{ duration: 0.4, ease: 'easeInOut', delay: animationDelay }}
       className="item flex min-h-[340px] flex-col justify-start gap-4 rounded-lg bg-[#303030] px-6 py-8 text-white shadow-md md:min-h-[260px] lg:w-[250px] lg:flex-none xl:w-[320px] 2xl:w-[400px]"
