@@ -14,6 +14,7 @@ export default function Feature(props: FeatureProps) {
   const animationDelay = props.delay * 0.225
   return (
     <motion.div
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: [0, 1], y: [50, 0] }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, ease: 'easeInOut', delay: animationDelay }}
