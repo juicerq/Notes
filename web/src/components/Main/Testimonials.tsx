@@ -31,7 +31,7 @@ export default function Testimonials() {
       {testimonials && (
         <>
           <div
-            className="relative flex h-[340px] flex-col items-center justify-around rounded-md bg-mainPalette-bgAlt p-8 md:h-[300px] md:w-[540px] lg:h-72 lg:flex-row"
+            className="relative flex h-[340px] flex-col items-center justify-around rounded-md bg-mainPalette-bgAlt p-8 md:h-[300px] md:w-[540px] lg:h-72 lg:flex-row 2xl:w-[740px]"
             key={testimonials[currentIndex].name}
           >
             <motion.div
@@ -64,7 +64,7 @@ export default function Testimonials() {
                 viewport={{ once: true }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.6 }}
+                transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.5 }}
                 className="md:w-full md:text-center"
               >
                 <h4 className="font-main text-mainPalette-primaryButton md:text-lg">
