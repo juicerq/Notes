@@ -53,7 +53,7 @@ export default function Testimonials() {
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4 }}
-                className=" text-justify text-zinc-400 lg:leading-relaxed"
+                className=" text-center text-zinc-400 lg:leading-relaxed"
               >
                 {testimonials[currentIndex].feedBack}
               </motion.p>

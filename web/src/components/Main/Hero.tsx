@@ -40,7 +40,7 @@ export default function Main() {
       </div>
       <Link
         href={'#'}
-        onClick={() => handleLinkClick('features')}
+        onClick={() => handleLinkClick('about')}
         className="absolute bottom-20 flex justify-center gap-2 text-zinc-500 hover:text-mainPalette-text"
       >
         <FaAngleDown
