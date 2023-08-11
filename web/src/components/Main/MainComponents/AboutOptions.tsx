@@ -11,7 +11,7 @@ export default function AboutOptions() {
     setOptionIndex(n)
   }
   return (
-    <div className="flex flex-col gap-12 text-justify lg:w-1/2 lg:gap-16">
+    <div className="flex flex-col gap-12 lg:w-1/2 lg:gap-16">
       {/* Button to render different option */}
       <div className="flex gap-6 lg:items-center">
         <div
@@ -20,14 +20,14 @@ export default function AboutOptions() {
         >
           <div
             className={`option-bar peer ${
-              optionIndex === 1 ? 'opacity-100' : 'opacity-20 hover:opacity-50'
+              optionIndex === 1 ? 'opacity-100' : 'opacity-30 hover:opacity-50'
             }`}
           />
           <p
             className={`option-bar-text ${
               optionIndex === 1
                 ? 'opacity-100'
-                : 'opacity-5 peer-hover:opacity-50'
+                : 'opacity-30 peer-hover:opacity-50'
             }`}
           >
             01
@@ -39,13 +39,13 @@ export default function AboutOptions() {
         >
           <div
             className={`option-bar peer ${
-              optionIndex === 1 ? 'opacity-20 hover:opacity-50' : 'opacity-100'
+              optionIndex === 1 ? 'opacity-30 hover:opacity-50' : 'opacity-100'
             }`}
           />
           <p
             className={`option-bar-text ${
               optionIndex === 1
-                ? 'opacity-5 peer-hover:opacity-50'
+                ? 'opacity-30 peer-hover:opacity-50'
                 : 'opacity-100'
             }`}
           >

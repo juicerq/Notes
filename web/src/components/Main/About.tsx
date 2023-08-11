@@ -11,7 +11,7 @@ export default function About() {
       <div className="flex w-full flex-col gap-8 md:rounded-lg md:py-8">
         {/* Title n subtitle */}
         <div className="flex-center flex-col gap-2 text-center">
-          <h4 className="font-main text-4xl text-mainPalette-bg lg:text-6xl">
+          <h4 className="font-main text-4xl tracking-tighter text-mainPalette-bg lg:text-6xl">
             Como funciona?
           </h4>
           <p className="text-lg leading-relaxed text-zinc-400 md:w-3/4">

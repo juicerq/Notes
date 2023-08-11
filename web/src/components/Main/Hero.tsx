@@ -21,9 +21,9 @@ export default function Main() {
           <span className="text-mainPalette-primaryButton">site perfeito</span>{' '}
           em segundos
         </h1>
-        <p className="px-8 text-lg leading-relaxed text-mainPalette-text xl:text-2xl ">
+        <h2 className="px-8 text-lg leading-relaxed text-mainPalette-text xl:text-2xl ">
           Experimente nossa ferramenta de demonstração.
-        </p>
+        </h2>
       </div>
       {/* Buttons */}
       <div className="z-20 flex w-full flex-col justify-center gap-8 font-main  md:flex-row">
