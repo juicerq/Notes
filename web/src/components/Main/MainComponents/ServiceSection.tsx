@@ -58,7 +58,7 @@ export default function ServiceSection(props: ServiceSectionProps) {
           />
         </div>
         <div
-          className={`min-w-min text-justify ${
+          className={`min-w-min ${
             props.reverse ? 'lg:pr-12 xl:pr-20 2xl:pr-36' : '2xl:pr-16'
           } text-zinc-400`}
         >

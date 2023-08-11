@@ -19,7 +19,7 @@ export default function Option(props: OptionProps) {
       className="flex flex-col gap-6"
       key={'1'}
     >
-      <h4 className=" relative z-10 w-fit text-5xl text-mainPalette-bg">
+      <h4 className=" relative z-10 w-fit text-left text-5xl text-mainPalette-bg">
         {props.title}
       </h4>
       {props.children}

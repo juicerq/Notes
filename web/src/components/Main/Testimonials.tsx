@@ -28,10 +28,9 @@ export default function Testimonials() {
   return (
     <div className="section-spacing relative flex w-screen flex-col items-center justify-around gap-24 py-28">
       <CornerDividerTop />
-      <h3 className="w-full text-center font-main text-3xl uppercase text-mainPalette-text">
-        UM POUCO DO QUE NOSSOS{' '}
-        <span className="text-mainPalette-primaryButton">CLIENTES</span> TEM A
-        DIZER
+      <h3 className="w-full text-center font-main text-3xl text-mainPalette-text">
+        Relatos dos nossos{' '}
+        <span className="text-mainPalette-primaryButton">clientes</span>
       </h3>
       {testimonials && (
         <div className="flex w-full flex-col items-center justify-center">
@@ -92,7 +91,7 @@ export default function Testimonials() {
               <HiChevronLeft size={35} />
             </button>
             <button
-              className="duration-400 flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white transition-all active:scale-95 active:bg-mainPalette-accent lg:hover:bg-mainPalette-accent"
+              className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white active:scale-95 active:bg-mainPalette-accent lg:hover:bg-mainPalette-accent"
               onClick={() =>
                 handleClick(
                   currentIndex === testimonials.length - 1

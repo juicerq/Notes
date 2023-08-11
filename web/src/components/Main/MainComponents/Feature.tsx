@@ -33,9 +33,7 @@ export default function Feature(props: FeatureProps) {
         {props.icon}
       </div>
       <h2 className="text-lg xl:text-xl">{props.title}</h2>
-      <p className="text-lg text-zinc-400 xl:text-justify">
-        {props.description}
-      </p>
+      <p className="text-lg leading-snug text-zinc-400">{props.description}</p>
     </motion.div>
   )
 }
