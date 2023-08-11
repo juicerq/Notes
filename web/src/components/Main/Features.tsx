@@ -17,10 +17,10 @@ export default function Features() {
         className="flex flex-col items-center justify-center lg:w-full"
       >
         <div className="w-full">
-          <h3 className="w-full bg-mainPalette-bgAlt py-4 text-center font-main text-3xl uppercase text-mainPalette-bg lg:py-24">
-            Nossa Abordagem para seu{' '}
+          <h3 className="bg-mainPalette-bgAlt px-4 py-8 text-center font-main text-3xl text-mainPalette-bg md:py-16 lg:pb-24 lg:pt-0">
+            Nossa abordagem para seu{' '}
             <span className="text-mainPalette-primaryButton">
-              Site de Sucesso
+              site de sucesso
             </span>
           </h3>
         </div>
