@@ -1,18 +1,25 @@
 import './globals.css'
 import { ReactNode } from 'react'
-import {
-  Roboto_Flex as Roboto,
-  Share_Tech_Mono as ShareTech,
-} from 'next/font/google'
+import { Roboto_Flex as Roboto } from 'next/font/google'
 import Header from '@/components/Main/Header'
 import BackToTop from '@/components/General/BackToTop'
+import localFont from '@next/font/local'
 
-const roboto = Roboto({ subsets: ['latin'], variable: '--font-alt' })
-const main = ShareTech({
-  subsets: ['latin'],
-  weight: '400',
+const satoshi = localFont({
+  src: [
+    {
+      path: '../../public/fonts/satoshi/Satoshi-Regular.ttf',
+      weight: '400',
+    },
+    {
+      path: '../../public/fonts/satoshi/Satoshi-Bold.ttf',
+      weight: '700',
+    },
+  ],
   variable: '--font-main',
 })
+
+const roboto = Roboto({ subsets: ['latin'], variable: '--font-alt' })
 
 export const metadata = {
   title: 'WebCraft',
@@ -26,7 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${main.variable} z-0 overflow-x-hidden bg-mainPalette-bg`}
+        className={`${roboto.variable} ${satoshi.variable} z-0 overflow-x-hidden bg-mainPalette-bg`}
       >
         <Header />
         {children}
