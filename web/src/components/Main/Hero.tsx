@@ -21,7 +21,7 @@ export default function Main() {
           <span className="text-mainPalette-primaryButton">site perfeito</span>{' '}
           em segundos
         </h1>
-        <h2 className="px-8 text-lg leading-relaxed text-mainPalette-text xl:text-2xl ">
+        <h2 className="text-lg leading-relaxed text-mainPalette-text xl:text-2xl ">
           Experimente nossa ferramenta de demonstração.
         </h2>
       </div>
