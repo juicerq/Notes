@@ -16,7 +16,7 @@ export default function Services() {
         </div>
         <div className="flex-center flex-col gap-6">
           <ServiceSection title="Landing Page" image={images.lp}>
-            <p className="">
+            <p>
               Impulsione sua{' '}
               <span className="text-mainPalette-primaryButton">
                 {' '}

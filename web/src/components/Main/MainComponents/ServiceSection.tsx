@@ -41,12 +41,12 @@ export default function ServiceSection(props: ServiceSectionProps) {
         />
       </div>
       <div
-        className={`flex flex-col gap-4 lg:h-80 lg:w-1/2 lg:items-start lg:justify-center ${
+        className={`flex flex-col gap-6 lg:h-80 lg:w-1/2 lg:items-start lg:justify-center ${
           props.reverse ? '2xl:pl-20' : 'lg:pl-12 xl:pl-24'
         } xl:h-96 2xl:h-[480px]`}
       >
         <div className={`w-fit`}>
-          <h3 className="font-main text-xl uppercase tracking-wider xs:text-2xl xl:text-3xl 2xl:text-4xl">
+          <h3 className="font-main text-xl uppercase tracking-wide xs:text-2xl xl:text-3xl 2xl:text-4xl">
             {props.title}
           </h3>
           <motion.div
@@ -58,7 +58,7 @@ export default function ServiceSection(props: ServiceSectionProps) {
           />
         </div>
         <div
-          className={`min-w-min ${
+          className={`min-w-min text-lg leading-snug ${
             props.reverse ? 'lg:pr-12 xl:pr-20 2xl:pr-36' : '2xl:pr-16'
           } text-zinc-400`}
         >
