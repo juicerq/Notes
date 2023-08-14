@@ -1,7 +1,7 @@
 'use client'
 
 import ServiceSection from './MainComponents/ServiceSection'
-import ContainerTitle from './MainComponents/ContainerTitle'
+
 import { images } from '@/constants'
 
 export default function Services() {
