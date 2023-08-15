@@ -26,10 +26,20 @@ export function SideBar() {
           <ArrowLeftFromLine size={28} />
         </Link>
 
-        <div className="relative w-full">
+        <div className="relative flex w-full justify-center xs:gap-2 md:gap-4 lg:flex-col lg:gap-12">
           <div
-            className={`duration-400 flex-center absolute transition-all xs:gap-2 md:gap-4 lg:flex-col lg:gap-12 ${
-              show ? 'left-0' : '-left-[100vw] lg:-left-[10vw]'
+            className={`duration-400  transition-all`}
+            onClick={() => setShow(!show)}
+          >
+            {show ? (
+              <SideBarIcon text="Esconder" icon={<ArrowLeft size={30} />} />
+            ) : (
+              <SideBarIcon text="Mostrar" icon={<ArrowRight size={30} />} />
+            )}
+          </div>
+          <div
+            className={`duration-400 flex-center relative transition-all xs:gap-2 md:gap-4 lg:flex-col lg:gap-12 ${
+              show ? 'right-0' : '-right-[100vw] lg:-right-[10vw]'
             }`}
           >
             <SideBarIcon text="Sessões" icon={<Activity size={30} />} />
@@ -37,25 +47,6 @@ export function SideBar() {
             <SideBarIcon text="Piriquito" icon={<Bird size={30} />} />
             <SideBarIcon text="Cores" icon={<PaintBucket size={30} />} />
           </div>
-          {show ? (
-            <div
-              className={`duration-400 absolute transition-all ${
-                show ? '' : ''
-              }`}
-              onClick={() => setShow(!show)}
-            >
-              <SideBarIcon text="Esconder" icon={<ArrowLeft size={30} />} />
-            </div>
-          ) : (
-            <div
-              className={`duration-400 absolute transition-all ${
-                show ? '' : ''
-              }`}
-              onClick={() => setShow(!show)}
-            >
-              <SideBarIcon text="Mostrar" icon={<ArrowRight size={30} />} />
-            </div>
-          )}
         </div>
 
         {/* <div className="absolute top-0 h-full w-full bg-mainPalette-bgAlt bg-opacity-50"></div> */}
