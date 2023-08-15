@@ -43,7 +43,7 @@ export default function Testimonials() {
               viewport={{ once: true }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
             >
               <Image
                 src={`https://source.unsplash.com/random/150x150?woman=${currentIndex}`}
@@ -59,7 +59,7 @@ export default function Testimonials() {
                 initial={{ opacity: 0 }}
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
                 className="text-zinc-400 lg:leading-relaxed"
               >
                 {testimonials[currentIndex].feedBack}
@@ -68,7 +68,7 @@ export default function Testimonials() {
                 viewport={{ once: true }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.5 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
                 className="md:w-full md:text-center"
               >
                 <h4 className="font-main text-mainPalette-primaryButton md:text-lg">
