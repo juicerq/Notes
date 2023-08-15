@@ -29,13 +29,13 @@
 }
 
 :root {
-  --bg: #fff;
+  --bg: #eee;
   --bgAlt: #252525;
   --primaryButton: #74c313;
   --secondaryButton: #07010e;
   --extra: #253514;
-  --accent: #4D7C14;
-  --text: #000;
+  --accent: #6BB214;
+  --text: #2c2c2c;
 }
 
 .item {
@@ -82,7 +82,7 @@
   }
 
   .sidebar-tooltip {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-mainPalette-text bg-gray-900 border-2 border-mainPalette-primaryButton text-xs font-bold transition-all duration-100 scale-0 origin-left;
+    @apply absolute w-auto p-2 m-2 min-w-max -top-14 lg:left-14 rounded-md shadow-md text-mainPalette-text bg-gray-900 border-2 border-mainPalette-primaryButton text-xs font-bold transition-all duration-100 scale-0 origin-bottom lg:origin-left;
   }
 
   .highlight {

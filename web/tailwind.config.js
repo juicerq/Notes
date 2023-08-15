@@ -53,7 +53,7 @@ module.exports = {
           accent: '#6BB214',
           fadedBlack: 'rgba(0, 0, 0, 0.55)',
         },
-        previewPalette0: {
+        demoPalette: {
           text: 'var(--text)',
           bg: 'var(--bg)',
           bgAlt: 'var(--bgAlt)',
@@ -61,14 +61,6 @@ module.exports = {
           secondaryButton: 'var(--secondaryButton)',
           extra: 'var(--extra)',
           accent: 'var(--accent)',
-        },
-        previewPalette1: {
-          text: '#14171f',
-          bg: '#f2f4f7',
-          primaryButton: '#d6cebd',
-          secondaryButton: '#e9ecf1',
-          extra: '#DDD8CC',
-          accent: '#E2E1DE',
         },
         border: 'hsl(var(--border))',
         input: '#74c313',

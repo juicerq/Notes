@@ -1,6 +1,6 @@
 export default function ArtMobile() {
   return (
-    <div className="md:hidden">
+    <div className="hidden">
       <svg
         id="art-mobile"
         width="300"

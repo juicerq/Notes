@@ -49,7 +49,7 @@ export default function LPNavbarDesktop(props: NavDesktopProps) {
     >
       <nav className="flex h-full w-full items-center justify-around">
         <div className="flex-center h-full w-[172px]">
-          <div className="flex items-center justify-center text-previewPalette0-text">
+          <div className="flex items-center justify-center text-demoPalette-text">
             <BoxSelect size={48} />
             <p className="text-xl font-semibold uppercase">Logo</p>
           </div>
