@@ -10,22 +10,19 @@ export function LPHero() {
     >
       <div className="flex w-full flex-col items-start justify-center gap-8 lg:gap-12 xl:w-1/2 xl:gap-12 2xl:gap-16">
         <div className="flex w-full flex-col gap-6">
-          <h2 className="text-2xl font-bold xl:text-3xl 2xl:text-3xl">
-            Esse é um modelo de{' '}
-            <span className="text-demoPalette-primaryButton">Landing Page</span>{' '}
-            que você pode customizar e adquirir
-          </h2>
-          <motion.div
-            viewport={{ once: true }}
-            initial={{ width: 0 }}
-            whileInView={{ width: '100%', height: 1 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="w-0 rounded-full border-2 border-demoPalette-text"
-          />
-          <p className="text-xl text-demoPalette-accent">
-            {' '}
-            Aprenda a usar rapidinho!
-          </p>
+          <div className="flex flex-col gap-2">
+            <h2 className="text-2xl font-bold xl:text-3xl 2xl:text-3xl">
+              Esse é um modelo de{' '}
+              <span className="text-demoPalette-primaryButton">
+                Landing Page
+              </span>{' '}
+              que você pode customizar e adquirir
+            </h2>
+            <p className="text-xl text-demoPalette-accent">
+              {' '}
+              Aprenda a usar rapidinho!
+            </p>
+          </div>
           <p className="text-md font-main leading-relaxed xl:text-sm 2xl:text-lg">
             Na parte inferior dessa tela você verá botões que controlam a edição
             da Landing Page, para saber o que cada um faz clique uma vez, para

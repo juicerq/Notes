@@ -1,7 +1,3 @@
-'use client'
-
-import ServiceSection from './MainComponents/ServiceSection'
-
 import { images } from '@/constants'
 import Image from 'next/image'
 
