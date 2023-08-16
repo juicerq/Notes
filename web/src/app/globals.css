@@ -70,7 +70,7 @@
   }
 
   .section-spacing {
-    @apply px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-64;
+    @apply px-8 md:px-12 lg:pb-20 2xl:pb-32 lg:px-16 xl:px-24 2xl:px-64;
   }
 
   .button-hover {
