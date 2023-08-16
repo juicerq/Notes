@@ -29,11 +29,11 @@ export default function Testimonials() {
     <div className="section-spacing relative flex w-screen flex-col items-center justify-around gap-28 py-28">
       <CornerDividerTop />
       <div className="flex flex-col gap-4">
-        <h3 className="w-full text-center font-main text-5xl text-mainPalette-text">
+        <h3 className="w-full text-center font-main text-3xl text-mainPalette-text 2xl:text-5xl">
           Relatos dos nossos{' '}
           <span className="text-mainPalette-primaryButton">clientes</span>
         </h3>
-        <p className="w-full text-center text-lg text-zinc-600">
+        <p className="w-full text-center text-lg text-zinc-600 2xl:px-56">
           A satisfação dos nossos clientes é a nossa maior conquista
         </p>
       </div>
