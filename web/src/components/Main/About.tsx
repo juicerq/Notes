@@ -28,7 +28,7 @@ export default function About() {
               src={images.landingPage}
               fill
               alt="a"
-              className="rounded object-cover"
+              className="w-full rounded object-cover"
             />
           </div>
         </div>

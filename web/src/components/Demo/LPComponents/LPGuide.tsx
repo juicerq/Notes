@@ -3,7 +3,7 @@
 import ArtMobile from './Arts/ArtMobile'
 import ArtTablet from './Arts/ArtTablet'
 
-export function LPHero() {
+export function LPGuide() {
   return (
     <div
       id="lp-home"

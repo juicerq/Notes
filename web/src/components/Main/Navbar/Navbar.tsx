@@ -1,7 +1,7 @@
 'use client'
 
 import NavbarDesktop from './NavbarDesktop'
-import NavbarMobile from './NavbarMobile'
+// import NavbarMobile from './NavbarMobile'
 
 const navLinks: { id: string; name: string }[] = [
   { id: '', name: 'Início' },
@@ -13,9 +13,6 @@ export default function Navbar() {
     <>
       {/* // Navbar // */}
       <NavbarDesktop links={navLinks} />
-
-      {/* // Navbar Mobile // */}
-      <NavbarMobile links={navLinks} />
     </>
   )
 }

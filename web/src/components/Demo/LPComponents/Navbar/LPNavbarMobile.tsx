@@ -1,3 +1,5 @@
+'use client'
+
 import {
   X,
   Instagram,
@@ -16,7 +18,6 @@ interface NavMobileProps {
 
 export default function LPNavbarMobile(props: NavMobileProps) {
   const [toggle, setToggle] = useState(false)
-
   const router = useRouter()
 
   const handleLinkClick = (item: string) => {
