@@ -20,17 +20,14 @@ export default function About() {
           </p>
         </div>
         {/* Conteúdo */}
-        <div className="flex w-full justify-center gap-8 text-lg leading-relaxed lg:h-full lg:gap-20 xl:gap-36 2xl:gap-40">
+        <div className="flex w-full justify-center gap-8 text-lg leading-relaxed lg:h-[1360px] lg:gap-16 xl:h-[1500px] xl:gap-24">
           <AboutOptions />
           {/* Img */}
-          <div className="relative hidden h-[620px] flex-col gap-6 lg:flex lg:w-1/2">
-            <Image
-              src={images.landingPage}
-              fill
-              alt="a"
-              className="w-full rounded object-cover"
-            />
-          </div>
+          <Image
+            src={images.landingPage}
+            alt="a"
+            className="top-[15%] hidden h-[66vh] w-full object-cover object-top lg:sticky lg:block lg:max-w-[50%] xl:max-w-[40%]"
+          />
         </div>
       </div>
     </div>

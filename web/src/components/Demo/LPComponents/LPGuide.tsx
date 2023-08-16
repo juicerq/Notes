@@ -6,7 +6,7 @@ import ArtTablet from './Arts/ArtTablet'
 export function LPGuide() {
   return (
     <div
-      id="lp-home"
+      id="lp-guide"
       className="section-spacing flex flex-col items-center gap-36 pt-28 md:gap-16 md:pt-36 lg:h-screen lg:flex-row lg:pt-20"
     >
       <div className="flex w-full flex-col items-start justify-center gap-8 lg:gap-12 xl:w-1/2 xl:gap-12 2xl:gap-16">

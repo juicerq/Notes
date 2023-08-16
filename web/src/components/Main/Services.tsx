@@ -19,7 +19,7 @@ export default function Services() {
             >
               Impulsione
             </motion.span>{' '}
-            a sua presença virtual
+            a sua presença online
           </h2>
           <div className="flex flex-col gap-4 text-lg text-zinc-400 lg:w-2/3">
             <p>

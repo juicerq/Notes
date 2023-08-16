@@ -1,8 +1,8 @@
 import { LPAbout } from './LPComponents/LPAbout'
 import { LPGuide } from './LPComponents/LPGuide'
+import { LPProjects } from './LPComponents/LPProjects'
 // import { LPWork } from './LPComponents/LPWork'
 // import { BarChart4 } from 'lucide-react'
-// import { LPProjects } from './LPComponents/LPSkills'
 // import { LPHero } from './LPComponents/LPHero'
 import LPNavbar from './LPComponents/Navbar/LPNavbar'
 
@@ -12,9 +12,9 @@ export default function LandingPage() {
       <LPNavbar />
       <LPGuide />
       <LPAbout />
+      {/* <LPWork /> */}
+      <LPProjects />
       {/* <LPHero /> */}
-      {/* <LPWork />
-      <LPProjects /> */}
 
       {/* <div
         id="contact"

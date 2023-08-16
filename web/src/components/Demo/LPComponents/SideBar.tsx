@@ -24,7 +24,7 @@ export function SideBar() {
       >
         <Link
           href={'/'}
-          className="group absolute top-10 hidden h-12 w-12 items-center justify-center rounded-3xl bg-mainPalette-bgAlt transition-all ease-linear lg:flex lg:hover:-translate-x-1 lg:hover:bg-mainPalette-text lg:hover:text-mainPalette-bg"
+          className="group absolute top-20 hidden h-12 w-12 items-center justify-center rounded-3xl bg-mainPalette-bgAlt transition-all ease-linear lg:flex lg:hover:-translate-x-1 lg:hover:bg-mainPalette-text lg:hover:text-mainPalette-bg"
         >
           <ArrowLeftFromLine size={28} />
           <span className="absolute m-2 w-auto min-w-max scale-0 rounded-md border-2 border-mainPalette-bg bg-mainPalette-bgAlt p-2 text-xs font-bold text-mainPalette-bg shadow-md transition-all duration-100 group-hover:scale-100 lg:left-14 lg:origin-left">
