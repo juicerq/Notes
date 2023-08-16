@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react'
 import { motion } from 'framer-motion'
+import useIsMobile from '@/hooks/useIsMobile'
 
 interface FeatureProps {
   icon: ReactNode
@@ -11,7 +12,7 @@ interface FeatureProps {
 }
 
 export default function Feature(props: FeatureProps) {
-  const isNotMobile = window.innerWidth >= 1024
+  const isNotMobile = useIsMobile()
   const animationDelay = isNotMobile ? props.delay * 0.225 : 0
 
   const initialValue = isNotMobile

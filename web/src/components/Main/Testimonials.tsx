@@ -26,12 +26,17 @@ export default function Testimonials() {
   }
 
   return (
-    <div className="section-spacing relative flex w-screen flex-col items-center justify-around gap-24 py-28">
+    <div className="section-spacing relative flex w-screen flex-col items-center justify-around gap-28 py-28">
       <CornerDividerTop />
-      <h3 className="w-full text-center font-main text-3xl text-mainPalette-text">
-        Relatos dos nossos{' '}
-        <span className="text-mainPalette-primaryButton">clientes</span>
-      </h3>
+      <div className="flex flex-col gap-4">
+        <h3 className="w-full text-center font-main text-5xl text-mainPalette-text">
+          Relatos dos nossos{' '}
+          <span className="text-mainPalette-primaryButton">clientes</span>
+        </h3>
+        <p className="w-full px-56 text-center text-lg text-zinc-600">
+          A satisfação dos nossos clientes é a nossa maior conquista
+        </p>
+      </div>
       {testimonials && (
         <div className="flex w-full flex-col items-center justify-center">
           <div
