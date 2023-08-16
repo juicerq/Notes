@@ -1,15 +1,27 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
 export default function Services() {
   return (
     <div
       id="service"
       className="section-spacing flex flex-col items-center justify-center gap-20 bg-mainPalette-bgAlt pt-12 xl:py-44"
     >
-      <div className="flex flex-col xl:flex-row xl:gap-16">
+      <div className="flex flex-col gap-16">
         <div className="flex flex-col gap-8 xl:pr-14">
-          <h2 className="w-2/3 tracking-tight text-mainPalette-bg xl:text-6xl">
-            A Landing Page dos sonhos
+          <h2 className="text-5xl text-mainPalette-bg lg:w-2/3 xl:text-6xl">
+            <motion.span
+              initial={{ x: -500 }}
+              whileInView={{ x: [-500, 0] }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
+              className="text-mainPalette-primaryButton"
+            >
+              Impulsione
+            </motion.span>{' '}
+            a sua presença virtual
           </h2>
-          <div className="flex w-2/3 flex-col gap-4 text-lg text-zinc-400">
+          <div className="flex flex-col gap-4 text-lg text-zinc-400 lg:w-2/3">
             <p>
               Impulsione sua{' '}
               <span className="text-mainPalette-primaryButton">
@@ -20,6 +32,14 @@ export default function Services() {
               especializados em criar páginas de destino que convertem
               visitantes em clientes.
             </p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 xl:pr-14">
+          <h2 className="text-5xl text-mainPalette-bg lg:w-2/3 xl:text-6xl">
+            <span className="text-mainPalette-primaryButton">Capte</span>{' '}
+            clientes a partir do seu site
+          </h2>
+          <div className="flex flex-col gap-4 text-lg text-zinc-400 lg:w-2/3">
             <p>
               Sua Landing Page será uma poderosa ferramenta de{' '}
               <span className="text-mainPalette-primaryButton">
