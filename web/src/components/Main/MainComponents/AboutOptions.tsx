@@ -15,41 +15,45 @@ export default function AboutOptions() {
       {/* Button to render different option */}
       <div className="flex gap-6 lg:items-center">
         <div
-          className="flex flex-col-reverse"
+          className="group flex flex-col-reverse"
           onClick={() => handleChangeOptionIndex(1)}
         >
           <div
-            className={`option-bar peer ${
-              optionIndex === 1 ? 'opacity-100' : 'opacity-30 hover:opacity-50'
+            className={`option-bar ${
+              optionIndex === 1
+                ? 'opacity-100'
+                : 'opacity-30 group-hover:opacity-50'
             }`}
           />
           <p
-            className={`option-bar-text ${
+            className={`option-bar-text cursor-pointer   ${
               optionIndex === 1
                 ? 'opacity-100'
-                : 'opacity-30 peer-hover:opacity-50'
+                : 'opacity-30 group-hover:opacity-50'
             }`}
           >
-            Ferramenta
+            Opção 01
           </p>
         </div>
         <div
-          className="flex flex-col-reverse"
+          className="group flex flex-col-reverse"
           onClick={() => handleChangeOptionIndex(2)}
         >
           <div
-            className={`option-bar peer ${
-              optionIndex === 1 ? 'opacity-30 hover:opacity-50' : 'opacity-100'
+            className={`option-bar ${
+              optionIndex === 1
+                ? 'opacity-30 group-hover:opacity-50'
+                : 'opacity-100'
             }`}
           />
           <p
-            className={`option-bar-text ${
+            className={`option-bar-text cursor-pointer ${
               optionIndex === 1
-                ? 'opacity-30 peer-hover:opacity-50'
+                ? 'opacity-30 group-hover:opacity-50'
                 : 'opacity-100'
             }`}
           >
-            Contato Direto
+            Opção 02
           </p>
         </div>
       </div>
@@ -57,7 +61,11 @@ export default function AboutOptions() {
       {optionIndex === 1 ? (
         // Opção 1
         <>
-          <Option title="Ferramenta" buttonName="craft" buttonLink="demo">
+          <Option
+            title="Fazer do meu jeitinho"
+            buttonName="Explorar"
+            buttonLink="demo"
+          >
             <p className="text-lg leading-relaxed text-zinc-400">
               A primeira delas é utilizar nossa ferramenta de construção de
               landing page, acessível pelo{' '}
@@ -81,7 +89,7 @@ export default function AboutOptions() {
         // Opção 2
         <div className="flex flex-col gap-12">
           <Option
-            title="Contato Direto"
+            title="Entrar em contato diretamente com a gente"
             buttonName="Contato"
             buttonLink="contact"
           >

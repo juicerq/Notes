@@ -33,7 +33,7 @@ export default function Testimonials() {
           Relatos dos nossos{' '}
           <span className="text-mainPalette-primaryButton">clientes</span>
         </h3>
-        <p className="w-full text-center text-lg text-zinc-600 2xl:px-56">
+        <p className="w-full text-center text-lg text-zinc-600">
           A satisfação dos nossos clientes é a nossa maior conquista
         </p>
       </div>
