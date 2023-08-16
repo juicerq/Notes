@@ -13,9 +13,6 @@ export default function Navbar() {
     <>
       {/* // Navbar // */}
       <NavbarDesktop links={navLinks} />
-
-      {/* // Navbar Mobile // */}
-      {/* <NavbarMobile links={navLinks} /> */}
     </>
   )
 }
