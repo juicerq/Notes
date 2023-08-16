@@ -30,7 +30,7 @@ export default function AboutOptions() {
                 : 'opacity-30 peer-hover:opacity-50'
             }`}
           >
-            01
+            Ferramenta
           </p>
         </div>
         <div
@@ -49,7 +49,7 @@ export default function AboutOptions() {
                 : 'opacity-100'
             }`}
           >
-            02
+            Contato Direto
           </p>
         </div>
       </div>
