@@ -1,16 +1,18 @@
 import { LPAbout } from './LPComponents/LPAbout'
-import { LPWork } from './LPComponents/LPWork'
-import { BarChart4 } from 'lucide-react'
-import { LPProjects } from './LPComponents/LPSkills'
-import { LPHero } from './LPComponents/LPHero'
+import { LPGuide } from './LPComponents/LPGuide'
+// import { LPWork } from './LPComponents/LPWork'
+// import { BarChart4 } from 'lucide-react'
+// import { LPProjects } from './LPComponents/LPSkills'
+// import { LPHero } from './LPComponents/LPHero'
 import LPNavbar from './LPComponents/Navbar/LPNavbar'
 
 export default function LandingPage() {
   return (
     <div className="bg-demoPalette-bg text-demoPalette-text">
       <LPNavbar />
-      <LPHero />
+      <LPGuide />
       <LPAbout />
+      {/* <LPHero /> */}
       {/* <LPWork />
       <LPProjects /> */}
 

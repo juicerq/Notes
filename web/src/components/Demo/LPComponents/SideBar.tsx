@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Activity,
   ArrowLeft,
@@ -11,13 +13,14 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 export function SideBar() {
-  const [canToggle, setCanToggle] = useState(false)
+  const isNotMobile = window.innerWidth >= 1024
+
   const [show, setShow] = useState(true)
 
   return (
     <>
       <div
-        className={`fixed bottom-0 z-50 flex h-32 w-full items-center justify-center text-mainPalette-bg transition-all duration-700 xs:gap-2 md:bottom-auto md:top-28 md:gap-4 lg:flex lg:h-full lg:w-32 lg:flex-col lg:gap-12 xl:top-12`}
+        className={`fixed bottom-0 z-50 flex h-32 w-full items-center justify-center text-mainPalette-bg transition-all duration-700 xs:gap-2 md:gap-4 lg:bottom-auto lg:top-28 lg:flex lg:h-full lg:w-32 lg:flex-col lg:gap-12 xl:top-12`}
       >
         <Link
           href={'/'}
@@ -29,26 +32,46 @@ export function SideBar() {
           </span>
         </Link>
 
-        <div className="relative flex w-full items-center justify-center xs:gap-1 md:flex-col md:gap-4 lg:gap-12">
+        <div className="relative flex w-full items-center justify-center xs:gap-1 md:gap-4 lg:flex-col lg:gap-12">
           <div
-            className={`duration-400  transition-all`}
+            className={`${
+              show ? '' : 'md:-translate-x-44 lg:translate-x-0'
+            } duration-400  transition-all`}
             onClick={() => setShow(!show)}
           >
-            {show ? (
-              <SideBarIcon
-                text="Esconder Menu"
-                icon={<ArrowLeft size={30} />}
-              />
+            {isNotMobile ? (
+              <>
+                {show ? (
+                  <SideBarIcon
+                    text="Esconder Menu"
+                    icon={<ArrowLeft size={30} />}
+                  />
+                ) : (
+                  <SideBarIcon
+                    text="Mostrar Menu"
+                    icon={<ArrowRight size={30} />}
+                  />
+                )}
+              </>
             ) : (
-              <SideBarIcon
-                text="Mostrar Menu"
-                icon={<ArrowRight size={30} />}
-              />
+              <>
+                {show ? (
+                  <SideBarIcon
+                    text="Esconder Menu"
+                    icon={<ArrowRight size={30} />}
+                  />
+                ) : (
+                  <SideBarIcon
+                    text="Mostrar Menu"
+                    icon={<ArrowLeft size={30} />}
+                  />
+                )}
+              </>
             )}
           </div>
           <div
-            className={`duration-400 flex-center relative transition-all xs:gap-1 md:flex-col md:gap-4 lg:gap-12 ${
-              show ? ' right-0 lg:left-0' : '-right-[100vw] md:-left-[10vw]'
+            className={`duration-400 flex-center relative transition-all xs:gap-1 md:gap-4 lg:flex-col lg:gap-12 ${
+              show ? ' right-0 lg:left-0' : '-right-[100vw] lg:-left-[10vw]'
             }`}
           >
             <SideBarIcon text="Sessões" icon={<Activity size={30} />} />

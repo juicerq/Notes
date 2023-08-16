@@ -21,6 +21,7 @@ export default function Feature(props: FeatureProps) {
   const whileInViewValue = isNotMobile
     ? { opacity: [0, 1], y: [50, 0] }
     : { opacity: 1, y: 0 }
+
   return (
     <motion.div
       initial={initialValue}

@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    concurrentFeatures: true,
+    serverComponents: true,
+  },
+  swcMinify: true,
   images: {
     remotePatterns: [
       {

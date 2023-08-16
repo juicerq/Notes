@@ -1,5 +1,3 @@
-'use client'
-
 import { SideBar } from '@/components/Demo/LPComponents/SideBar'
 import LandingPage from '@/components/Demo/LandingPage'
 import PageTransition from '@/components/General/PageTransition'
