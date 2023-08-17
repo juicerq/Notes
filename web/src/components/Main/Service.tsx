@@ -1,16 +1,13 @@
 'use client'
 
-import Image from 'next/image'
 import Lottie from 'lottie-react'
-
 import animationData from '../../assets/serviceanimation.json'
-import { images } from '@/constants'
 
 export default function Service() {
   return (
     <div
       id="service"
-      className="section-spacing flex flex-col items-center justify-center gap-20 bg-mainPalette-bgAlt pt-12 xl:flex-row xl:py-44"
+      className="section-spacing flex flex-col items-center justify-center  bg-mainPalette-bgAlt pt-12 lg:gap-20 xl:flex-row xl:py-44"
     >
       <div className="flex flex-col justify-evenly gap-16 2xl:gap-28">
         <div className="flex flex-col gap-8">
@@ -47,7 +44,7 @@ export default function Service() {
       <div className="flex">
         <Lottie
           animationData={animationData}
-          className="h-[600px] xl:w-[600px]"
+          className="h-[480px] lg:h-[600px] xl:w-[600px]"
         />
       </div>
       {/* <Image
