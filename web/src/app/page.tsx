@@ -1,4 +1,4 @@
-import PageTransition from '@/components/General/PageTransition'
+import PageTransition from '@/components/general/PageTransition'
 import About from '@/components/Main/About'
 import Features from '@/components/Main/Features'
 import Footer from '@/components/Main/Footer'
