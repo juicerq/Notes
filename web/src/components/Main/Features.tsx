@@ -8,7 +8,7 @@ import {
 import { MdOutlineAnimation } from 'react-icons/md'
 import { PiHandSwipeLeft } from 'react-icons/pi'
 
-import Feature from './MainComponents/Feature'
+import Feature from './mainComponents/Feature'
 
 export default function Features() {
   return (

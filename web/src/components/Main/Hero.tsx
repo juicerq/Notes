@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { FaAngleDown } from 'react-icons/fa'
-import { CornerDividerBottom } from './MainComponents/CornerDivider'
+import { CornerDividerBottom } from './mainComponents/CornerDivider'
 
-import TraceAnimations from './MainComponents/TraceAnimations'
+import TraceAnimations from './mainComponents/TraceAnimations'
 
 export default function Hero() {
   return (

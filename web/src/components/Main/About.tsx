@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { images } from '@/constants'
 
-import AboutOptions from './MainComponents/AboutOptions'
+import AboutOptions from './mainComponents/AboutOptions'
 
 export default function About() {
   return (

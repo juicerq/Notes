@@ -1,7 +1,7 @@
 'use client'
 
-import ArtMobile from './Arts/ArtMobile'
-import ArtTablet from './Arts/ArtTablet'
+import ArtMobile from './arts/ArtMobile'
+import ArtTablet from './arts/ArtTablet'
 
 export function LPHero() {
   return (

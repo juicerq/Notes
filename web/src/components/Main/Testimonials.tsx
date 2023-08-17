@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import Image from 'next/image'
-import { CornerDividerTop } from './MainComponents/CornerDivider'
+import { CornerDividerTop } from './mainComponents/CornerDivider'
 
 const testimonials = [
   {

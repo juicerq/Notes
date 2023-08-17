@@ -1,6 +1,6 @@
 'use client'
 
-import PageTransition from '@/components/General/PageTransition'
+import PageTransition from '@/components/general/PageTransition'
 import { Input } from '@/components/ui/input'
 import {
   Select,

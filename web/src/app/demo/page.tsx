@@ -1,15 +1,13 @@
-import { SideBar } from '@/components/Demo/LPComponents/SideBar'
-import LandingPage from '@/components/Demo/LandingPage'
-import PageTransition from '@/components/General/PageTransition'
+import LandingPage from '@/components/demo/LandingPage'
+import { SideBar } from '@/components/demo/lpComponents/SideBar'
+import PageTransition from '@/components/general/PageTransition'
 
 export default function Demo() {
   return (
     <PageTransition>
       <div className="h-screen w-full">
         <SideBar />
-        <div className="remove-scrollbar w-full">
-          <LandingPage />
-        </div>
+        <LandingPage />
       </div>
     </PageTransition>
   )

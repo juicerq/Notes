@@ -2,7 +2,7 @@ import { Instagram } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 import Link from 'next/link'
 
-import FooterInfo from './MainComponents/FooterInfo'
+import FooterInfo from './mainComponents/FooterInfo'
 
 export default function Footer() {
   return (
