@@ -24,9 +24,9 @@ export default function About() {
           <AboutOptions />
           {/* Img */}
           <Image
-            src={images.landingPage}
+            src={images.webPresence}
             alt="a"
-            className="top-[15%] hidden h-[66vh] w-full object-cover object-top lg:sticky lg:block lg:max-w-[50%] xl:max-w-[40%]"
+            className="top-[10%] hidden h-[70vh] w-full -scale-x-100 object-cover object-top lg:sticky lg:block lg:max-w-[50%] xl:max-w-[40%]"
           />
         </div>
       </div>

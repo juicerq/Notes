@@ -47,7 +47,6 @@ export default function Service() {
       <div className="flex">
         <Lottie
           animationData={animationData}
-          colorfil
           className="h-[600px] xl:w-[600px]"
         />
       </div>

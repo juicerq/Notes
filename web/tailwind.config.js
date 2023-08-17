@@ -49,7 +49,7 @@ module.exports = {
           bgAlt: '#252525',
           primaryButton: '#74c313',
           secondaryButton: '#07010e',
-          extra: '#253514',
+          extra: '#375514',
           accent: '#6BB214',
           fadedBlack: 'rgba(0, 0, 0, 0.55)',
         },
