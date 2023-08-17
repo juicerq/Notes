@@ -7,7 +7,7 @@ export default function Service() {
   return (
     <div
       id="service"
-      className="section-spacing flex flex-col items-center justify-center  bg-mainPalette-bgAlt pt-12 lg:gap-20 xl:flex-row xl:py-44"
+      className="section-spacing flex flex-col items-center justify-center bg-mainPalette-bgAlt pt-12 md:gap-12 lg:gap-20 xl:flex-row xl:py-44 2xl:gap-60"
     >
       <div className="flex flex-col justify-evenly gap-16 2xl:gap-28">
         <div className="flex flex-col gap-8">
@@ -47,11 +47,6 @@ export default function Service() {
           className="h-[480px] lg:h-[600px] xl:w-[600px]"
         />
       </div>
-      {/* <Image
-        src={images.bike}
-        alt="oi"
-        className=" h-[600px] object-cover lg:w-full xl:w-[600px]"
-      /> */}
     </div>
   )
 }
