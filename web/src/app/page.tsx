@@ -3,7 +3,7 @@ import About from '@/components/Main/About'
 import Features from '@/components/Main/Features'
 import Footer from '@/components/Main/Footer'
 import Hero from '@/components/Main/Hero'
-import TraceAnimations from '@/components/Main/MainComponents/TraceAnimations'
+import TraceAnimations from '@/components/Main/mainComponents/TraceAnimations'
 import Service from '@/components/Main/Service'
 import Testimonials from '@/components/Main/Testimonials'
 
