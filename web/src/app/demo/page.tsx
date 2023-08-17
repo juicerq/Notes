@@ -1,5 +1,5 @@
-import { SideBar } from '@/components/Demo/LPComponents/SideBar'
-import LandingPage from '@/components/Demo/LandingPage'
+import LandingPage from '@/components/demo/LandingPage'
+import { SideBar } from '@/components/demo/lpComponents/SideBar'
 import PageTransition from '@/components/general/PageTransition'
 
 export default function Demo() {

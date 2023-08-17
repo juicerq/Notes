@@ -1,7 +1,7 @@
 import './globals.css'
 import { ReactNode } from 'react'
 import { Roboto_Flex as Roboto } from 'next/font/google'
-import Header from '@/components/Main/Header'
+import Header from '@/components/main/Header'
 import BackToTop from '@/components/general/BackToTop'
 import localFont from '@next/font/local'
 

@@ -1,11 +1,11 @@
+import TraceAnimations from '@/components/main/mainComponents/TraceAnimations'
 import PageTransition from '@/components/general/PageTransition'
-import About from '@/components/Main/About'
-import Features from '@/components/Main/Features'
-import Footer from '@/components/Main/Footer'
-import Hero from '@/components/Main/Hero'
-import TraceAnimations from '@/components/Main/mainComponents/TraceAnimations'
-import Service from '@/components/Main/Service'
-import Testimonials from '@/components/Main/Testimonials'
+import About from '@/components/main/About'
+import Features from '@/components/main/Features'
+import Footer from '@/components/main/Footer'
+import Hero from '@/components/main/Hero'
+import Service from '@/components/main/Service'
+import Testimonials from '@/components/main/Testimonials'
 
 export default async function Home() {
   return (

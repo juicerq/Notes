@@ -1,7 +1,7 @@
-import { LPAbout } from './LPComponents/LPAbout'
-import { LPGuide } from './LPComponents/LPGuide'
-import { LPProjects } from './LPComponents/LPProjects'
-import LPNavbar from './LPComponents/navbar/LPNavbar'
+import { LPAbout } from './lpComponents/LPAbout'
+import { LPGuide } from './lpComponents/LPGuide'
+import { LPProjects } from './lpComponents/LPProjects'
+import LPNavbar from './lpComponents/navbar/LPNavbar'
 
 export default function LandingPage() {
   return (
