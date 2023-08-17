@@ -1,10 +1,12 @@
 'use client'
 
-import Lottie from 'lottie-react'
+import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import animationData from '../../assets/serviceanimation.json'
+import { useRef } from 'react'
 import { motion } from 'framer-motion'
 
 export default function Service() {
+  const animationRef = useRef<LottieRefCurrentProps>(null)
   return (
     <div
       id="service"
@@ -56,6 +58,11 @@ export default function Service() {
       </div>
       <div className="flex">
         <Lottie
+          onComplete={() => {
+            animationRef.current?.goToAndPlay(2, true)
+          }}
+          loop={false}
+          lottieRef={animationRef}
           animationData={animationData}
           className="h-[480px] lg:h-[600px] xl:w-[550px] 2xl:w-[600px]"
         />
