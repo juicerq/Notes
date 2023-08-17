@@ -7,9 +7,7 @@ export default function Demo() {
     <PageTransition>
       <div className="h-screen w-full">
         <SideBar />
-        <div className="remove-scrollbar w-full">
-          <LandingPage />
-        </div>
+        <LandingPage />
       </div>
     </PageTransition>
   )
