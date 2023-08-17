@@ -220,7 +220,7 @@ export default function AboutOptions() {
                 transition={{
                   duration: 0.4,
                   ease: 'easeIn',
-                  delay: 0.6,
+                  delay: 0.3,
                 }}
                 className="flex items-center gap-6 text-mainPalette-bg"
               >

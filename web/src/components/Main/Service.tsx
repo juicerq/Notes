@@ -6,7 +6,7 @@ export default function Service() {
   return (
     <div
       id="service"
-      className="section-spacing flex flex-col items-center justify-center gap-20 bg-mainPalette-bgAlt pt-12 lg:flex-row xl:py-44"
+      className="section-spacing flex flex-col items-center justify-center gap-20 bg-mainPalette-bgAlt pt-12 xl:flex-row xl:py-44"
     >
       <div className="flex flex-col justify-evenly gap-16 2xl:gap-28">
         <div className="flex flex-col gap-8">
@@ -48,7 +48,7 @@ export default function Service() {
       <Image
         src={images.bike}
         alt="oi"
-        className="aspect-video h-[600px] w-[600px] object-cover"
+        className=" h-[600px] object-cover lg:w-full xl:w-[600px]"
       />
     </div>
   )
