@@ -46,9 +46,9 @@ export default function Service() {
         </div>
       </div>
       <Image
-        src={images.bike}
+        src={images.laptop}
         alt="oi"
-        className=" h-[600px] object-cover lg:w-full xl:w-[600px]"
+        className="h-[600px] rounded-md object-cover lg:w-full xl:w-[800px]"
       />
     </div>
   )
