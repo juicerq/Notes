@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { images } from '@/constants'
+
 import AboutOptions from './MainComponents/AboutOptions'
 
 export default function About() {
@@ -15,12 +16,11 @@ export default function About() {
             Como funciona?
           </h4>
           <p className="text-lg leading-relaxed text-zinc-400 md:w-3/4">
-            Proporcionamos <span className="font-bold">duas </span>
-            opções de contato.
+            Proporcionamos duas opções de contato.
           </p>
         </div>
         {/* Conteúdo */}
-        <div className="flex w-full justify-center gap-8 text-lg leading-relaxed lg:h-[1360px] lg:gap-16 xl:h-[1500px] xl:gap-24">
+        <div className="flex w-full justify-center gap-8 text-lg leading-relaxed lg:h-[1360px] lg:flex-row-reverse lg:gap-16 xl:h-[1500px] xl:gap-24">
           <AboutOptions />
           {/* Img */}
           <Image

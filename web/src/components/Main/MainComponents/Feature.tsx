@@ -12,16 +12,14 @@ interface FeatureProps {
 }
 
 export default function Feature(props: FeatureProps) {
-  const isNotMobile = useIsMobile()
-  const animationDelay = isNotMobile ? props.delay * 0.225 : 0
+  const isMobile = useIsMobile()
+  const animationDelay = isMobile ? 0 : props.delay * 0.225
 
-  const initialValue = isNotMobile
-    ? { opacity: 0, y: 50 }
-    : { opacity: 1, y: 0 }
+  const initialValue = isMobile ? { opacity: 0 } : { opacity: 0, y: 50 }
 
-  const whileInViewValue = isNotMobile
-    ? { opacity: [0, 1], y: [50, 0] }
-    : { opacity: 1, y: 0 }
+  const whileInViewValue = isMobile
+    ? { opacity: 1 }
+    : { opacity: [0, 1], y: [50, 0] }
 
   return (
     <motion.div

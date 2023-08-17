@@ -1,27 +1,20 @@
-'use client'
+import Image from 'next/image'
 
-import { motion } from 'framer-motion'
+import { images } from '@/constants'
 
-export default function Services() {
+export default function Service() {
   return (
     <div
       id="service"
-      className="section-spacing flex flex-col items-center justify-center gap-20 bg-mainPalette-bgAlt pt-12 xl:py-44"
+      className="section-spacing flex flex-col items-center justify-center gap-20 bg-mainPalette-bgAlt pt-12 lg:flex-row xl:py-44"
     >
-      <div className="flex flex-col gap-16">
-        <div className="flex flex-col gap-8 xl:pr-14">
-          <h2 className="text-5xl text-mainPalette-bg lg:w-2/3 xl:text-6xl">
-            <motion.span
-              initial={{ x: -500 }}
-              whileInView={{ x: [-500, 0] }}
-              transition={{ duration: 1, ease: 'easeInOut' }}
-              className="text-mainPalette-primaryButton"
-            >
-              Impulsione
-            </motion.span>{' '}
-            a sua presença online
+      <div className="flex flex-col justify-evenly gap-16 2xl:gap-28">
+        <div className="flex flex-col gap-8">
+          <h2 className="text-5xl text-mainPalette-bg xl:text-6xl">
+            <span className="text-mainPalette-primaryButton">Impulsione</span> a
+            sua presença online
           </h2>
-          <div className="flex flex-col gap-4 text-lg text-zinc-400 lg:w-2/3">
+          <div className="flex flex-col gap-4 text-lg text-zinc-400">
             <p>
               Impulsione sua{' '}
               <span className="text-mainPalette-primaryButton">
@@ -34,12 +27,12 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-8 xl:pr-14">
-          <h2 className="text-5xl text-mainPalette-bg lg:w-2/3 xl:text-6xl">
+        <div className="flex flex-col gap-8">
+          <h2 className="text-5xl text-mainPalette-bg xl:text-6xl">
             <span className="text-mainPalette-primaryButton">Capte</span>{' '}
             clientes a partir do seu site
           </h2>
-          <div className="flex flex-col gap-4 text-lg text-zinc-400 lg:w-2/3">
+          <div className="flex flex-col gap-4 text-lg text-zinc-400">
             <p>
               Sua Landing Page será uma poderosa ferramenta de{' '}
               <span className="text-mainPalette-primaryButton">
@@ -52,6 +45,11 @@ export default function Services() {
           </div>
         </div>
       </div>
+      <Image
+        src={images.bike}
+        alt="oi"
+        className="aspect-video h-[600px] w-[600px] object-cover"
+      />
     </div>
   )
 }

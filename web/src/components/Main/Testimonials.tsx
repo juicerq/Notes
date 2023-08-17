@@ -59,7 +59,7 @@ export default function Testimonials() {
               />
             </motion.div>
             {/* FeedBack */}
-            <div className="flex w-full flex-col items-start gap-4 pt-6 text-justify md:gap-8 md:text-center">
+            <div className="flex w-full flex-col items-start gap-8 pt-6 text-center md:text-center">
               <motion.p
                 initial={{ opacity: 0 }}
                 viewport={{ once: true }}
@@ -74,7 +74,7 @@ export default function Testimonials() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
-                className="md:w-full md:text-center"
+                className="w-full text-center"
               >
                 <h4 className="font-main text-mainPalette-primaryButton md:text-lg">
                   {testimonials[currentIndex].name}

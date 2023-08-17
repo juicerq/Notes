@@ -1,18 +1,10 @@
-'use client'
-
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import { FaAngleDown } from 'react-icons/fa'
 import { CornerDividerBottom } from './MainComponents/CornerDivider'
+
 import TraceAnimations from './MainComponents/TraceAnimations'
 
 export default function Main() {
-  const router = useRouter()
-
-  const handleLinkClick = (item: string) => {
-    router.push(`/demo#${item.toLocaleLowerCase()}`)
-  }
-
   return (
     <div className="section-spacing relative flex h-[95vh] flex-col items-center justify-center gap-12 bg-mainPalette-bg pt-12 text-center xl:gap-16 xl:pt-24">
       <TraceAnimations />
@@ -38,14 +30,13 @@ export default function Main() {
           explorar
         </Link>
         <div className="flex flex-col">
-          <button className="duration-400 rounded-md bg-mainPalette-bg px-6 py-4 text-lg uppercase tracking-widest shadow-md transition-all lg:hover:bg-zinc-200">
+          <button className="duration-400 rounded-md bg-mainPalette-bg px-6 py-4 text-lg uppercase tracking-widest shadow-md transition-all active:scale-95 md:px-12 lg:hover:bg-zinc-200">
             Projetos
           </button>
         </div>
       </div>
       <Link
-        href={'#'}
-        onClick={() => handleLinkClick('about')}
+        href="#service"
         className="absolute bottom-20 flex justify-center gap-2 text-zinc-500 hover:text-mainPalette-text"
       >
         <FaAngleDown

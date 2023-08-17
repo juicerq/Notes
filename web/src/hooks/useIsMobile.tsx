@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 
 export default function useIsMobile() {
-  const [isMobile, setIsMobile] = useState<boolean>()
+  const [isMobile, setIsMobile] = useState<boolean>(true)
 
   useEffect(() => {
-    const verify = window.innerWidth > 1024
-    setIsMobile(verify)
+    const isNotMobile = window.innerWidth < 1024
+    setIsMobile(isNotMobile)
   }, [])
 
   return isMobile

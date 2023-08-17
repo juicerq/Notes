@@ -7,6 +7,7 @@ import {
 } from 'lucide-react'
 import { MdOutlineAnimation } from 'react-icons/md'
 import { PiHandSwipeLeft } from 'react-icons/pi'
+
 import Feature from './MainComponents/Feature'
 
 export default function Features() {

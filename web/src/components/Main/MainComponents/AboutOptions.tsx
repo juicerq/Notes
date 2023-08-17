@@ -1,11 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import Option from './Option'
 import { motion } from 'framer-motion'
 
+import Option from './Option'
+import useIsMobile from '@/hooks/useIsMobile'
+
 export default function AboutOptions() {
-  const isNotMobile = window.innerWidth < 1024
+  const isMobile = useIsMobile()
   const [optionIndex, setOptionIndex] = useState<number>(1)
 
   const handleChangeOptionIndex = (n: number) => {
@@ -13,7 +15,7 @@ export default function AboutOptions() {
   }
   return (
     <>
-      {isNotMobile ? (
+      {isMobile ? (
         <>
           <div className="flex flex-col gap-12 lg:w-1/2 lg:gap-16">
             {/* Button to render different option */}
@@ -108,7 +110,7 @@ export default function AboutOptions() {
                   viewport={{ once: true }}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: [0, 1] }}
-                  transition={{ duration: 0.4, ease: 'easeInOut' }}
+                  transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
                   className="flex flex-col gap-6"
                   key={'3'}
                 >
@@ -128,7 +130,7 @@ export default function AboutOptions() {
                     transition={{
                       duration: 0.4,
                       ease: 'easeInOut',
-                      delay: 0.3,
+                      delay: 0.6,
                     }}
                     className="flex items-center gap-6 text-mainPalette-bg"
                   >
@@ -198,7 +200,7 @@ export default function AboutOptions() {
               viewport={{ once: true }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
               className="flex flex-col gap-6"
               key={'3'}
             >
@@ -217,8 +219,8 @@ export default function AboutOptions() {
                 whileInView={{ opacity: [0, 1], y: [10, 0] }}
                 transition={{
                   duration: 0.4,
-                  ease: 'easeInOut',
-                  delay: 0.3,
+                  ease: 'easeIn',
+                  delay: 0.6,
                 }}
                 className="flex items-center gap-6 text-mainPalette-bg"
               >

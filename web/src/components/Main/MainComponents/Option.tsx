@@ -15,7 +15,7 @@ export default function Option(props: OptionProps) {
       viewport={{ once: true }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: [0, 1] }}
-      transition={{ duration: 0.4, ease: 'easeInOut' }}
+      transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
       className="flex flex-col gap-6"
       key={'1'}
     >
@@ -24,11 +24,8 @@ export default function Option(props: OptionProps) {
       </h4>
       {props.children}
       {/* Button Craft */}
-      <button>
-        <Link
-          href={`/${props.buttonLink}`}
-          className="button-hover flex w-full items-center justify-center rounded-md bg-mainPalette-primaryButton px-4 py-2 text-lg tracking-widest text-mainPalette-text shadow-md active:scale-95 md:w-1/3 md:px-12 lg:w-1/2 xl:w-1/3"
-        >
+      <button className="button-hover w-full items-center justify-center rounded-md bg-mainPalette-primaryButton px-4 py-2 text-lg tracking-widest text-mainPalette-text shadow-md active:scale-95 md:w-1/3 md:px-12 lg:w-fit">
+        <Link href={`/${props.buttonLink}`} className="">
           {props.buttonName}
         </Link>
       </button>
