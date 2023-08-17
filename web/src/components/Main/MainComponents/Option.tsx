@@ -1,3 +1,4 @@
+import useIsMobile from '@/hooks/useIsMobile'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ReactNode } from 'react'
@@ -10,14 +11,16 @@ interface OptionProps {
 }
 
 export default function Option(props: OptionProps) {
+  const isMobile = useIsMobile()
+  const initialValue = isMobile ? { opacity: 0 } : { opacity: 1 }
+  const whileInViewValue = isMobile ? { opacity: [0, 1] } : { opacity: 1 }
   return (
     <motion.div
       viewport={{ once: true }}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: [0, 1] }}
+      initial={initialValue}
+      whileInView={whileInViewValue}
       transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
       className="flex flex-col gap-6"
-      key={'1'}
     >
       <h4 className=" relative z-10 w-fit text-left text-5xl text-mainPalette-bg">
         {props.title}

@@ -1,3 +1,5 @@
 import webPresence from '../assets/webPresence.png'
 
-export default {}
+export default {
+  webPresence,
+}

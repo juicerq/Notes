@@ -71,6 +71,7 @@ export default function AboutOptions() {
                   title="Fazer do meu jeitinho"
                   buttonName="Explorar"
                   buttonLink="demo"
+                  key={'option01'}
                 >
                   <p className="text-lg leading-relaxed text-zinc-400">
                     Utilize a{' '}
@@ -95,6 +96,7 @@ export default function AboutOptions() {
                   title="Entrar em contato diretamente com a gente"
                   buttonName="Contato"
                   buttonLink="contact"
+                  key={'option02'}
                 >
                   <p className="text-lg leading-relaxed text-zinc-400">
                     Nos envie uma mensagem pelo nosso formulário, acessível pelo
@@ -112,7 +114,6 @@ export default function AboutOptions() {
                   whileInView={{ opacity: [0, 1] }}
                   transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
                   className="flex flex-col gap-6"
-                  key={'3'}
                 >
                   <p className="text-lg leading-relaxed text-zinc-400">
                     Outra alternativa é entrar em contato diretamente pelo
@@ -160,31 +161,46 @@ export default function AboutOptions() {
         </>
       ) : (
         <div className="hidden w-1/2 flex-col justify-evenly gap-96 lg:flex">
-          <Option
-            title="Fazer do meu jeitinho"
-            buttonName="Explorar"
-            buttonLink="demo"
+          <motion.div
+            initial={{ x: 200 }}
+            viewport={{ once: true }}
+            whileInView={{ x: [200, 0] }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
           >
-            <p className="text-lg leading-relaxed text-zinc-400">
-              Utilize a{' '}
-              <span className="text-mainPalette-primaryButton">
-                ferramenta de visualização de landing page
-              </span>
-              , acessível pelo botão abaixo. Personalize as seções do seu site
-              de maneira simples e intuitiva e em seguida nos envie suas ideias
-              para construirmos o site para você! No entanto, lembre-se de que o
-              site de demonstração{' '}
-              <span className="text-mainPalette-primaryButton">
-                não representa o produto final
-              </span>
-              .
-            </p>
-          </Option>
-          <div className="flex flex-col gap-12">
+            <Option
+              title="Fazer do meu jeitinho"
+              buttonName="Explorar"
+              buttonLink="demo"
+              key={'option03'}
+            >
+              <p className="text-lg leading-relaxed text-zinc-400">
+                Utilize a{' '}
+                <span className="text-mainPalette-primaryButton">
+                  ferramenta de visualização de landing page
+                </span>
+                , acessível pelo botão abaixo. Personalize as seções do seu site
+                de maneira simples e intuitiva e em seguida nos envie suas
+                ideias para construirmos o site para você! No entanto, lembre-se
+                de que o site de demonstração{' '}
+                <span className="text-mainPalette-primaryButton">
+                  não representa o produto final
+                </span>
+                .
+              </p>
+            </Option>
+          </motion.div>
+          <motion.div
+            initial={{ x: 200 }}
+            viewport={{ once: true }}
+            whileInView={{ x: [200, 0] }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+            className="flex flex-col gap-12"
+          >
             <Option
               title="Entrar em contato diretamente com a gente"
               buttonName="Contato"
               buttonLink="contact"
+              key={'option04'}
             >
               <p className="text-lg leading-relaxed text-zinc-400">
                 Nos envie uma mensagem pelo nosso formulário, acessível pelo
@@ -202,7 +218,6 @@ export default function AboutOptions() {
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
               className="flex flex-col gap-6"
-              key={'3'}
             >
               <p className="text-lg leading-relaxed text-zinc-400">
                 Outra alternativa é entrar em contato diretamente pelo WhatsApp
@@ -244,7 +259,7 @@ export default function AboutOptions() {
                 </a>
               </motion.div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       )}
     </>

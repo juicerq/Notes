@@ -10,14 +10,14 @@ export default function Service() {
       id="service"
       className="section-spacing flex flex-col items-center justify-center bg-mainPalette-bgAlt pt-12 md:gap-12 lg:gap-20 xl:flex-row xl:py-36 2xl:gap-60"
     >
-      <motion.div
-        initial={{ x: -250 }}
-        viewport={{ once: true }}
-        whileInView={{ x: [-250, 0] }}
-        transition={{ duration: 0.4, ease: 'easeInOut' }}
-        className="flex flex-col justify-evenly gap-16 2xl:gap-28"
-      >
-        <motion.div className="flex flex-col gap-8">
+      <div className="flex flex-col justify-evenly gap-16 2xl:gap-28">
+        <motion.div
+          initial={{ x: -100 }}
+          viewport={{ once: true }}
+          whileInView={{ x: [-100, 0] }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
+          className="flex flex-col gap-8"
+        >
           <h2 className="text-5xl text-mainPalette-bg 2xl:text-6xl">
             <span className="text-mainPalette-primaryButton">Impulsione</span> a
             sua presença online
@@ -32,7 +32,13 @@ export default function Service() {
             </p>
           </div>
         </motion.div>
-        <motion.div className="flex flex-col gap-8">
+        <motion.div
+          initial={{ x: -100 }}
+          viewport={{ once: true }}
+          whileInView={{ x: [-100, 0] }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
+          className="flex flex-col gap-8"
+        >
           <h2 className="text-5xl text-mainPalette-bg 2xl:text-6xl">
             <span className="text-mainPalette-primaryButton">Capte</span>{' '}
             clientes a partir do seu site
@@ -47,7 +53,7 @@ export default function Service() {
             </p>
           </div>
         </motion.div>
-      </motion.div>
+      </div>
       <div className="flex">
         <Lottie
           animationData={animationData}
