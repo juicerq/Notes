@@ -4,7 +4,7 @@ import NavbarDesktop from './NavbarDesktop'
 // import NavbarMobile from './NavbarMobile'
 
 const navLinks: { id: string; name: string }[] = [
-  { id: '', name: 'Início' },
+  { id: '/', name: 'Início' },
   { id: 'contact', name: 'Contato' },
 ]
 

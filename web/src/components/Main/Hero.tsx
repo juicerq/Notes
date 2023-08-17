@@ -4,9 +4,12 @@ import { CornerDividerBottom } from './MainComponents/CornerDivider'
 
 import TraceAnimations from './MainComponents/TraceAnimations'
 
-export default function Main() {
+export default function Hero() {
   return (
-    <div className="section-spacing relative flex h-[95vh] flex-col items-center justify-center gap-12 bg-mainPalette-bg pt-12 text-center xl:gap-16 xl:pt-24">
+    <div
+      id="hero"
+      className="section-spacing relative flex h-[95vh] flex-col items-center justify-center gap-12 bg-mainPalette-bg pt-12 text-center xl:gap-16 xl:pt-24"
+    >
       <TraceAnimations />
       <CornerDividerBottom />
       <div className="flex flex-col items-center justify-center gap-6">
