@@ -40,7 +40,7 @@ export default function Features() {
               description="Uma estrutura de menu clara e uma hierarquia de páginas bem definida ajudam os usuários a encontrar facilmente o que estão procurando."
             />
             <Feature
-              delay={5}
+              delay={2}
               icon={<MonitorSmartphone size={35} />}
               title="Responsividade"
               description="O seu site irá se adaptar automaticamente a diferentes dispositivos e tamanhos de tela, garantindo uma experiência consistente em smartphones, tablets e desktops."
@@ -58,13 +58,13 @@ export default function Features() {
               description=" Facilite o compartilhamento de conteúdo por meio de botões de redes sociais e exiba feeds ou links para suas páginas de redes sociais."
             />
             <Feature
-              delay={2}
+              delay={4}
               icon={<MdOutlineAnimation size={35} />}
               title="Animações Cativantes"
               description="Integre animações sutis e envolventes ao design do seu site para criar uma experiência visualmente atraente e dinâmica."
             />
             <Feature
-              delay={4}
+              delay={5}
               icon={<FileText size={35} />}
               title="Formulário de Contato"
               description="Forneçeremos formulários de contato personalizados para garantir a geração de leads de acordo com suas necessidades."
