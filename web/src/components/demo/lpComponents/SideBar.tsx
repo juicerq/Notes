@@ -1,5 +1,6 @@
 'use client'
 
+import useIsMobile from '@/hooks/useIsMobile'
 import {
   Activity,
   ArrowLeft,
@@ -13,7 +14,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 export function SideBar() {
-  const isNotMobile = window.innerWidth >= 1024
+  const isMobile = useIsMobile()
 
   const [show, setShow] = useState(true)
 
@@ -39,17 +40,17 @@ export function SideBar() {
             } duration-400  transition-all`}
             onClick={() => setShow(!show)}
           >
-            {isNotMobile ? (
+            {isMobile ? (
               <>
                 {show ? (
                   <SideBarIcon
                     text="Esconder Menu"
-                    icon={<ArrowLeft size={30} />}
+                    icon={<ArrowRight size={30} />}
                   />
                 ) : (
                   <SideBarIcon
                     text="Mostrar Menu"
-                    icon={<ArrowRight size={30} />}
+                    icon={<ArrowLeft size={30} />}
                   />
                 )}
               </>
@@ -58,12 +59,12 @@ export function SideBar() {
                 {show ? (
                   <SideBarIcon
                     text="Esconder Menu"
-                    icon={<ArrowRight size={30} />}
+                    icon={<ArrowLeft size={30} />}
                   />
                 ) : (
                   <SideBarIcon
                     text="Mostrar Menu"
-                    icon={<ArrowLeft size={30} />}
+                    icon={<ArrowRight size={30} />}
                   />
                 )}
               </>
