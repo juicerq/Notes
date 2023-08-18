@@ -64,7 +64,7 @@ export default function LPNavbarDesktop(props: NavDesktopProps) {
                   : 'text-mainPalette-bg'
               } `}
             >
-              Craft
+              Kraft
             </span>
           </Link>
         </div>

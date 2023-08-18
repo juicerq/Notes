@@ -22,7 +22,7 @@ const satoshi = localFont({
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-alt' })
 
 export const metadata = {
-  title: 'WebCraft',
+  title: 'WebKraft',
   description: 'Showcase of Julios and Pedros Web Developer Skills',
   icons: {
     icon: '/images/favicon.ico',

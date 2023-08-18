@@ -8,14 +8,16 @@ import { CornerDividerTop } from './mainComponents/CornerDivider'
 
 const testimonials = [
   {
-    name: 'Toninho Rodrigues',
+    name: 'André Oliveira',
     feedBack:
-      'As a fellow developer, I have had the pleasure of working with [Your Name] and I am thrilled with the exceptional service they provided. Their expertise, professionalism, and attention to detail were outstanding. ',
+      'Minha compra do site aqui foi incrível! A equipe entendeu exatamente o que eu queria, resultando em um site que me encantou. Recomendo totalmente!',
+    imgUrl: 'https://source.unsplash.com/random/150x150?man-profile',
   },
   {
-    name: 'Xubi Rodrigo',
+    name: 'Laura Santos',
     feedBack:
-      'As a fellow developer, I have had the pleasure of working with [Your Name] and I am thrilled with the exceptional service they provided. Their expertise.',
+      'Estou feliz com meu novo site. Profissionais competentes capturaram minha visão perfeitamente. Recomendo esta plataforma para quem busca qualidade e eficiência.',
+    imgUrl: 'https://source.unsplash.com/random/150x150?woman-profile',
   },
 ]
 
@@ -51,7 +53,7 @@ export default function Testimonials() {
               transition={{ duration: 0.4, ease: 'easeInOut' }}
             >
               <Image
-                src={`https://source.unsplash.com/random/150x150?woman=${currentIndex}`}
+                src={testimonials[currentIndex].imgUrl}
                 width={150}
                 height={150}
                 alt="a"

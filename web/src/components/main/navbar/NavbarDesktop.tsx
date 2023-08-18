@@ -53,7 +53,7 @@ export default function NavbarDesktop(props: NavDesktopProps) {
                   : 'text-mainPalette-bg'
               } `}
             >
-              Craft
+              Kraft
             </span>
           </Link>
         </div>

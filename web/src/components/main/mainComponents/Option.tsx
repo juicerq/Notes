@@ -24,7 +24,7 @@ export default function Option(props: OptionProps) {
         {props.title}
       </h4>
       {props.children}
-      {/* Button Craft */}
+      {/* Button Kraft */}
       <button className="button-hover w-full items-center justify-center rounded-md bg-mainPalette-primaryButton px-4 py-2 text-lg tracking-widest text-mainPalette-text shadow-md active:scale-95 md:w-1/3 md:px-12 lg:w-fit">
         <Link href={`/${props.buttonLink}`} className="">
           {props.buttonName}
