@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <PageTransition>
       <TraceAnimations />
-      <main className="font-alt">
+      <main className="bg-mainPalette-bgAlt font-alt">
         <Hero />
         <Service />
         <Features />
