@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import { FaAngleDown } from 'react-icons/fa'
 import { CornerDividerBottom } from './mainComponents/CornerDivider'
+import DiscoverButton from './mainComponents/DiscoverButton'
 
 export default function Hero() {
   return (
     <div
       id="hero"
-      className="section-spacing relative flex flex-col items-center justify-center gap-12 bg-gradient-to-b  from-mainPalette-bg to-zinc-300 py-36 text-center md:py-52 xl:gap-16 xl:pb-36 2xl:py-80"
+      className="section-spacing relative flex flex-col items-center justify-center gap-12 bg-gradient-to-b  from-mainPalette-bg to-zinc-300 py-36 text-center md:py-52 xl:gap-16 xl:pb-32 2xl:py-80"
     >
       <CornerDividerBottom />
       <div className="flex flex-col items-center justify-center gap-6">
@@ -35,16 +35,7 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <Link
-        href="#service"
-        className="absolute bottom-12 flex justify-center gap-2 text-zinc-500 hover:text-mainPalette-text"
-      >
-        <FaAngleDown
-          size={24}
-          className="animate-bounce text-mainPalette-primaryButton"
-        />
-        <p>Descubra</p>
-      </Link>
+      <DiscoverButton />
     </div>
   )
 }
