@@ -26,11 +26,9 @@ export default function Service() {
           </h2>
           <div className="flex flex-col gap-4 text-lg text-zinc-400">
             <p>
-              Confie em nós para criar um website que não seja apenas uma
-              vitrine virtual, mas sim uma ferramenta estratégica que amplie seu
-              alcance, construa confiança e impulsione o crescimento do seu
-              negócio. Junte-se a nós e comece a jornada rumo ao sucesso
-              digital.
+              Com um website que não seja apenas uma vitrine virtual, mas sim
+              uma ferramenta estratégica que amplie seu alcance, construa
+              confiança e impulsione o crescimento do seu negócio.
             </p>
           </div>
         </motion.div>
@@ -47,11 +45,9 @@ export default function Service() {
           </h2>
           <div className="flex flex-col gap-4 text-lg text-zinc-400">
             <p>
-              Diga adeus à espera passiva por clientes e dê poder ao seu negócio
-              com um site que não só representa a sua marca, mas também age como
-              um íman para atrair e manter clientes. Transformaremos a sua
-              presença online numa máquina de captação de clientes e alcance
-              novos patamares de sucesso.
+              Dê poder ao seu negócio com um site que não só representa a sua
+              marca, mas também estabelece a sua credibilidade e reforça a
+              confiança dos clientes.
             </p>
           </div>
         </motion.div>
