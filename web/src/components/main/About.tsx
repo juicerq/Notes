@@ -18,7 +18,7 @@ export default function About() {
         {/* Title n subtitle */}
         <div className="flex-center flex-col gap-2 text-center">
           <h4 className="font-main text-4xl tracking-tighter text-mainPalette-bg lg:text-6xl">
-            Como funciona?
+            Como funciona
           </h4>
           <p className="text-lg leading-relaxed text-zinc-400 md:w-3/4">
             Proporcionamos duas opções de contato.
