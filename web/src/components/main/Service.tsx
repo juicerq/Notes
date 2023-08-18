@@ -10,7 +10,7 @@ export default function Service() {
   return (
     <div
       id="service"
-      className="section-spacing flex flex-col items-center justify-center bg-mainPalette-bgAlt pt-12 md:gap-12 lg:gap-20 xl:my-28 xl:flex-row 2xl:my-0 2xl:gap-60 2xl:py-36"
+      className="section-spacing flex flex-col items-center justify-center bg-mainPalette-bgAlt pt-12 md:gap-12 lg:gap-20 xl:mb-24 xl:flex-row 2xl:my-0 2xl:gap-60 2xl:py-36"
     >
       <div className="flex flex-col justify-evenly gap-16 2xl:gap-28">
         <motion.div
