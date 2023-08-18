@@ -1,9 +1,14 @@
+'use client'
+
 import Image from 'next/image'
 import { images } from '@/constants'
 
-import AboutOptions from './mainComponents/AboutOptions'
+import AboutOptionDesktop from './mainComponents/AboutOptionDesktop'
+import AboutOptionMobile from './mainComponents/AboutOptionMobile'
+import useIsMobile from '@/hooks/useIsMobile'
 
 export default function About() {
+  const isMobile = useIsMobile()
   return (
     <div
       id="about"
@@ -21,7 +26,15 @@ export default function About() {
         </div>
         {/* Conteúdo */}
         <div className="flex w-full justify-center gap-8 text-lg leading-relaxed lg:h-[1360px] lg:flex-row-reverse lg:gap-16 xl:h-[1500px] xl:gap-24">
-          <AboutOptions />
+          {isMobile ? (
+            <>
+              <AboutOptionMobile />
+            </>
+          ) : (
+            <>
+              <AboutOptionDesktop />
+            </>
+          )}
           {/* Img */}
           <Image
             src={images.webPresence}
