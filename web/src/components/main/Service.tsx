@@ -14,10 +14,10 @@ export default function Service() {
     >
       <div className="flex flex-col justify-evenly gap-16 2xl:gap-28">
         <motion.div
-          initial={{ x: -100 }}
+          initial={{ x: -700 }}
           viewport={{ once: true }}
-          whileInView={{ x: [-100, 0] }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
+          whileInView={{ x: [-700, 0] }}
+          transition={{ duration: 0.7, ease: 'easeInOut' }}
           className="flex flex-col gap-8"
         >
           <h2 className="text-5xl text-mainPalette-bg 2xl:text-6xl">
@@ -33,10 +33,10 @@ export default function Service() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: -100 }}
+          initial={{ x: -700 }}
           viewport={{ once: true }}
-          whileInView={{ x: [-100, 0] }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
+          whileInView={{ x: [-700, 0] }}
+          transition={{ duration: 0.7, ease: 'easeInOut' }}
           className="flex flex-col gap-8"
         >
           <h2 className="text-5xl text-mainPalette-bg 2xl:text-6xl">

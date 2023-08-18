@@ -162,10 +162,10 @@ export default function AboutOptions() {
       ) : (
         <div className="hidden w-1/2 flex-col justify-evenly gap-96 overflow-x-hidden lg:flex">
           <motion.div
-            initial={{ x: 200 }}
+            initial={{ x: 700 }}
             viewport={{ once: true }}
-            whileInView={{ x: [200, 0] }}
-            transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
+            whileInView={{ x: [700, 0] }}
+            transition={{ duration: 0.7, ease: 'easeInOut' }}
           >
             <Option
               title="Fazer do seu jeitinho"
@@ -190,10 +190,10 @@ export default function AboutOptions() {
             </Option>
           </motion.div>
           <motion.div
-            initial={{ x: 200 }}
+            initial={{ x: 700 }}
             viewport={{ once: true }}
-            whileInView={{ x: [200, 0] }}
-            transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
+            whileInView={{ x: [700, 0] }}
+            transition={{ duration: 0.7, ease: 'easeInOut' }}
             className="flex flex-col gap-12"
           >
             <Option
@@ -216,7 +216,7 @@ export default function AboutOptions() {
               viewport={{ once: true }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
+              transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.3 }}
               className="flex flex-col gap-6"
             >
               <p className="text-lg leading-relaxed text-zinc-400">
@@ -233,9 +233,9 @@ export default function AboutOptions() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: [0, 1], y: [10, 0] }}
                 transition={{
-                  duration: 0.4,
+                  duration: 0.6,
                   ease: 'easeIn',
-                  delay: 0.3,
+                  delay: 0.5,
                 }}
                 className="flex items-center gap-6 text-mainPalette-bg"
               >
