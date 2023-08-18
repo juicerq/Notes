@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="section-spacing relative flex flex-col items-center justify-center gap-12 bg-gradient-to-b  from-mainPalette-bg to-zinc-300 py-36 text-center md:py-52 xl:gap-16 xl:pb-64 xl:pt-80 2xl:pb-80"
+      className="section-spacing relative flex flex-col items-center justify-center gap-12 bg-gradient-to-b  from-mainPalette-bg to-zinc-300 py-36 text-center md:py-52 xl:gap-16 xl:pb-36 2xl:py-80"
     >
       <CornerDividerBottom />
       <div className="flex flex-col items-center justify-center gap-6">
