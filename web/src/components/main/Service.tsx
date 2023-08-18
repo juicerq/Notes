@@ -14,9 +14,8 @@ export default function Service() {
     >
       <div className="flex flex-col justify-evenly gap-16 2xl:gap-28">
         <motion.div
-          initial={{ x: -700 }}
-          viewport={{ once: true }}
           whileInView={{ x: [-700, 0] }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: 'easeInOut' }}
           className="flex flex-col gap-8"
         >
@@ -33,9 +32,8 @@ export default function Service() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: -700 }}
-          viewport={{ once: true }}
           whileInView={{ x: [-700, 0] }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: 'easeInOut' }}
           className="flex flex-col gap-8"
         >
