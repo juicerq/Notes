@@ -7,6 +7,10 @@
   scroll-behavior: smooth !important;
 }
 
+body {
+  background: linear-gradient(to right, #eee, #d4d4d8);
+}
+
 ::selection {
   background-color: #74c313; /* Cor de fundo quando o texto é selecionado */
   color: #252525; /* Cor do texto selecionado */
@@ -42,7 +46,13 @@
   flex: 0 0 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+
+  @media screen and (min-width: 768px){
+    flex: 0 0 48%;
+  }
 }
+
+  
 
 .remove-scrollbar {
   overflow-y: scroll;

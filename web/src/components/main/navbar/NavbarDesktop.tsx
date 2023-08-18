@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from 'lucide-react'
+import { Instagram } from 'lucide-react'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
@@ -34,9 +34,7 @@ export default function NavbarDesktop(props: NavDesktopProps) {
     // Logic to display or not the navbar
     <div
       className={`${
-        prevScrollPos === 0
-          ? 'bg-gradient-to-r from-mainPalette-bg to-zinc-300'
-          : 'bg-mainPalette-bgAlt'
+        prevScrollPos === 0 ? 'bg-mainPalette-bg' : 'bg-mainPalette-bgAlt'
       } ${
         showNavbar ? 'top-0 ' : '-top-[110px]'
       } fixed left-0 right-0 z-50 h-20 font-main shadow-md transition-all duration-700 lg:block lg:h-24 lg:shadow-none`}
@@ -135,11 +133,9 @@ export default function NavbarDesktop(props: NavDesktopProps) {
           </div>
           <div
             className={`${
-              toggle ? 'top-20 shadow-md' : '-top-32 shadow-none'
+              toggle ? 'top-[79px] shadow-md' : '-top-32 shadow-none'
             } ${
-              prevScrollPos === 0
-                ? 'bg-gradient-to-r from-mainPalette-bg to-zinc-300'
-                : 'bg-mainPalette-bgAlt'
+              prevScrollPos === 0 ? 'bg-mainPalette-bg' : 'bg-mainPalette-bgAlt'
             } fixed left-0 right-0 z-20 flex flex-col items-start justify-evenly bg-demoPalette-bgAlt transition-all duration-700`}
           >
             {/* List */}
@@ -171,26 +167,16 @@ export default function NavbarDesktop(props: NavDesktopProps) {
                 </div>
               </Link>
 
-              <Link href="https://www.instagram.com/arq.aab/" target="_blank">
+              <Link
+                href="https://www.instagram.com/pedrinhopagan/"
+                target="_blank"
+              >
                 <div
                   className={`${
                     toggle ? '' : 'text-transparent'
                   } flex-center bg-palette-outerSpace rounded-full p-2.5 transition-all duration-300`}
                 >
                   <Instagram size={20} />
-                </div>
-              </Link>
-
-              <Link
-                href="https://www.facebook.com/arquitetura.aab/"
-                target="_blank"
-              >
-                <div
-                  className={`${
-                    toggle ? '' : 'text-transparent'
-                  } bg-palette-beaver flex items-center justify-center rounded-full p-2.5 transition-all duration-300`}
-                >
-                  <Facebook size={20} />
                 </div>
               </Link>
             </div>

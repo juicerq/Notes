@@ -68,7 +68,7 @@ export default function AboutOptions() {
               // Opção 1
               <>
                 <Option
-                  title="Fazer do meu jeitinho"
+                  title="Fazer do seu jeitinho"
                   buttonName="Explorar"
                   buttonLink="demo"
                   key={'option01'}
@@ -168,7 +168,7 @@ export default function AboutOptions() {
             transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
           >
             <Option
-              title="Fazer do meu jeitinho"
+              title="Fazer do seu jeitinho"
               buttonName="Explorar"
               buttonLink="demo"
               key={'option03'}

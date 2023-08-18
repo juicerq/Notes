@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="section-spacing relative flex h-[95vh] flex-col items-center justify-center gap-12 bg-gradient-to-r from-mainPalette-bg to-zinc-300 pt-12 text-center xl:gap-16 xl:pt-24"
+      className="section-spacing relative flex flex-col items-center justify-center gap-12 bg-gradient-to-r from-mainPalette-bg to-zinc-300 py-36 text-center md:py-52 xl:gap-16 xl:pb-64 xl:pt-80 2xl:pb-80"
     >
       <CornerDividerBottom />
       <div className="flex flex-col items-center justify-center gap-6">
@@ -16,8 +16,8 @@ export default function Hero() {
           <span className="text-mainPalette-primaryButton">sem enrolação</span>{' '}
         </h1>
         <h2 className="text-lg leading-relaxed text-mainPalette-text md:max-w-md lg:max-w-2xl xl:max-w-3xl xl:text-xl ">
-          Vamos expandir sua marca para o mundo digital. Explore nossa
-          plataforma e consolide suas ideias.
+          Estamos aqui para expandir sua marca para o mundo digital. Explore
+          nossa plataforma e consolide suas ideias.
         </h2>
       </div>
       {/* Buttons */}
@@ -37,7 +37,7 @@ export default function Hero() {
       </div>
       <Link
         href="#service"
-        className="absolute bottom-20 flex justify-center gap-2 text-zinc-500 hover:text-mainPalette-text"
+        className="absolute bottom-12 flex justify-center gap-2 text-zinc-500 hover:text-mainPalette-text"
       >
         <FaAngleDown
           size={24}
