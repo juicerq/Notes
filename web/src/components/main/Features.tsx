@@ -25,8 +25,8 @@ export default function Features() {
             </span>
           </h3>
         </div>
-        <div className="flex h-full flex-col lg:gap-4">
-          <div className="relative flex w-screen snap-x snap-mandatory scroll-p-3 gap-4 overflow-auto overflow-y-hidden p-3 lg:w-full lg:snap-none lg:scroll-p-0 lg:flex-wrap lg:overflow-hidden lg:p-0">
+        <div className="flex h-full flex-col lg:gap-8">
+          <div className="relative flex w-screen snap-x snap-mandatory scroll-p-3 gap-8 overflow-auto overflow-y-hidden p-3 lg:w-full lg:snap-none lg:scroll-p-0 lg:flex-wrap lg:overflow-hidden lg:p-0">
             <Feature
               icon={<Component size={35} />}
               delay={0}
@@ -50,7 +50,7 @@ export default function Features() {
             <PiHandSwipeLeft size={25} />
             <p>Arraste para o lado</p>
           </div>
-          <div className="flex w-screen snap-x snap-mandatory scroll-p-3 gap-4 overflow-auto overflow-y-hidden p-3 lg:w-full lg:snap-none lg:scroll-p-0 lg:flex-wrap lg:overflow-hidden lg:p-0  lg:pb-12">
+          <div className="flex w-screen snap-x snap-mandatory scroll-p-3 gap-8 overflow-auto overflow-y-hidden p-3 lg:w-full lg:snap-none lg:scroll-p-0 lg:flex-wrap lg:overflow-hidden lg:p-0  lg:pb-12">
             <Feature
               delay={3}
               icon={<Workflow size={35} />}

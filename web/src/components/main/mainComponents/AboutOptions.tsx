@@ -165,7 +165,7 @@ export default function AboutOptions() {
             initial={{ x: 200 }}
             viewport={{ once: true }}
             whileInView={{ x: [200, 0] }}
-            transition={{ duration: 0.4, ease: 'easeInOut' }}
+            transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
           >
             <Option
               title="Fazer do meu jeitinho"
@@ -193,7 +193,7 @@ export default function AboutOptions() {
             initial={{ x: 200 }}
             viewport={{ once: true }}
             whileInView={{ x: [200, 0] }}
-            transition={{ duration: 0.4, ease: 'easeInOut' }}
+            transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
             className="flex flex-col gap-12"
           >
             <Option

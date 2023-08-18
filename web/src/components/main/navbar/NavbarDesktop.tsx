@@ -34,7 +34,9 @@ export default function NavbarDesktop(props: NavDesktopProps) {
     // Logic to display or not the navbar
     <div
       className={`${
-        prevScrollPos === 0 ? 'bg-mainPalette-bg' : 'bg-mainPalette-bgAlt'
+        prevScrollPos === 0
+          ? 'bg-gradient-to-r from-mainPalette-bg to-zinc-300'
+          : 'bg-mainPalette-bgAlt'
       } ${
         showNavbar ? 'top-0 ' : '-top-[110px]'
       } fixed left-0 right-0 z-50 h-20 font-main shadow-md transition-all duration-700 lg:block lg:h-24 lg:shadow-none`}

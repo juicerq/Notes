@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${satoshi.variable} z-0 overflow-x-hidden bg-mainPalette-bg`}
+        className={`${roboto.variable} ${satoshi.variable} z-0 overflow-x-hidden bg-gradient-to-r from-mainPalette-bg to-zinc-300`}
       >
         <Header />
         {children}

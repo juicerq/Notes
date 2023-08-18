@@ -15,7 +15,7 @@ import { Mail, Phone, User, Pen, LayoutTemplate } from 'lucide-react'
 export default function Contact() {
   return (
     <PageTransition>
-      <div className="flex flex-col items-center justify-center bg-mainPalette-bg py-20 lg:py-32">
+      <div className="flex flex-col items-center justify-center py-20 lg:py-32">
         <h1 className="pb-1 text-center font-main text-3xl font-bold tracking-wider text-mainPalette-text">
           Peça um{' '}
           <span className="text-mainPalette-primaryButton">orçamento</span>{' '}

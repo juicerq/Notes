@@ -26,7 +26,7 @@ export default function Testimonials() {
   }
 
   return (
-    <div className="section-spacing relative flex w-screen flex-col items-center justify-around gap-28 py-28">
+    <div className="section-spacing relative flex w-screen flex-col items-center justify-around gap-28 bg-gradient-to-l from-mainPalette-bg to-zinc-300 py-28">
       <CornerDividerTop />
       <div className="flex flex-col gap-4">
         <h3 className="w-full text-center font-main text-3xl text-mainPalette-text 2xl:text-5xl">
@@ -40,7 +40,7 @@ export default function Testimonials() {
       {testimonials && (
         <div className="flex w-full flex-col items-center justify-center">
           <div
-            className="relative flex h-[340px] flex-col items-center justify-center rounded-md bg-mainPalette-bgAlt p-8 md:h-[300px] md:w-[540px] lg:h-72 lg:flex-row 2xl:w-[740px]"
+            className="relative flex h-[340px] flex-col items-center justify-center rounded-md bg-gradient-to-br from-[#303030] to-[#262626] p-8 md:h-[300px] md:w-[540px] lg:h-72 lg:flex-row 2xl:w-[740px]"
             key={testimonials[currentIndex].name}
           >
             <motion.div
@@ -84,7 +84,7 @@ export default function Testimonials() {
           </div>
           <div className="m-6 flex gap-10">
             <button
-              className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white active:scale-95 active:bg-mainPalette-accent lg:hover:bg-mainPalette-accent"
+              className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white transition-colors duration-200 active:scale-95 active:bg-mainPalette-accent lg:hover:bg-mainPalette-accent"
               onClick={() =>
                 handleClick(
                   currentIndex === 0
@@ -96,7 +96,7 @@ export default function Testimonials() {
               <HiChevronLeft size={35} />
             </button>
             <button
-              className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white active:scale-95 active:bg-mainPalette-accent lg:hover:bg-mainPalette-accent"
+              className="flex cursor-pointer items-center justify-center rounded-full bg-mainPalette-bgAlt p-1 text-white transition-colors duration-200 active:scale-95 active:bg-mainPalette-accent lg:hover:bg-mainPalette-accent"
               onClick={() =>
                 handleClick(
                   currentIndex === testimonials.length - 1
