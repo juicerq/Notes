@@ -1,6 +1,5 @@
-import useIsMobile from '@/hooks/useIsMobile'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
 
 interface OptionProps {
@@ -11,9 +10,8 @@ interface OptionProps {
 }
 
 export default function Option(props: OptionProps) {
-  const isMobile = useIsMobile()
-  const initialValue = isMobile ? { opacity: 0 } : { opacity: 1 }
-  const whileInViewValue = isMobile ? { opacity: [0, 1] } : { opacity: 1 }
+  const initialValue = { opacity: 0 }
+  const whileInViewValue = { opacity: [0, 1] }
   return (
     <motion.div
       viewport={{ once: true }}

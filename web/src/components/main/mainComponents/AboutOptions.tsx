@@ -1,10 +1,10 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-
 import Option from './Option'
 import useIsMobile from '@/hooks/useIsMobile'
+
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function AboutOptions() {
   const isMobile = useIsMobile()

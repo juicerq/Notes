@@ -15,12 +15,15 @@ export default function Feature(props: FeatureProps) {
   const isMobile = useIsMobile()
   const animationDelay = isMobile ? 0 : props.delay * 0.225
 
+  const initialValue = { opacity: 0 }
+
   const whileInViewValue = isMobile
     ? { opacity: 1, y: 0 }
     : { opacity: [0, 1], y: [50, 0] }
 
   return (
     <motion.div
+      initial={initialValue}
       whileInView={whileInViewValue}
       viewport={{ once: true }}
       transition={{ duration: 0.4, ease: 'easeIn', delay: animationDelay }}
