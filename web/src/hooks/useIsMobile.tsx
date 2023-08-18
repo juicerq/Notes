@@ -1,13 +1,21 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function useIsMobile() {
-  const [isMobile, setIsMobile] = useState<boolean>(true)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const isNotMobile = window?.innerWidth < 1024
-    setIsMobile(isNotMobile)
+    function handleResize() {
+      setIsMobile(window.innerWidth < 1024) // Size less than tablet
+    }
+
+    handleResize() // Initial call to set initial value
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   return isMobile
