@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="section-spacing relative flex h-[95vh] flex-col items-center justify-center gap-12 bg-mainPalette-bg pt-12 text-center xl:gap-16 xl:pt-24"
+      className="section-spacing relative flex h-[95vh] flex-col items-center justify-center gap-12 pt-12 text-center xl:gap-16 xl:pt-24"
     >
       <TraceAnimations />
       <CornerDividerBottom />

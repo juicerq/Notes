@@ -160,7 +160,7 @@ export default function AboutOptions() {
           </div>
         </>
       ) : (
-        <div className="hidden w-1/2 flex-col justify-evenly gap-96 lg:flex">
+        <div className="hidden w-1/2 flex-col justify-evenly gap-96 overflow-x-hidden lg:flex">
           <motion.div
             initial={{ x: 200 }}
             viewport={{ once: true }}

@@ -137,7 +137,9 @@ export default function NavbarDesktop(props: NavDesktopProps) {
             className={`${
               toggle ? 'top-20 shadow-md' : '-top-32 shadow-none'
             } ${
-              prevScrollPos === 0 ? 'bg-mainPalette-bg' : 'bg-mainPalette-bgAlt'
+              prevScrollPos === 0
+                ? 'bg-gradient-to-r from-mainPalette-bg to-zinc-300'
+                : 'bg-mainPalette-bgAlt'
             } fixed left-0 right-0 z-20 flex flex-col items-start justify-evenly bg-demoPalette-bgAlt transition-all duration-700`}
           >
             {/* List */}
