@@ -1,8 +1,15 @@
+'use client'
+
 import Link from 'next/link'
 import { CornerDividerBottom } from './mainComponents/CornerDivider'
 import DiscoverButton from './mainComponents/DiscoverButton'
+import { useRouter } from 'next/navigation'
 
 export default function Hero() {
+  const router = useRouter()
+  const handleLinkClick = () => {
+    router.push('/#service')
+  }
   return (
     <div
       id="hero"
@@ -23,7 +30,8 @@ export default function Hero() {
       {/* Buttons */}
       <div className="z-20 flex w-full flex-col justify-center gap-8 font-main  md:flex-row">
         <Link
-          href="/demo"
+          href="#"
+          onClick={handleLinkClick}
           rel="noopener noreferrer"
           className="button-hover flex items-center justify-center bg-mainPalette-primaryButton px-4 py-4 text-lg uppercase tracking-widest shadow-md active:scale-95 md:px-12"
         >
