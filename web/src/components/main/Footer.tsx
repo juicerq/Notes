@@ -41,7 +41,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="https://www.instagram.com/arq.aab/"
+                href="https://www.instagram.com/pedrinhopagan/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

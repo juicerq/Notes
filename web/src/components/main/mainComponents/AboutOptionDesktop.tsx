@@ -94,9 +94,7 @@ export default function AboutOptionDesktop() {
               .WhatsApp
             </a>
             <a
-              href={
-                'https://api.whatsapp.com/send?phone=5519997855562&text=Ol%C3%A1%21%20Estou%20interessado%28a%29%20em%20um%20site%21%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os.%20Aguardo%20sua%20resposta.%20Obrigado%21'
-              }
+              href={'mailto:pedroantoniobonaldo@gmail.com'}
               target="_blank"
               className=" flex items-center justify-center gap-2 rounded-md underline underline-offset-4 transition-all duration-150 lg:hover:text-zinc-400"
             >
