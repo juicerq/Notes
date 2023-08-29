@@ -39,6 +39,7 @@ export default function ContactForm() {
       className="mt-5 flex w-3/4 flex-col gap-7 text-lg text-mainPalette-text lg:w-2/3 2xl:w-1/2"
     >
       <div className="flex w-full flex-wrap gap-10 py-4 tracking-wide">
+        {/* Name Input */}
         <div className="contact-input-container">
           <div className="flex items-center">
             <User size={18} className="opacity-80" />
@@ -46,7 +47,11 @@ export default function ContactForm() {
           </div>
           <Input
             {...register('name', {
-              required: 'Por favor, insira um nome.',
+              required: 'Insira um nome.',
+              minLength: {
+                value: 3,
+                message: 'Insira um nome maior.',
+              },
             })}
             placeholder="Insira o seu nome"
             id="contact-name"
@@ -60,6 +65,7 @@ export default function ContactForm() {
           )}
         </div>
 
+        {/* Email Input */}
         <div className="contact-input-container">
           <div className="flex items-center gap-1">
             <Mail size={18} className="opacity-80" />
@@ -67,10 +73,10 @@ export default function ContactForm() {
           </div>
           <Input
             {...register('email', {
-              required: 'Por favor, insira um e-mail.',
+              required: 'Insira um e-mail.',
             })}
             id="contact-email"
-            placeholder="Insira seu email"
+            placeholder="Insira seu email."
             className="bg-zinc-300"
           />
           {errors.email && (
@@ -81,6 +87,7 @@ export default function ContactForm() {
           )}
         </div>
 
+        {/* Cellphone Input */}
         <div className="flex w-full flex-col gap-10 md:flex-row">
           <div className="contact-input-container">
             <div className="flex items-center gap-1">
@@ -99,6 +106,7 @@ export default function ContactForm() {
           </div>
         </div>
 
+        {/* Message Input */}
         <div className="flex w-full flex-col gap-1">
           <div className="flex items-center gap-1">
             <Pen size={18} className="opacity-80" />
@@ -111,7 +119,11 @@ export default function ContactForm() {
           </div>
           <Textarea
             {...register('message', {
-              required: 'Por favor, conte-nos um pouco sobre seu projeto.',
+              required: 'Insira uma mensagem.',
+              minLength: {
+                value: 5,
+                message: 'Insira uma mensagem maior.',
+              },
             })}
             id="contact-message"
             placeholder="Insira sua mensagem"
