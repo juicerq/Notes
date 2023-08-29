@@ -1,9 +1,10 @@
 'use client'
 
-import { User, Mail, Phone, Pen } from 'lucide-react'
-import { Input } from '../ui/input'
+import { User, Mail, Phone, Pen, BadgeAlert } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 import { useForm, type FieldValues } from 'react-hook-form'
+
+import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 
 interface FormValues {
@@ -52,7 +53,10 @@ export default function ContactForm() {
             className="bg-zinc-300"
           />
           {errors.name && (
-            <p className="text-red-500">{`${errors.name.message}`}</p>
+            <div className="flex items-center gap-2 text-red-500">
+              <BadgeAlert size={18} />
+              <p>{`${errors.name.message}`}</p>
+            </div>
           )}
         </div>
 
@@ -70,7 +74,10 @@ export default function ContactForm() {
             className="bg-zinc-300"
           />
           {errors.email && (
-            <p className="text-red-500">{`${errors.email.message}`}</p>
+            <div className="flex items-center gap-2 text-red-500">
+              <BadgeAlert size={18} />
+              <p>{`${errors.email.message}`}</p>
+            </div>
           )}
         </div>
 
@@ -111,7 +118,10 @@ export default function ContactForm() {
             className="h-56 resize-none bg-zinc-300"
           />
           {errors.message && (
-            <p className="text-red-500">{`${errors.message.message}`}</p>
+            <div className="flex items-center gap-2 text-red-500">
+              <BadgeAlert size={18} />
+              <p>{`${errors.message.message}`}</p>
+            </div>
           )}
         </div>
       </div>
