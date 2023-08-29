@@ -34,6 +34,7 @@ export default function AboutOptionDesktop() {
           </p>
         </Option>
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0 }}
         viewport={{ once: true }}
@@ -57,6 +58,7 @@ export default function AboutOptionDesktop() {
             . Estamos aqui para te ajudar!
           </p>
         </Option>
+
         <motion.div
           viewport={{ once: true }}
           initial={{ opacity: 0 }}

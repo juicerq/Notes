@@ -10,7 +10,7 @@ export default function Service() {
   return (
     <div
       id="service"
-      className="section-spacing flex flex-col items-center justify-center bg-mainPalette-bgAlt pt-12 md:gap-12 lg:gap-20 xl:mb-24 xl:flex-row 2xl:my-0 2xl:gap-60 2xl:py-36"
+      className="section-spacing flex flex-col items-center justify-center pt-12 md:gap-12 lg:gap-20 xl:mb-24 xl:flex-row 2xl:my-0 2xl:gap-60 2xl:py-36"
     >
       <div className="flex flex-col justify-evenly gap-16 2xl:gap-28">
         <motion.div
@@ -24,6 +24,7 @@ export default function Service() {
             <span className="text-mainPalette-primaryButton">Impulsione</span> a
             sua presença online
           </h2>
+
           <div className="flex flex-col gap-4 text-lg text-zinc-400">
             <p>
               Com um website que não seja apenas uma vitrine virtual, mas sim
@@ -32,6 +33,7 @@ export default function Service() {
             </p>
           </div>
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ x: [-300, 0], opacity: 1 }}
@@ -43,6 +45,7 @@ export default function Service() {
             <span className="text-mainPalette-primaryButton">Capte</span>{' '}
             clientes a partir do seu site
           </h2>
+
           <div className="flex flex-col gap-4 text-lg text-zinc-400">
             <p>
               Dê poder ao seu negócio com um site que não só representa a sua
@@ -52,6 +55,7 @@ export default function Service() {
           </div>
         </motion.div>
       </div>
+
       <div className="flex">
         <Lottie
           onComplete={() => {

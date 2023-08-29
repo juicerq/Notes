@@ -32,7 +32,9 @@ export default function Feature(props: FeatureProps) {
       <div className="flex-center h-12 w-12 justify-center rounded-full bg-mainPalette-primaryButton p-1 text-mainPalette-text">
         {props.icon}
       </div>
+
       <h2 className="text-lg xl:text-xl">{props.title}</h2>
+
       <p className="text-lg leading-snug text-zinc-400">{props.description}</p>
     </motion.div>
   )

@@ -22,9 +22,11 @@ export default function Footer() {
             </span>
             .
           </FooterInfo>
+
           <FooterInfo title="Telefone">
             (19) 9 9785-5562 <br /> (24) 9 8872-0167
           </FooterInfo>
+
           <FooterInfo title="Email">webcraftcomp@gmail.com</FooterInfo>
 
           {/* Sociais */}
@@ -52,7 +54,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        {/*  */}
       </div>
       <div className="flex h-10 w-full items-center justify-center bg-mainPalette-accent text-sm text-mainPalette-bg text-opacity-70">
         © Todos os direitos reservados.

@@ -27,6 +27,7 @@ export default function Hero() {
           nossa plataforma e consolide suas ideias.
         </h2>
       </div>
+
       {/* Buttons */}
       <div className="z-20 flex w-full flex-col justify-center gap-8 font-main  md:flex-row">
         <Link
@@ -43,6 +44,7 @@ export default function Hero() {
           </button>
         </div>
       </div>
+
       <DiscoverButton />
     </div>
   )

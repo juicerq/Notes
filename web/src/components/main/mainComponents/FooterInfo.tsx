@@ -14,6 +14,7 @@ export default function FooterInfo(props: FooterInfoProps) {
           <div className="duration-400 absolute -bottom-1 h-0.5 w-0 bg-zinc-400 transition-all group-hover:w-full" />
         </h1>
       </div>
+
       <div className="">
         <p className="duration-400 text-justify text-sm text-gray-300 transition-all group-hover:text-zinc-400">
           {props.children}
